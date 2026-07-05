@@ -2,95 +2,90 @@
 
 > 多维度数据分析报告中心 · 通过 GitHub Pages 静态呈现
 
-## 🚀 快速开始
+## 🌐 在线访问
 
-### 在线查看
-
-访问 **[https://gl-universe.github.io/AnalystReport](https://gl-universe.github.io/AnalystReport)** 即可浏览所有报告。
-
-### 本地预览
-
-```bash
-# 克隆仓库
-git clone git@github.com:GL-Universe/AnalystReport.git
-cd AnalystReport
-
-# 使用任意静态服务器启动
-python3 -m http.server 8080
-# 然后访问 http://localhost:8080
-```
+- **网站**：https://gl-universe.github.io/AnalystReport
+- **仓库**：https://github.com/GL-Universe/AnalystReport
 
 ## 📁 项目结构
 
 ```
 AnalystReport/
-├── index.html              # 🏠 首页 — 报告列表
-├── assets/
-│   ├── css/style.css       # 🎨 全局样式
-│   └── js/main.js          # ⚡ 动态加载报告列表
-├── data/
-│   └── reports.json        # 📋 报告元数据（标题、日期、路径等）
-├── reports/                # 📄 报告文件夹
-│   └── sample-report.html  # 示例报告
-└── README.md
+├── frontend/              # 🚀 前端代码（GitHub Pages 根目录）
+│   ├── index.html          #    首页：报告列表
+│   ├── assets/             #    样式与脚本
+│   ├── data/reports.json   #    报告注册表
+│   └── reports/            #    HTML 报告详情页
+│
+├── reports-md/             # 📝 Markdown 报告源文件
+│
+├── skills/                 # 🛠️ AI 技能集合
+│   ├── report-generator/   #    报告生成 skill
+│   └── page-builder/       #    页面搭建 skill
+│
+├── wiki/                   # 📚 项目文档（架构、工作流）
+├── Progress/               # 📈 项目进展记录
+└── .github/workflows/      # ⚙️ GitHub Pages 自动部署
+```
+
+详见 [`wiki/architecture.md`](./wiki/architecture.md)。
+
+## 🔄 核心工作流
+
+```
+[1] report-generator skill  →  产出 reports-md/*.md
+[2] page-builder skill      →  md 转 frontend/reports/*.html + 更新 reports.json
+[3] git push                →  GitHub Actions 自动部署到 Pages
+[4] Progress/changelog.md   →  追加变更记录
+```
+
+详见 [`wiki/workflow.md`](./wiki/workflow.md)。
+
+## 🚀 快速开始
+
+### 在线查看
+
+访问 **https://gl-universe.github.io/AnalystReport** 即可浏览所有报告。
+
+### 本地预览
+
+```bash
+git clone git@github.com:GL-Universe/AnalystReport.git
+cd AnalystReport
+cd frontend && python3 -m http.server 8080
+# 访问 http://localhost:8080
 ```
 
 ## ✍️ 如何添加新报告
 
-### 第 1 步：创建报告 HTML 文件
+### 方式 1：使用 AI Skill（推荐）
 
-在 `reports/` 目录下创建新的 `.html` 文件。推荐复制 `reports/sample-report.html` 作为模板，修改内容即可。
+对 AI 说：
+> 「帮我生成一份关于 XX 的分析报告，并发布上线。」
 
-> 💡 **模板已内置：**
-> - 返回首页链接
-> - 统一的报告头部样式
-> - 表格、引用块、高亮框等组件
-> - 标签系统
+AI 会自动调用 `report-generator` 生成 md，再调用 `page-builder` 转换为 HTML 并注册到首页。
 
-### 第 2 步：注册报告元数据
+### 方式 2：手动操作
 
-编辑 `data/reports.json`，在 `reports` 数组中添加条目：
+1. 在 `reports-md/` 创建 `{slug}.md`（参考 [`sample-report.md`](./reports-md/sample-report.md)）
+2. 在 `frontend/reports/` 创建对应的 `{slug}.html`（参考 [`sample-report.html`](./frontend/reports/sample-report.html)）
+3. 在 `frontend/data/reports.json` 追加条目
+4. `git add . && git commit && git push`
 
-```json
-{
-  "title": "你的报告标题",
-  "description": "简短描述，会显示在首页卡片上",
-  "date": "2026-07-05",
-  "author": "你的名字",
-  "icon": "📊",
-  "tags": ["tech", "market"],
-  "file": "reports/your-report.html"
-}
-```
+## 📚 文档导航
 
-### 第 3 步：提交并推送
-
-```bash
-git add .
-git commit -m "添加新报告：你的报告标题"
-git push origin main
-```
-
-推送后，GitHub Pages 会自动更新（通常 1-2 分钟内生效）。
-
-## 🏷️ 可用标签
-
-在 `reports.json` 中的 `tags` 字段支持以下预设标签：
-
-| 标签 | CSS 类 | 用途 |
-|------|--------|------|
-| `tech` | `tag-tech` | 技术分析 |
-| `market` | `tag-market` | 市场研究 |
-| `data` | `tag-data` | 数据分析 |
-| `strategy` | `tag-strategy` | 战略规划 |
-
-可在 `assets/css/style.css` 的 `.tag-*` 中自定义更多标签样式。
+- 📖 [项目架构](./wiki/architecture.md)
+- 🔄 [工作流说明](./wiki/workflow.md)
+- 🛠️ [AI Skills](./skills/README.md)
+- 📈 [项目进展](./Progress/README.md)
 
 ## 🛠️ 技术栈
 
 - 纯静态 HTML/CSS/JavaScript（零依赖）
-- 通过 `reports.json` 动态加载报告列表
-- 托管于 **GitHub Pages**，免费、自动部署
+- Markdown + front-matter 内容源
+- AI Skill 驱动内容生产
+- GitHub Actions 自动部署
+- GitHub Pages 免费托管
 
 ## 📄 License
 
