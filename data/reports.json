@@ -1,0 +1,13 @@
+{
+  "reports": [
+    {
+      "title": "示例报告：2026 上半年科技行业趋势分析",
+      "description": "涵盖人工智能、云计算、半导体等关键领域的市场趋势、投融资数据及未来展望。",
+      "date": "2026-07-01",
+      "author": "AnalystReport",
+      "icon": "📈",
+      "tags": ["tech", "market"],
+      "file": "reports/sample-report.html"
+    }
+  ]
+}
