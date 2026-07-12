@@ -93,7 +93,9 @@ At the Medium effort level, GPT-5.5 matches Claude Opus 4.7 (Max) intelligence a
 
 When asked to implement a file-upload feature, GPT-5.5 proactively included UUID renaming, whitelist validation, size limits, and MIME verification, while GPT-5.3 produced only basic file-type checking (TechnicalAnalysis-C, 2026). This is a single-prompt case study, not a systematic measurement.
 
-## 6.3 GPT-5.5's Disadvantage Scenarios.3, this section is **mandatory** and cannot be omitted. GPT-5.5 exhibits the following disadvantages relative to specific competitors:
+## 6.3 GPT-5.5's Disadvantage Scenarios
+
+GPT-5.5 exhibits the following disadvantages relative to specific competitors:
 
 ### 6.3.1 Hallucination rate — worst among frontier models tested
 
@@ -179,12 +181,10 @@ DeepSeek-V4 Preview, released the same day as GPT-5.5, lists V4-Flash at $0.14/$
 ## References for This Chapter
 
 1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-2. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
 3. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
 4. OpenAI. "GPT-5.5 launch announcement." 2026-04-23.
 5. Anthropic. "Claude Opus 4.7 model card and pricing." 2026.
 6. Google. "Gemini 3.1 Pro and 3.5 Flash launch and benchmarks." 2026.
 7. DeepSeek. "DeepSeek-V4 Preview release." 2026-04-23.
-8. TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed
 9. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
 10. EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55

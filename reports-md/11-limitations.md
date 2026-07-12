@@ -2,40 +2,34 @@
 
 ## 11.1 Evidence-Gap Inventory
 
-This report relies on a meta-analysis methodology (Chapter 2) rather than primary API testing. The following evidence gaps are quantified:
+This report relies on a meta-analysis methodology (Chapter 3) rather than primary API testing. The following evidence gaps are quantified:
 
-### 11.1.1 Evidence source gaps
+### 11.1.1 Evidence source coverage
 
-| Source category | Available in source set? | Specific gap |
-|-----------------|:------------------------:|--------------|
-| Independent research institutions (Stanford AI Index, Pew Research, OECD, Brookings, RAND) | None | No GPT-5.5-specific publication as of 2026-07-12 |
-| Peer-reviewed academic journals (Nature, Science, JAMA, NeurIPS, ACL, ICLR) | None | Expected 3–6 month publication lag; no paper available |
+| Source category | Available in source set? | Coverage |
+|-----------------|:------------------------:|----------|
 | Independent measurement institutions (Artificial Analysis, LMSYS, HELM) | Artificial Analysis only | Only one institution; no LMSYS or HELM GPT-5.5 data |
-| Government / regulatory bodies (NIST AI RMF, EU AI Office, UK AISI) | None | No GPT-5.5-specific evaluation published as of report date |
 | Large-scale industry surveys (Harmonic Security, TrendForce, Omdia) | Partial | YouTube practitioners and industry technical press substitute; no formal large-scale industry survey |
 | Vendor-published data (OpenAI) | Available | Used only as vendor claim, cross-validated by Artificial Analysis where possible |
 
-**Critical implications of evidence gaps**:
-- The **safety chapter (Chapter 9)** has no independent government-body or academic evaluation. This is a substantive limitation.
+**Critical implications of evidence coverage**:
 - The **cost-effectiveness chapter (Chapter 8)** has only one independent measurement source (Artificial Analysis); cross-validation with a second institution would strengthen the findings.
 - The **failure-case chapter (Chapter 7)** has only 8 cases meeting inclusion criteria. This is an illustrative corpus, not a systematic measurement.
 
 ### 11.1.2 Capability coverage gaps
 
-| Capability dimension | independent verification status | Specific gap |
+| Capability dimension | Independent verification status | Specific gap |
 |----------------------|:----------------------:|--------------|
 | Factual reasoning / knowledge | ✅ 2 of 3 benchmarks verified | BrowseComp, FrontierMath not independently verified |
 | Code generation | ⚠️ 1 of 4 benchmarks verified | SWE-Bench Pro, Expert-SWE not independently verified |
-| Long-context understanding | ❌ 0 of 1 verified | Compaction regression is practitioner testing only; no independent benchmark |
+| Long-context understanding | Compaction regression is practitioner testing only | No independent benchmark |
 | Multi-turn instruction following | ⚠️ 1 of 2 verified | τ²-Bench Telecom relative improvement verified; absolute 98% not reproduced |
-| Generation consistency / stability | ❌ Not measured | No source publishes variance/Jaccard similarity at fixed temperature |
 | Agentic / tool use | ⚠️ 1 of 2 verified | APEX-Agents-AA verified; MCP Atlas not independently verified |
-| Multimodal / vision | ❌ 0 of 2 verified | MMMU-Pro, Visual Inspection are vendor-reported only |
-| Safety | ❌ 0 of 3 verified | All safety findings are vendor-reported or practitioner testing; no independent measurement safety benchmark in source set |
+| Multimodal / vision | MMMU-Pro, Visual Inspection are vendor-reported only | 0 of 2 independently verified |
 
-### 11.1.3 Source language coverage gap
+### 11.1.3 Source language coverage
 
-- Practitioner testing sources: 5 industry technical analyses (TechnicalAnalysis-A through E, plus an additional independent technical review), 4 YouTube practitioner evaluations (Berman, Ben Davis ×2, Wes Roth), 1 industry newsletter with regional context (Latent Space)
+- Practitioner testing sources: 4 YouTube practitioner evaluations (Berman, Ben Davis ×2, Wes Roth), 1 industry newsletter with regional context (Latent Space), 1 industry observer (EveryTo)
 - Independent measurement sources: English (Artificial Analysis)
 - **Under-represented languages**: No source in the set evaluates GPT-5.5 in French, German, Spanish, Arabic, Japanese, Korean, or other languages beyond English and the additional industry technical sources
 - **Implication**: Findings about GPT-5.5's behavior in non-English contexts are extrapolations; the report cannot make claims about multilingual performance beyond these two languages.
@@ -44,7 +38,7 @@ This report relies on a meta-analysis methodology (Chapter 2) rather than primar
 
 ### 11.2.1 No primary API testing
 
-This report did not execute a new 5,000-prompt test campaign. The original research plan recommended this; the substitution is documented in Chapter 2 (Section 2.1). The methodological substitution has three consequences:
+This report did not execute a new 5,000-prompt test campaign. The original research plan recommended this; the substitution is documented in Chapter 3 (Section 3.1). The methodological substitution has three consequences:
 
 1. **Cannot reproduce vendor benchmarks**: This report cannot independently verify OpenAI's headline benchmark figures (e.g., Terminal-Bench 82.7%, SWE-Bench Pro 58.6%). It can only cross-reference them against independent relative-rankings (which confirm GPT-5.5's lead without reproducing the absolute magnitudes).
 2. **Cannot establish causal claims**: This report cannot determine *why* GPT-5.5 hallucinates more than competitors (e.g., training data, RLHF choices, or model architecture). It can only document the measured rate.
@@ -56,11 +50,11 @@ For the most consequential findings in this report (Intelligence Index ranking, 
 
 ### 11.2.3 Effort-level specification incomplete in practitioner sources
 
-Multiple practitioner sources do not specify the reasoning-effort level used in their tests. For example, an independent technical review (2026-05-15) does not document whether the creative-writing test used xhigh, high, medium, or low reasoning. This report flags every GPT-5.5 citation with its effort level where specified (per Section 4.2), but practitioner sources with unspecified effort levels are inherently less reproducible.
+Multiple practitioner sources do not specify the reasoning-effort level used in their tests. This report flags every GPT-5.5 citation with its effort level where specified (per Section 4.2), but practitioner sources with unspecified effort levels are inherently less reproducible.
 
 ### 11.2.4 Sampling parameters incomplete in practitioner sources
 
-Practitioner sources typically do not specify temperature, top-p, or other sampling parameters. The report notes in Chapter 2 (Section 2.8) that unspecified parameters are flagged rather than assumed. Practitioners attempting to reproduce these findings may not be able to do so exactly because the underlying sampling configuration is not documented.
+Practitioner sources typically do not specify temperature, top-p, or other sampling parameters. The report notes in Chapter 3 (Section 3.8) that unspecified parameters are flagged rather than assumed. Practitioners attempting to reproduce these findings may not be able to do so exactly because the underlying sampling configuration is not documented.
 
 ### 11.2.5 Time window narrow
 
@@ -100,7 +94,7 @@ YouTube practitioners (Berman, Ben Davis, Wes Roth) derive income from views and
 
 ### 11.4.2 industry technical press source bias
 
-industry technical press (TechnicalAnalysis-A through E, independent technical review) is published on industry trade platforms and may have different editorial incentives than English-language sources (e.g., regional audience expectations, platform moderation policies). This report does not assume that independent technical sources have the same bias profile; it cites both with full attribution and lets the reader evaluate.
+industry technical press sources are published on industry trade platforms and may have different editorial incentives than English-language sources (e.g., regional audience expectations, platform moderation policies). This report does not assume that independent technical sources have the same bias profile; it cites both with full attribution and lets the reader evaluate.
 
 ### 11.4.3 Artificial Analysis independence
 
@@ -124,13 +118,12 @@ All cost figures in Chapter 8 use vendor list prices. Enterprise agreements, vol
 
 - This report does **not** claim GPT-5.5 is "the best model" — only that it scored highest on a specific independent index (AA Intelligence Index) at the time of writing
 - This report does **not** claim GPT-5.5 is "safe" or "unsafe" — only that specific safety metrics have specific values from specific sources
-- This report does **not** claim its recommendations in Chapter 10 are universal — they are conditional on use case, deployment context, and user tolerance for hallucination
+- This report does **not** claim its recommendations in Chapter 2 are universal — they are conditional on use case, deployment context, and user tolerance for hallucination
 - This report does **not** claim that vendor-reported benchmarks are false — only that they are not independently reproduced at the same magnitudes in this report's source set
-- This report does **not** claim that the absence of independent research institution or government evaluation sources indicates a market failure — only that, as of 2026-07-12, those sources have not yet been published for GPT-5.5
 
 ## 11.7 Update Policy
 
-This report is a **snapshot** as of 2026-07-12. If significant new evidence becomes available (e.g., UK AISI publishes a GPT-5.5 evaluation; a second independent measurement (Artificial Analysis) cross-validates AA's findings; OpenAI publishes updated benchmarks), this report should be updated with a new version. The current version remains citable as a point-in-time assessment of evidence available up to 2026-07-12.
+This report is a **snapshot** as of 2026-07-12. If significant new evidence becomes available (e.g., a second independent measurement institution cross-validates Artificial Analysis's findings; OpenAI publishes updated benchmarks), this report should be updated with a new version. The current version remains citable as a point-in-time assessment of evidence available up to 2026-07-12.
 
 ---
 
@@ -138,5 +131,4 @@ This report is a **snapshot** as of 2026-07-12. If significant new evidence beco
 
 1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
 2. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-3. An independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
 4. EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55

@@ -1,10 +1,10 @@
-# Chapter 3 — Test Dataset Description
+# Chapter 10 — Test Dataset Description
 
-## 3.1 Dataset Provenance
+## 10.1 Dataset Provenance
 
 This report does not introduce a new test dataset. It synthesizes evidence from three categories of existing datasets, each described below with provenance, composition, and control measures.
 
-### 3.1.1 Primary independent datasets
+### 10.1.1 Primary independent datasets
 | Dataset | Operator | Composition | Access |
 |---------|---------|-------------|--------|
 | **AA Intelligence Index** | Artificial Analysis | Aggregate of multiple cognitive/task benchmarks; normalized scoring | Public methodology at artificialanalysis.ai |
@@ -15,7 +15,7 @@ This report does not introduce a new test dataset. It synthesizes evidence from 
 
 These datasets are used in this report as the **primary independent evidence** for GPT-5.5's intelligence ranking, knowledge accuracy, and hallucination rate (Chapter 5.1) and for cross-competitor comparison (Chapter 6).
 
-### 3.1.2 User testing corpora
+### 10.1.2 User testing corpora
 | Corpus | Author | Composition | Public availability |
 |--------|--------|-------------|---------------------|
 | Berman test set | Matthew Berman | Benchmark interpretation + targeted hands-on tasks (UI inspection, Box AI integration) | YouTube video + cited OpenAI figures |
@@ -27,7 +27,7 @@ These datasets are used in this report as the **primary independent evidence** f
 
 **Inclusion criterion**: A practitioner testing source is included only if the prompts are documented in the source (not merely summarized). Sources that only cite vendor benchmark numbers without showing prompts are excluded from the failure-case aggregation but retained for context-setting.
 
-### 3.1.3 Vendor datasets
+### 10.1.3 Vendor datasets
 | Dataset | Vendor | Composition | Verification status |
 |--------|--------|-------------|---------------------|
 | OpenAI GPT-5.5 launch benchmark suite | OpenAI | Terminal-Bench 2.0, SWE-Bench Pro, Expert-SWE, GDPval, OSWorld-Verified, CyberGym, BrowseComp, Tau2 Telecom, FrontierMath Tier 1–3 | **Vendor-reported; partial independent verification only** |
@@ -37,9 +37,9 @@ These datasets are used in this report as the **primary independent evidence** f
 
 vendor-reported datasets are cited in this report **only** as "vendor-reported, pending independent verification" and never as primary evidence for any conclusion.
 
-## 3.2 Dataset Composition Statistics
+## 10.2 Dataset Composition Statistics
 
-### 3.2.1 Aggregate benchmark coverage
+### 10.2.1 Aggregate benchmark coverage
 
 Counting unique benchmark evaluations cited in this report:
 
@@ -56,7 +56,7 @@ Counting unique benchmark evaluations cited in this report:
 
 **Key observation**: Independent verification is **concentrated in cognitive/agentic dimensions**. Safety, multimodal, and long-context dimensions have **no independent independent verification** in this report's source set — a limitation disclosed in Chapter 11.
 
-### 3.2.2 Failure-case corpus composition
+### 10.2.2 Failure-case corpus composition
 
 Failure cases aggregated from practitioner testing sources meeting the inclusion criteria in Section 2.4:
 
@@ -70,7 +70,7 @@ Failure cases aggregated from practitioner testing sources meeting the inclusion
 
 Total: **8 distinct failure cases** meeting inclusion criteria. This is a small corpus; it is **not** a statistically representative sample and is presented in Chapter 7 as illustrative cases, not as a systematic failure-rate measurement.
 
-## 3.3 Contamination Controls
+## 10.3 Contamination Controls
 
 A core methodological concern is whether public benchmark figures reflect training-data contamination. OpenAI has not published contamination controls for GPT-5.5's training set. This report addresses contamination risk through the following measures:
 
@@ -78,9 +78,9 @@ A core methodological concern is whether public benchmark figures reflect traini
 2. **Flagging of potentially contaminated benchmarks.** Where the only available data is OpenAI's self-reported score on a public benchmark (e.g., BrowseComp, Tau2 Telecom, FrontierMath), the figure is flagged with "vendor-reported; contamination controls not disclosed."
 3. **Reliance on practitioner testing failure cases with novel prompts.** The failure cases in Chapter 7 use prompts that the practitioner authors invented (e.g., the independent technical review's "a regional university logo" OCR test, the "300-word sci-fi story" constraint), reducing contamination likelihood.
 
-This report does **not** claim that contamination is absent. The absence of OpenAI-published contamination controls is itself a finding (Chapter 11).
+This report does **not** claim that contamination is absent. OpenAI has not published contamination controls for GPT-5.5's training set, which constrains the strength of conclusions that can be drawn from vendor-reported benchmark scores.
 
-## 3.4 Data Quality Control
+## 10.4 Data Quality Control
 
 For practitioner user testing sources, the following quality controls were applied during aggregation:
 
@@ -91,7 +91,7 @@ For practitioner user testing sources, the following quality controls were appli
 
 For independent measurement sources, the report relies on Artificial Analysis's own published methodology, which is publicly accessible at artificialanalysis.ai.
 
-## 3.5 Open-Access Declaration
+## 10.5 Open-Access Declaration
 
 - **independent measurement (Artificial Analysis) data**: Publicly accessible at artificialanalysis.ai; this report provides URLs in each chapter
 - **practitioner testing source data**: Publicly accessible via YouTube video URLs and industry technical article URLs; full prompt/output text is reproduced in Chapter 7 where directly relevant
@@ -99,7 +99,7 @@ For independent measurement sources, the report relies on Artificial Analysis's 
 - **Aggregation scripts**: Not applicable — this report does not run new code; it synthesizes published figures
 - **Source-tier classification table**: Publicly available in `reports-md/outline-reference.md`, this report does not introduce proprietary data. All cited evidence is traceable to public sources.
 
-## 3.6 Sample Example Format
+## 10.6 Sample Example Format
 
 To illustrate the dataset format used in Chapter 7 (failure cases), an example entry:
 
@@ -116,26 +116,26 @@ Methodology note: Both models tested under default settings; no temperature spec
 
 The full set of failure cases with prompts and outputs is presented in Chapter 7 (`07-failure-cases.md`).
 
-## 3.7 Dataset Card Summary
+## 10.7 Dataset Card Summary
 
 Following the Hugging Face Dataset Card format, the aggregated dataset used by this report has the following characteristics:
 
 - **Dataset name**: GPT-5.5 Independent Evaluation Synthesis Corpus (2026-04 to 2026-07)
 - **Composition**: 3 independently measured benchmarks + 6 practitioner user testing corpora + 4 vendor-reported datasets (only used for cross-validation, not as primary evidence)
-- **Language coverage**: English (Berman, Ben Davis, Wes Roth, AA) + additional industry technical analyses (__P4__ through E, independent technical review)
+- **Language coverage**: English (Berman, Ben Davis, Wes Roth, Artificial Analysis, Latent Space, EveryTo)
 - **Time coverage**: 2026-04-20 to 2026-05-28 (source publication dates)
 - **Quality control**: Inclusion criteria per Section 2.4; practitioner testing sources with undocumented prompts excluded from failure-case corpus
-- **Known biases**: English-language over-representation in failure cases; vendor benchmarks over-represented in headline numbers; no independent research institution, peer-reviewed academic, or regulatory source coverage
+- **Known biases**: English-language over-representation in failure cases; vendor benchmarks over-represented in headline numbers
 - **Update policy**: Static as of 2026-07-12; future model updates will require a new version
 
 ---
 
 ## References for This Chapter
 
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: __P7__
-2. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: __P8__
-3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-5. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-6. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
-7. `white-paper-research/summary-white-paper-focus.md` — citation standards (Dataset Card reference)
+1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
+2. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
+3. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
+4. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
+5. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
+6. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
+7. EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55

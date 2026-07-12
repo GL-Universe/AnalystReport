@@ -111,15 +111,15 @@ The full white paper is structured into 13 chapter files:
 |------|---------|---------|
 | `00-executive-summary.md` | Ch 0 | Executive summary — key findings and evidence overview |
 | `01-research-background.md` | Ch 1 | Why this report exists, industry context, research questions |
-| `02-methodology.md` | Ch 2 | Meta-analysis framework, source classification, cross-validation protocol |
-| `03-dataset-description.md` | Ch 3 | Public datasets and user-test corpora used |
+| `02-practical-recommendations.md` | Ch 2 | Decision tree by use case, deployment configurations |
+| `03-methodology.md` | Ch 3 | Meta-analysis framework, source classification, cross-validation protocol |
 | `04-evaluation-metrics.md` | Ch 4 | Definitions of intelligence, hallucination, cost, safety metrics |
 | `05-core-capability-results.md` | Ch 5 | Reasoning, coding, long-context, multi-turn, stability findings |
 | `06-competitor-comparison.md` | Ch 6 | Quantitative matrix vs Claude/Gemini/DeepSeek |
 | `07-failure-cases.md` | Ch 7 | Hallucination, instruction drift, compaction, safety regression |
 | `08-cost-effectiveness.md` | Ch 8 | API pricing, token efficiency, latency, cost-per-quality |
 | `09-safety-alignment.md` | Ch 9 | Jailbreak, harmful content, privacy, regulatory compliance |
-| `10-practical-recommendations.md` | Ch 10 | Decision tree by use case, deployment configurations |
+| `10-dataset-description.md` | Ch 10 | Public datasets and user-test corpora used |
 | `11-limitations.md` | Ch 11 | Honest statement of evidence gaps |
 | `12-appendix.md` | Ch 12 | COI, references, source-tier index |
 
@@ -130,6 +130,5 @@ The full white paper is structured into 13 chapter files:
 1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
 2. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
 3. Berman, Matthew. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-4. Independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
+4. Independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15.
 5. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-6. Industry technical analysis. "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice

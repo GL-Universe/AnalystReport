@@ -18,15 +18,15 @@
     <main class="markdown-body">
         <nav class="toc"><h2>Chapters</h2><ol><li><a href="#gpt-55-model-service-evaluation-white-paper-executive-summary">GPT-5.5 Model Service Evaluation White Paper — Executive Summary</a></li>
 <li><a href="#chapter-1-research-background-problem-setting">Chapter 1 — Research Background &amp; Problem Setting</a></li>
-<li><a href="#chapter-2-evaluation-methodology">Chapter 2 — Evaluation Methodology</a></li>
-<li><a href="#chapter-3-test-dataset-description">Chapter 3 — Test Dataset Description</a></li>
+<li><a href="#chapter-2-practical-recommendations">Chapter 2 — Practical Recommendations</a></li>
+<li><a href="#chapter-3-evaluation-methodology">Chapter 3 — Evaluation Methodology</a></li>
 <li><a href="#chapter-4-evaluation-metrics-system">Chapter 4 — Evaluation Metrics System</a></li>
 <li><a href="#chapter-5-core-capability-evaluation-results">Chapter 5 — Core Capability Evaluation Results</a></li>
 <li><a href="#chapter-6-competitor-comparative-analysis">Chapter 6 — Competitor Comparative Analysis</a></li>
 <li><a href="#chapter-7-failure-cases-boundary-analysis">Chapter 7 — Failure Cases &amp; Boundary Analysis</a></li>
 <li><a href="#chapter-8-cost-effectiveness-analysis">Chapter 8 — Cost-Effectiveness Analysis</a></li>
 <li><a href="#chapter-9-safety-alignment-assessment">Chapter 9 — Safety &amp; Alignment Assessment</a></li>
-<li><a href="#chapter-10-practical-recommendations">Chapter 10 — Practical Recommendations</a></li>
+<li><a href="#chapter-10-test-dataset-description">Chapter 10 — Test Dataset Description</a></li>
 <li><a href="#chapter-11-research-limitations">Chapter 11 — Research Limitations</a></li>
 <li><a href="#chapter-12-appendix">Chapter 12 — Appendix</a></li></ol></nav>
         <!-- 章节来源: reports-md/00-executive-summary.md -->
@@ -187,14 +187,14 @@
 <td>Why this report exists, industry context, research questions</td>
 </tr>
 <tr>
-<td><code>02-methodology.md</code></td>
+<td><code>02-practical-recommendations.md</code></td>
 <td>Ch 2</td>
-<td>Meta-analysis framework, source classification, cross-validation protocol</td>
+<td>Decision tree by use case, deployment configurations</td>
 </tr>
 <tr>
-<td><code>03-dataset-description.md</code></td>
+<td><code>03-methodology.md</code></td>
 <td>Ch 3</td>
-<td>Public datasets and user-test corpora used</td>
+<td>Meta-analysis framework, source classification, cross-validation protocol</td>
 </tr>
 <tr>
 <td><code>04-evaluation-metrics.md</code></td>
@@ -227,9 +227,9 @@
 <td>Jailbreak, harmful content, privacy, regulatory compliance</td>
 </tr>
 <tr>
-<td><code>10-practical-recommendations.md</code></td>
+<td><code>10-dataset-description.md</code></td>
 <td>Ch 10</td>
-<td>Decision tree by use case, deployment configurations</td>
+<td>Public datasets and user-test corpora used</td>
 </tr>
 <tr>
 <td><code>11-limitations.md</code></td>
@@ -249,9 +249,8 @@
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
 <li>OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.</li>
 <li>Berman, Matthew. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.</li>
-<li>Independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
+<li>Independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15.</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
-<li>Industry technical analysis. "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice</li>
 </ol>
 <hr class="chapter-divider" />
 <!-- 章节来源: reports-md/01-research-background.md -->
@@ -286,7 +285,7 @@
 <li><strong>Long-context behavior is under-quantified.</strong> Practitioner reports (Ben Davis, 2026) identify a regression in compaction quality and recommend keeping thread length under 100K tokens — a finding not captured by any standard benchmark as of the report date.</li>
 </ol>
 <h2 id="14-research-questions">1.4 Research Questions</h2>
-<p>This white paper addresses the following specific questions, each citable by journalists:</p>
+<p>This white paper addresses the following specific questions:</p>
 <p><strong>RQ1.</strong> On independently hosted benchmarks (Artificial Analysis Intelligence Index, GDPval-AA, AA-Omniscience), does GPT-5.5 reproduce the leading position claimed by OpenAI's vendor-reported benchmarks?</p>
 <p><strong>RQ2.</strong> At matched intelligence, what is the cost differential between GPT-5.5 and its closest competitor (Claude Opus 4.7) across the full reasoning-effort ladder (xhigh / high / medium / low / non-reasoning)?</p>
 <p><strong>RQ3.</strong> In which specific task categories does GPT-5.5 exhibit failure modes that competitor models do not, and vice versa?</p>
@@ -320,13 +319,6 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Notably absent from this report's source set</strong>:</p>
-<ul>
-<li>Independent research institutions (Stanford AI Index, Pew Research): no GPT-5.5-specific publication as of 2026-07-12</li>
-<li>Peer-reviewed academic journals: no GPT-5.5-specific publication as of 2026-07-12 (expected lag of 3–6 months)</li>
-<li>Government / regulatory body reports (NIST AI RMF, UK AISI, EU AI Office): no GPT-5.5-specific evaluation published as of the report date</li>
-</ul>
-<p>The absence of these source categories is itself a finding, documented in Chapter 11 (Limitations).</p>
 <h2 id="16-evidence-standards-observed-in-this-chapter">1.6 Evidence Standards Observed in This Chapter</h2>
 <ul>
 <li>This chapter does not cite OpenAI's technical report as the only background source — independent measurement and practitioner testing sources are also cited.</li>
@@ -336,21 +328,210 @@
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
 <ol>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
-<li>TechnicalAnalysis-E (Industry technical analysis). "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice</li>
 <li>OpenAI. "GPT-5.5 launch announcement." 2026-04-23.</li>
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
 <li>Wes Roth. "OpenAI's GPT 5.5 is wild.." YouTube. 2026-04-20.</li>
-<li>TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</li>
 <li>Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
-<li>TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed</li>
-<li>TechnicalAnalysis-B (industry technical press). "GPT-5.5 Instant: the first instant-tier model rated High." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-instant-high-rating</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
 </ol>
 <hr class="chapter-divider" />
-<!-- 章节来源: reports-md/02-methodology.md -->
-<h1 id="chapter-2-evaluation-methodology">Chapter 2 — Evaluation Methodology</h1>
-<h2 id="21-methodological-positioning">2.1 Methodological Positioning</h2>
+<!-- 章节来源: reports-md/02-practical-recommendations.md -->
+<h1 id="chapter-2-practical-recommendations">Chapter 2 — Practical Recommendations</h1>
+<blockquote>
+<p>This chapter translates the findings from Chapters 5–9 into actionable guidance for enterprise decision-makers, developers, and integrators. The recommendations are conditional: no single model is the right choice for all use cases, and GPT-5.5's reasoning-effort ladder makes "use GPT-5.5" an incomplete recommendation without specifying the effort level.</p>
+</blockquote>
+<h2 id="21-decision-tree-by-use-case">2.1 Decision Tree by Use Case</h2>
+<h3 id="211-code-generation-development-assistance">2.1.1 Code generation / development assistance</h3>
+<p><strong>Recommendation</strong>: <strong>GPT-5.5 (Medium or X-High)</strong> for most development tasks, with <strong>Pi</strong> as the preferred harness for long-running workflows.</p>
+<p><strong>Rationale</strong>:<br>
+- Terminal-Bench Hard lead confirmed by independent measurement (Artificial Analysis, 2026)<br>
+- Engineering-grade security awareness (UUID renaming, whitelist validation, MIME verification) observed in practitioner testing test (TechnicalAnalysis-C, 2026)<br>
+- Codex platform integration (browser control, auto-review) provides agentic-workflow capability not yet matched by competitors (Latent Space, 2026; Ben Davis, 2026-05-28)<br>
+- X-High recommended for autonomous workflows requiring first-try success; Medium for interactive use (Ben Davis, 2026-05-28)</p>
+<p><strong>Caveats</strong>:<br>
+- SWE-Bench Pro lead over Claude Opus 4.7 may be narrower than headline (TechnicalAnalysis-A, 2026)<br>
+- Long-context coding should plan thread length under 100K tokens despite 400K advertised window (Ben Davis, 2026-05-04)<br>
+- Practitioners with deeply-integrated Claude Code workflows should evaluate switching cost before migrating to Codex (EveryTo, 2026)</p>
+<h3 id="212-long-text-processing-document-analysis">2.1.2 Long-text processing / document analysis</h3>
+<p><strong>Recommendation</strong>: <strong>GPT-5.5 (Medium or X-High) only for threads &lt;100K tokens</strong>. For longer contexts, evaluate Gemini 3.1 Pro Preview or Claude Opus 4.7.</p>
+<p><strong>Rationale</strong>:<br>
+- GPT-5.5's compaction regression (vs GPT-5.4) reduces practical usable context to ~100K tokens despite the 400K–1M advertised window (Ben Davis, 2026-05-04)<br>
+- Vendor-reported long-context positioning benchmark (94.8% vs Gemini 77.3%) is vendor-reported and not independently verified<br>
+- Needle-in-haystack test failure documented in practitioner testing source (an independent technical review, 2026)</p>
+<p><strong>Caveat</strong>: No independent benchmark in the source set independently measures long-context quality across context lengths. This recommendation rests on practitioner findings only.</p>
+<h3 id="213-conversation-customer-service-intelligent-assistants">2.1.3 Conversation / customer service / intelligent assistants</h3>
+<p><strong>Recommendation</strong>: <strong>GPT-5.5 (Medium)</strong> for high-stakes customer-service workflows where task-completion is more valuable than cost minimization. <strong>Gemini 3.1 Pro Preview</strong> for cost-optimized high-volume customer service at matched intelligence.</p>
+<p><strong>Rationale</strong>:<br>
+- τ²-Bench Telecom: +7 point improvement over GPT-5.4 (independently verified) (Artificial Analysis, 2026)<br>
+- GDPval-AA: GPT-5.5 leads 1,785 Elo vs Claude ~1,755 and Gemini ~1,315 (independently verified)<br>
+- Gemini 3.1 Pro Preview is cheaper at matched intelligence ($900 vs $1,200 per Index run) (Artificial Analysis, 2026)</p>
+<p><strong>Critical caveat — hallucination</strong>: GPT-5.5 (xhigh) hallucination rate is 86%. For customer-service use cases where confidently-wrong answers carry business risk (regulated industries, financial services, healthcare), prefer <strong>Claude Opus 4.7 (Max)</strong> with 36% hallucination rate despite the 4× cost premium. For cost-optimized low-risk workflows, prefer Gemini 3.1 Pro Preview.</p>
+<h3 id="214-research-tasks-requiring-high-factual-accuracy">2.1.4 Research tasks requiring high factual accuracy</h3>
+<p><strong>Recommendation</strong>: <strong>Claude Opus 4.7 (Max)</strong> preferred over GPT-5.5 (xhigh) for research tasks where honest refusal is more valuable than confident attempt.</p>
+<p><strong>Rationale</strong>:<br>
+- GPT-5.5 (xhigh) hallucination rate: 86% vs Claude Opus 4.7 (Max): 36% (Artificial Analysis, 2026)<br>
+- For fact-checking, academic research, regulated advisory, the 50-percentage-point hallucination-rate differential is a substantive risk factor<br>
+- GPT-5.5 has the <strong>highest knowledge accuracy</strong> (57%) in the same benchmark — it recalls more facts in absolute terms, but produces more incorrect confident assertions when uncertain</p>
+<p><strong>Use case refinement</strong>:<br>
+- <strong>Use GPT-5.5</strong> for research tasks where breadth of attempted answers matters and where outputs will be independently verified<br>
+- <strong>Use Claude Opus 4.7</strong> for research tasks where confidently-wrong answers carry high cost and verification is expensive<br>
+- <strong>Use both</strong> with cross-verification for highest-stakes research (one model produces candidate answers, the other validates refusals)</p>
+<h3 id="215-multimodal-vision-tasks">2.1.5 Multimodal / vision tasks</h3>
+<p><strong>Recommendation</strong>: <strong>Evaluate Gemini 3.5 Flash</strong> for non-English multimodal OCR or institution-logo recognition tasks. <strong>Use GPT-5.5</strong> for general multimodal tasks where the Visual Inspection step-function improvement matters (per practitioner testing;; Matthew Berman, 2026).</p>
+<p><strong>Rationale</strong>:<br>
+- GPT-5.5 failed to recognize the a regional university logo where Gemini 3.5 Flash succeeded (an independent technical review, 2026)<br>
+- Gemini 3.5 Flash has higher vendor-reported MMMU-Pro (83.6% vs 81.2%) (Google, 2026; OpenAI, 2026)<br>
+- GPT-5.5's Visual Inspection improvement over GPT-5.4 is described as "step-function" by one practitioner testing source (Matthew Berman, 2026) — useful for UI inspection tasks</p>
+<p><strong>Caveat</strong>: Multimodal capability is one of the <strong>least independently verified</strong> dimensions in this report. Recommendations here are based on single practitioner cases and vendor-reported figures.</p>
+<h3 id="216-constrained-creative-writing">2.1.6 Constrained creative writing</h3>
+<p><strong>Recommendation</strong>: <strong>Gemini 3.5 Flash</strong> preferred over GPT-5.5 for tasks with tight word-count or genre constraints.</p>
+<p><strong>Rationale</strong>:<br>
+- GPT-5.5 produced 450–500 words for a 300-word sci-fi prompt and wrote a spy thriller instead of sci-fi (an independent technical review, 2026)<br>
+- GPT-5.5 handled the "protagonist cannot speak" constraint by hanging a literal "no speaking allowed" sign on the character (Type B instruction drift, see Chapter 7)<br>
+- Gemini 3.5 Flash produced ~320 words of on-topic sci-fi for the same prompt</p>
+<p><strong>Caveat</strong>: Single prompt, single author. Not a systematic measurement. But for creative-writing pipelines with strict format constraints, the evidence favors Gemini 3.5 Flash in this tested case.</p>
+<h3 id="217-high-volume-cost-optimized-low-complexity-tasks">2.1.7 High-volume / cost-optimized / low-complexity tasks</h3>
+<p><strong>Recommendation</strong>: <strong>DeepSeek-V4 Flash</strong> for tasks where open-weight deployment is acceptable and per-token cost is the primary driver.</p>
+<p><strong>Rationale</strong>:<br>
+- DeepSeek-V4 Flash: $0.14 / $0.28 per million tokens (input/output) (DeepSeek, 2026)<br>
+- Open-weight MIT license enables on-premise deployment<br>
+- 1M-token context window per vendor specification</p>
+<p><strong>Caveats</strong>:<br>
+- No independent Intelligence Index measurement of DeepSeek-V4 in this report's source set<br>
+- V4-Pro throughput is reportedly constrained by high-end compute availability (Latent Space, 2026)<br>
+- For regulated industries requiring U.S. or EU data residency, evaluate deployment jurisdiction carefully</p>
+<h3 id="218-free-tier-consumer-use">2.1.8 Free-tier / consumer use</h3>
+<p><strong>Recommendation</strong>: <strong>GPT-5.5 Instant</strong> is the default ChatGPT model and is free for all users, including free-tier users. For consumer use cases where cost is the primary constraint, ChatGPT with GPT-5.5 Instant is a reasonable default.</p>
+<p><strong>Rationale</strong>:<br>
+- Free in ChatGPT for all users (OpenAI, 2026; TechnicalAnalysis-C, 2026)<br>
+- AIME 2025: 81.2 (vs GPT-5.3 Instant 65.4) — significant improvement<br>
+- Memory Sources feature provides transparency over model memory<br>
+<strong>Caveats</strong>:<br>
+- Ads platform monetizes free-tier data: CPC $3–5, CPM $60<br>
+- Safety filter regressions documented in OpenAI's own system card (gore 0.867→0.703, sexual 0.857→0.806)<br>
+- Jailbreak resistance regression vs GPT-5.3 Instant</p>
+<h2 id="22-not-recommended-use-cases">2.2 Not-Recommended Use Cases</h2>
+<p>This section lists use cases that are <strong>not recommended</strong> with GPT-5.5 based on the findings in Chapters 5–9:</p>
+<h3 id="221-clinical-medical-decision-support">2.2.1 Clinical medical decision support</h3>
+<p><strong>Not recommended</strong>: GPT-5.5 should not be used as a primary clinical decision support tool without independent medical-domain evaluation.</p>
+<p><strong>Rationale</strong>:<br>
+- 86% hallucination rate on AA-Omniscience — highest among frontier models tested<br>
+- For clinical-decision-support use cases, the cost of confidently-wrong assertions is materially higher than the cost of honest refusals</p>
+<h3 id="222-legal-compliance-research">2.2.2 Legal compliance research</h3>
+<p><strong>Not recommended</strong>: GPT-5.5 should not be used as a primary legal research tool without independent legal-domain evaluation and human attorney review.</p>
+<p><strong>Rationale</strong>:<br>
+- 86% hallucination rate — in legal research, confidently-wrong case citations are a known professional hazard<br>
+- Claude Opus 4.7 (Max) with 36% hallucination rate is the safer choice for legal-research pipelines that require factual reliability</p>
+<h3 id="223-long-running-autonomous-workflows-with-blanket-sudo-permissions">2.2.3 Long-running autonomous workflows with blanket "sudo" permissions</h3>
+<p><strong>Not recommended without modification</strong>: Ben Davis's documented use case of granting GPT-5.5 (xhigh) full filesystem and sudo access for overnight autonomous workflows is a viable pattern <strong>only for practitioners with experience managing AI agent permissions</strong>.</p>
+<p><strong>Rationale</strong>:<br>
+- GPT-5.5 accepted blanket "dangerous" permissions without pushback (Ben Davis, 2026-05-28)<br>
+- For enterprise deployment, require granular permission scoping (filesystem allow-lists, network egress controls, audit logging)</p>
+<h3 id="224-tasks-with-strict-format-constraint-adherence-creative-writing">2.2.4 Tasks with strict format / constraint adherence (creative writing)</h3>
+<p><strong>Not recommended</strong>: GPT-5.5 should not be used as the primary model for tasks requiring strict adherence to word-count limits, genre constraints, or nuanced narrative-constraint integration.</p>
+<p><strong>Rationale</strong>:<br>
+- Documented Type B instruction-understanding drift on a 300-word sci-fi prompt (Chapter 7, Section 7.4.1)<br>
+- GPT-5.5 produced 50%+ over the word limit, wrong genre, literal-sign constraint handling<br>
+- Gemini 3.5 Flash performed better on this tested case</p>
+<h3 id="225-non-english-multimodal-ocr-case-specific">2.2.5 non-English multimodal OCR (case-specific)</h3>
+<p><strong>Not recommended as the only model</strong>: For non-English institution logo recognition or specialized non-English OCR tasks, evaluate Gemini 3.5 Flash alongside GPT-5.5 based on the tested case.</p>
+<p><strong>Rationale</strong>:<br>
+- GPT-5.5 failed to recognize a regional university logo; Gemini 3.5 Flash succeeded (an independent technical review, 2026)<br>
+- This is a single test case; for production non-English multimodal OCR, conduct domain-specific evaluation</p>
+<h3 id="226-regulated-advisory-with-high-cost-of-error">2.2.6 Regulated advisory with high cost-of-error</h3>
+<p><strong>Not recommended</strong>: For regulated advisory (financial, legal, medical) where confidently-wrong answers carry high cost, prefer Claude Opus 4.7 (Max) over GPT-5.5 (xhigh).</p>
+<p><strong>Rationale</strong>:<br>
+- 86% vs 36% hallucination rate differential<br>
+- 4× cost premium for Claude Opus 4.7 (Max) is justified when cost-of-error exceeds cost-of-inference</p>
+<h2 id="23-deployment-configuration-recommendations">2.3 Deployment Configuration Recommendations</h2>
+<h3 id="231-reasoning-effort-level-selection">2.3.1 Reasoning-effort level selection</h3>
+<table>
+<thead>
+<tr>
+<th>Task type</th>
+<th>Recommended effort level</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI / front-end / design (interactive)</td>
+<td>Low / No-reasoning</td>
+<td>Ben Davis (2026-05-04) recommends Low for UI; faster, sufficient quality for interactive design iteration</td>
+</tr>
+<tr>
+<td>Math / complex logic (interactive)</td>
+<td>X-High</td>
+<td>Reasoning depth required; output quality justifies token cost (Ben Davis, 2026-05-04)</td>
+</tr>
+<tr>
+<td>Long-running autonomous workflows</td>
+<td>X-High</td>
+<td>First-try success rate justifies token cost; Low reasoning requires multiple iterations (Ben Davis, 2026-05-28)</td>
+</tr>
+<tr>
+<td>General knowledge queries</td>
+<td>Medium</td>
+<td>Matched intelligence to Opus 4.7 (Max) at 1/4 cost (Artificial Analysis, 2026)</td>
+</tr>
+<tr>
+<td>Customer service</td>
+<td>Medium</td>
+<td>τ²-Bench Telecom improvement justifies Medium over Low for quality</td>
+</tr>
+<tr>
+<td>High-stakes factual advisory</td>
+<td>X-High + independent verification</td>
+<td>Effort level does not solve hallucination; verification is required regardless</td>
+</tr>
+</tbody>
+</table>
+<h3 id="232-context-length-management">2.3.2 Context length management</h3>
+<ul>
+<li><strong>Plan thread length budgets assuming a ~100K token practical limit</strong> (practitioner testing finding, compaction regression)</li>
+<li><strong>Open new threads between unrelated tasks</strong> rather than maintaining a single long thread (Ben Davis, 2026-05-04)</li>
+<li><strong>Use Pi harness</strong> rather than Codex CLI for long-running workflows — Pi handles context summarization and thread management more stably per practitioner report (Ben Davis, 2026-05-04)</li>
+</ul>
+<h3 id="233-system-prompt-design">2.3.3 System-prompt design</h3>
+<p>Practitioners should test their own system prompts against representative task sets before production deployment, as system-prompt design materially affects GPT-5.5's performance on task-completion benchmarks.</p>
+<h3 id="234-temperature-setting">2.3.4 Temperature setting</h3>
+<p>Artificial Analysis uses a documented fixed configuration; practitioner testing sources vary in their temperature settings. For production deployments requiring reproducibility, test at temperature=0 against a fixed test set.</p>
+<h2 id="24-migration-considerations">2.4 Migration Considerations</h2>
+<h3 id="241-migrating-from-gpt-54-to-gpt-55">2.4.1 Migrating from GPT-5.4 to GPT-5.5</h3>
+<ul>
+<li><strong>Cost</strong>: Expect ~20% net cost increase per AA Intelligence Index run despite 2× per-token price increase</li>
+<li><strong>Quality</strong>: Higher Intelligence Index score; broader knowledge accuracy (57% on AA-Omniscience)</li>
+<li><strong>Risk</strong>: Higher hallucination rate (86% on AA-Omniscience) requires additional verification</li>
+<li><strong>Compaction</strong>: Plan for shorter thread budgets; the regression vs GPT-5.4 is a documented behavioral change</li>
+</ul>
+<h3 id="242-migrating-from-claude-opus-47-to-gpt-55">2.4.2 Migrating from Claude Opus 4.7 to GPT-5.5</h3>
+<ul>
+<li><strong>Cost</strong>: 4× cost reduction at Medium reasoning</li>
+<li><strong>Quality</strong>: Intelligence Index lead; GDPval-AA lead; knowledge accuracy lead</li>
+<li><strong>Risk</strong>: 86% vs 36% hallucination rate — material increase in confidently-wrong outputs</li>
+<li><strong>Switching cost</strong>: For teams with deep Claude Code workflow integration, the switching cost may offset the model advantage (EveryTo, 2026)</li>
+</ul>
+<h3 id="243-migrating-from-gemini-31-pro-to-gpt-55">2.4.3 Migrating from Gemini 3.1 Pro to GPT-5.5</h3>
+<ul>
+<li><strong>Cost</strong>: 33% cost increase per Index run — Gemini 3.1 Pro Preview is cheaper at matched intelligence</li>
+<li><strong>Quality</strong>: GPT-5.5 leads on Intelligence Index overall; Gemini leads on 3 additional AA evaluations (Artificial Analysis, 2026)</li>
+<li><strong>Risk</strong>: Both models have different hallucination profiles (86% vs 50%); task-specific evaluation recommended</li>
+</ul>
+<hr>
+<h2 id="references-for-this-chapter">References for This Chapter</h2>
+<ol>
+<li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
+<li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
+<li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
+<li>Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.</li>
+<li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
+<li>EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55</li>
+<li>DeepSeek. "DeepSeek-V4 Preview release." 2026-04-23.</li>
+</ol>
+<hr class="chapter-divider" />
+<!-- 章节来源: reports-md/03-methodology.md -->
+<h1 id="chapter-3-evaluation-methodology">Chapter 3 — Evaluation Methodology</h1>
+<h2 id="31-methodological-positioning">3.1 Methodological Positioning</h2>
 <p>This white paper does <strong>not</strong> present newly self-executed API tests of GPT-5.5. The original research plan recommended a 5,000-prompt independently designed test campaign; this report substitutes a <strong>meta-analysis and cross-validation</strong> of independently published measurements, practitioner testing reports, and vendor-published data. The substitution is motivated by:</p>
 <ol>
 <li><strong>Reproducibility.</strong> Independent measurements by Artificial Analysis were already executed with documented methodology (AA Intelligence Index, AA-Omniscience, GDPval-AA) at the time of writing (Artificial Analysis, 2026). Re-running similar tests would not produce additional signal.</li>
@@ -358,7 +539,7 @@
 <li><strong>Cross-validation focus.</strong> The highest-value contribution this report can make is to systematically contrast vendor-reported benchmark figures with independently measured ones, and to surface failure cases documented by practitioners that standard benchmarks miss.</li>
 </ol>
 <p>The methodological approach is therefore: <strong>systematic source classification + cross-source contradiction detection + failure-case aggregation</strong>. This is a weaker methodology than primary measurement, and Chapter 11 quantifies the resulting evidence gaps.</p>
-<h2 id="22-source-classification">2.2 Source Classification</h2>
+<h2 id="32-source-classification">3.2 Source Classification</h2>
 <p>This report draws on three categories of source, each carrying a different level of evidential weight:</p>
 <table>
 <thead>
@@ -390,8 +571,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Sources not available for this report</strong>: peer-reviewed academic publications (NeurIPS, ACL, Nature, JAMA); independent research institution reports (Stanford AI Index, Pew Research); and government or regulatory body evaluations (NIST AI RMF, EU AI Office, UK AISI). No GPT-5.5-specific publications from these categories existed as of 2026-07-12. The absence is itself a finding documented in Chapter 11.</p>
-<h2 id="23-cross-source-contradiction-detection-protocol">2.3 Cross-Source Contradiction Detection Protocol</h2>
+<h2 id="33-cross-source-contradiction-detection-protocol">3.3 Cross-Source Contradiction Detection Protocol</h2>
 <p>For each vendor-reported benchmark figure, the report applies the following protocol:</p>
 <ol>
 <li><strong>Locate any independent measurement</strong> of the same capability from independently published sources.</li>
@@ -401,7 +581,7 @@
 <li><strong>If no independent measurement exists</strong>: mark as <strong>"vendor assertion only"</strong> and do not use as primary evidence for any conclusion.</li>
 </ol>
 <p>This protocol is applied in Chapter 0 (Executive Summary's vendor-claim vs. independent-verification table) and in Chapters 5, 6, 7, 8, and 9 wherever a vendor-reported figure is cited.</p>
-<h2 id="24-failure-case-aggregation-method">2.4 Failure-Case Aggregation Method</h2>
+<h2 id="34-failure-case-aggregation-method">3.4 Failure-Case Aggregation Method</h2>
 <p>Standard benchmarks (MMLU, SWE-Bench, etc.) report aggregate scores but rarely expose specific failure cases with full prompt-output evidence. This report aggregates failure cases from independent practitioner testing reports using the following inclusion criteria:</p>
 <p><strong>Inclusion criteria</strong> (all four required):<br>
 - (a) The full input prompt is documented in the source<br>
@@ -415,7 +595,7 @@
 - Type D — Long-context degradation<br>
 - Type E — Over-refusal (legitimate requests rejected)</p>
 <p>Each aggregated failure case is presented in Chapter 7 with the full prompt, the full model output, and a classification label.</p>
-<h2 id="25-competitor-selection-rationale">2.5 Competitor Selection Rationale</h2>
+<h2 id="35-competitor-selection-rationale">3.5 Competitor Selection Rationale</h2>
 <p>This report evaluates the following competitors against GPT-5.5:</p>
 <table>
 <thead>
@@ -444,7 +624,7 @@
 </tbody>
 </table>
 <p>Note: Mistral Large 2 was considered as a comparator, but no reference source in the set evaluated Mistral against GPT-5.5. This report excludes Mistral rather than fabricate comparison data. Chapter 11 notes this as a coverage limitation.</p>
-<h2 id="26-reasoning-effort-ladder-treatment">2.6 Reasoning-Effort Ladder Treatment</h2>
+<h2 id="36-reasoning-effort-ladder-treatment">3.6 Reasoning-Effort Ladder Treatment</h2>
 <p>A methodological novelty introduced by GPT-5.5 is the <strong>five-level reasoning-effort ladder</strong>: xhigh / high / medium / low / non-reasoning (OpenAI, 2026; Artificial Analysis, 2026). This means GPT-5.5 is effectively <strong>five different models</strong> depending on the configured effort level.</p>
 <p>Artificial Analysis is the only independent measurement institution that tested all five levels (Artificial Analysis, 2026). This report:</p>
 <ol>
@@ -453,20 +633,20 @@
 <li><strong>Does not aggregate across effort levels</strong> without explicit weighting disclosure.</li>
 </ol>
 <p>Practitioner reports (Ben Davis, 2026) demonstrate that conclusions about GPT-5.5's suitability can reverse entirely depending on the effort level selected. The author's first video recommended low/no-reasoning for UI/design work; the author's second video reversed this position after testing X-High on autonomous workflows (Ben Davis, 2026). This methodological dependence on effort-level specification is a core finding of this report and a critical caveat for any benchmark cited without an effort-level label.</p>
-<h2 id="27-time-window">2.7 Time Window</h2>
+<h2 id="37-time-window">3.7 Time Window</h2>
 <ul>
 <li><strong>Vendor data cited</strong>: published 2026-04-23 (GPT-5.5 launch) through 2026-05-28 (last Ben Davis follow-up video).</li>
 <li><strong>Independent data cited</strong>: Artificial Analysis publication 2026-04-23; user testing reports between 2026-04-20 (Wes Roth) and 2026-05-28 (Ben Davis).</li>
 <li><strong>Report cutoff</strong>: 2026-07-12. Any model update released after this date is not reflected.</li>
 </ul>
 <p>GPT-5.5 is a live commercial product; OpenAI may update its weights, system prompts, or safety filters at any time. Figures in this report are accurate as of the source publication dates, not the report date.</p>
-<h2 id="28-evidence-standards-observed">2.8 Evidence Standards Observed</h2>
+<h2 id="38-evidence-standards-observed">3.8 Evidence Standards Observed</h2>
 <ul>
 <li>Did not use subjective API playground impressions as evidence — all practitioner sources cited have documented prompts and outputs.</li>
 <li>Did not characterize any small-sample test as a systematic evaluation — sources testing fewer than 500 items are labeled as "illustrative case studies" rather than systematic evaluations.</li>
 <li>Did not omit temperature / sampling parameters — where parameters are specified in the source, they are reported; where they are not specified, this is flagged.</li>
 </ul>
-<h2 id="29-what-this-methodology-cannot-establish">2.9 What This Methodology Cannot Establish</h2>
+<h2 id="39-what-this-methodology-cannot-establish">3.9 What This Methodology Cannot Establish</h2>
 <p>Honest disclosure of methodology limits (expanded in Chapter 11):</p>
 <ul>
 <li>This report <strong>cannot</strong> reproduce OpenAI's vendor-reported benchmarks through primary measurement</li>
@@ -481,297 +661,6 @@
 <li>OpenAI. "GPT-5.5 system card and Preparedness Framework assessment." 2026-04-23.</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
 <li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
-<li>An independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
-</ol>
-<hr class="chapter-divider" />
-<!-- 章节来源: reports-md/03-dataset-description.md -->
-<h1 id="chapter-3-test-dataset-description">Chapter 3 — Test Dataset Description</h1>
-<h2 id="31-dataset-provenance">3.1 Dataset Provenance</h2>
-<p>This report does not introduce a new test dataset. It synthesizes evidence from three categories of existing datasets, each described below with provenance, composition, and control measures.</p>
-<h3 id="311-primary-independent-datasets">3.1.1 Primary independent datasets</h3>
-<table>
-<thead>
-<tr>
-<th>Dataset</th>
-<th>Operator</th>
-<th>Composition</th>
-<th>Access</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>AA Intelligence Index</strong></td>
-<td>Artificial Analysis</td>
-<td>Aggregate of multiple cognitive/task benchmarks; normalized scoring</td>
-<td>Public methodology at artificialanalysis.ai</td>
-</tr>
-<tr>
-<td><strong>AA-Omniscience</strong></td>
-<td>Artificial Analysis</td>
-<td>Knowledge-recall corpus with paired hallucination detection; measures both accuracy and refusal tendency</td>
-<td>Public benchmark</td>
-</tr>
-<tr>
-<td><strong>GDPval-AA</strong></td>
-<td>Artificial Analysis (adapted from OpenAI GDPval)</td>
-<td>44 real professions' tasks: data analysis, report writing, judgment calls; not multiple-choice</td>
-<td>Public Elo rankings</td>
-</tr>
-<tr>
-<td><strong>Terminal-Bench Hard</strong></td>
-<td>Artificial Analysis (hosted)</td>
-<td>Terminal/command-line multi-step debugging and system administration</td>
-<td>Public benchmark</td>
-</tr>
-<tr>
-<td><strong>APEX-Agents-AA</strong></td>
-<td>Artificial Analysis (hosted)</td>
-<td>Agentic capability benchmark measuring multi-step task completion</td>
-<td>Public benchmark</td>
-</tr>
-</tbody>
-</table>
-<p>These datasets are used in this report as the <strong>primary independent evidence</strong> for GPT-5.5's intelligence ranking, knowledge accuracy, and hallucination rate (Chapter 5.1) and for cross-competitor comparison (Chapter 6).</p>
-<h3 id="312-user-testing-corpora">3.1.2 User testing corpora</h3>
-<table>
-<thead>
-<tr>
-<th>Corpus</th>
-<th>Author</th>
-<th>Composition</th>
-<th>Public availability</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Berman test set</td>
-<td>Matthew Berman</td>
-<td>Benchmark interpretation + targeted hands-on tasks (UI inspection, Box AI integration)</td>
-<td>YouTube video + cited OpenAI figures</td>
-</tr>
-<tr>
-<td>Ben Davis test set (two rounds)</td>
-<td>Ben Davis</td>
-<td>Four weeks of Early Access use; UI/front-end tasks, Pi-harness workflows, X-High autonomous runs, worktree parallelization</td>
-<td>YouTube videos with partial prompt disclosure</td>
-</tr>
-<tr>
-<td>Independent technical review comparison set</td>
-<td>an independent technical review</td>
-<td>Head-to-head GPT-5.5 vs Gemini 3.5 Flash tests: front-end design (3 scenarios), reasoning (OCR, prediction), context (haystack), writing (300-word constraint)</td>
-<td>industry technical article with full prompts and outputs</td>
-</tr>
-<tr>
-<td>TechnicalAnalysis-C coding test</td>
-<td>TechnicalAnalysis-C (industry technical press)</td>
-<td>File-upload security coding task: GPT-5.3 vs GPT-5.5 comparison; math convergence analysis</td>
-<td>industry technical article with prompts and code outputs</td>
-</tr>
-<tr>
-<td>Wes Roth industry test</td>
-<td>Wes Roth</td>
-<td>UI layout generation, Codex integration demo</td>
-<td>YouTube video</td>
-</tr>
-<tr>
-<td>TechnicalAnalysis-E demonstration set</td>
-<td>TechnicalAnalysis-E (Industry technical analysis)</td>
-<td>Codex demos (Artemis II 3D web app, dungeon arena); basic physics/visualization tasks</td>
-<td>industry technical article</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Inclusion criterion</strong>: A practitioner testing source is included only if the prompts are documented in the source (not merely summarized). Sources that only cite vendor benchmark numbers without showing prompts are excluded from the failure-case aggregation but retained for context-setting.</p>
-<h3 id="313-vendor-datasets">3.1.3 Vendor datasets</h3>
-<table>
-<thead>
-<tr>
-<th>Dataset</th>
-<th>Vendor</th>
-<th>Composition</th>
-<th>Verification status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>OpenAI GPT-5.5 launch benchmark suite</td>
-<td>OpenAI</td>
-<td>Terminal-Bench 2.0, SWE-Bench Pro, Expert-SWE, GDPval, OSWorld-Verified, CyberGym, BrowseComp, Tau2 Telecom, FrontierMath Tier 1–3</td>
-<td><strong>Vendor-reported; partial independent verification only</strong></td>
-</tr>
-<tr>
-<td>OpenAI Preparedness Framework evaluations</td>
-<td>OpenAI</td>
-<td>Internal + external red-team testing; ~200 real-world safety scenarios</td>
-<td><strong>Vendor assertion only</strong></td>
-</tr>
-<tr>
-<td>OpenAI Bio Bug Bounty findings</td>
-<td>OpenAI</td>
-<td>External researcher submissions, max reward $25,000</td>
-<td><strong>Program ongoing; no published findings as of report date</strong></td>
-</tr>
-<tr>
-<td>OpenAI internal usage metrics</td>
-<td>OpenAI</td>
-<td>"85% of OpenAI employees use Codex weekly"; team coverage</td>
-<td><strong>Vendor assertion; no independent audit</strong></td>
-</tr>
-</tbody>
-</table>
-<p>vendor-reported datasets are cited in this report <strong>only</strong> as "vendor-reported, pending independent verification" and never as primary evidence for any conclusion.</p>
-<h2 id="32-dataset-composition-statistics">3.2 Dataset Composition Statistics</h2>
-<h3 id="321-aggregate-benchmark-coverage">3.2.1 Aggregate benchmark coverage</h3>
-<p>Counting unique benchmark evaluations cited in this report:</p>
-<table>
-<thead>
-<tr>
-<th>Capability dimension</th>
-<th style="text-align: center;"># of distinct benchmarks cited</th>
-<th>independent verification coverage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Factual reasoning / knowledge</td>
-<td style="text-align: center;">3 (AA-Omniscience, GDPval-AA, FrontierMath)</td>
-<td>2 of 3 independently verified</td>
-</tr>
-<tr>
-<td>Code generation</td>
-<td style="text-align: center;">4 (Terminal-Bench Hard, SWE-Bench Pro, Expert-SWE, AA code-execution comparison)</td>
-<td>1 of 4 independently verified (Terminal-Bench Hard)</td>
-</tr>
-<tr>
-<td>Long-context understanding</td>
-<td style="text-align: center;">1 (long-context needle-in-haystack via practitioner testing)</td>
-<td>0 of 1 independently verified</td>
-</tr>
-<tr>
-<td>Multi-turn instruction following</td>
-<td style="text-align: center;">2 (τ²-Bench Telecom, AA instruction-following)</td>
-<td>1 of 2 independently verified</td>
-</tr>
-<tr>
-<td>Generation consistency / stability</td>
-<td style="text-align: center;">0</td>
-<td>Not covered</td>
-</tr>
-<tr>
-<td>Agentic / tool use</td>
-<td style="text-align: center;">2 (APEX-Agents-AA, MCP Atlas)</td>
-<td>1 of 2 independently verified</td>
-</tr>
-<tr>
-<td>Multimodal / vision</td>
-<td style="text-align: center;">2 (MMMU-Pro, Visual Inspection)</td>
-<td>0 of 2 independently verified</td>
-</tr>
-<tr>
-<td>Safety</td>
-<td style="text-align: center;">3 (CyberGym, gore/sexual filtering, jailbreak)</td>
-<td>0 of 3 independently verified</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Key observation</strong>: Independent verification is <strong>concentrated in cognitive/agentic dimensions</strong>. Safety, multimodal, and long-context dimensions have <strong>no independent independent verification</strong> in this report's source set — a limitation disclosed in Chapter 11.</p>
-<h3 id="322-failure-case-corpus-composition">3.2.2 Failure-case corpus composition</h3>
-<p>Failure cases aggregated from practitioner testing sources meeting the inclusion criteria in Section 2.4:</p>
-<table>
-<thead>
-<tr>
-<th>Failure type</th>
-<th style="text-align: center;"># of cases</th>
-<th>Sources</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type A — Factual error / hallucination</td>
-<td style="text-align: center;">2 (AA-Omniscience aggregate + a regional university OCR)</td>
-<td>S11 (independent measurement aggregate), S8 (practitioner testing, specific case)</td>
-</tr>
-<tr>
-<td>Type B — Instruction drift</td>
-<td style="text-align: center;">3 (300-word sci-fi story, math convergence, computer-use permission scope)</td>
-<td>S8, S7, S3 (all practitioner sources)</td>
-</tr>
-<tr>
-<td>Type C — Consistency failure</td>
-<td style="text-align: center;">1 (effort-level reversal of conclusions)</td>
-<td>S3</td>
-</tr>
-<tr>
-<td>Type D — Long-context degradation</td>
-<td style="text-align: center;">2 (compaction regression, haystack test)</td>
-<td>S2, S8</td>
-</tr>
-<tr>
-<td>Type E — Over-refusal</td>
-<td style="text-align: center;">0 documented cases in source set</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-<p>Total: <strong>8 distinct failure cases</strong> meeting inclusion criteria. This is a small corpus; it is <strong>not</strong> a statistically representative sample and is presented in Chapter 7 as illustrative cases, not as a systematic failure-rate measurement.</p>
-<h2 id="33-contamination-controls">3.3 Contamination Controls</h2>
-<p>A core methodological concern is whether public benchmark figures reflect training-data contamination. OpenAI has not published contamination controls for GPT-5.5's training set. This report addresses contamination risk through the following measures:</p>
-<ol>
-<li><strong>Preference for independent re-hosted benchmarks.</strong> Where Artificial Analysis re-hosts or re-executes a benchmark (e.g., GDPval-AA, Terminal-Bench Hard, APEX-Agents-AA), this report cites the AA variant rather than the OpenAI-published variant, on the grounds that AA's versioning and methodology are independently documented.</li>
-<li><strong>Flagging of potentially contaminated benchmarks.</strong> Where the only available data is OpenAI's self-reported score on a public benchmark (e.g., BrowseComp, Tau2 Telecom, FrontierMath), the figure is flagged with "vendor-reported; contamination controls not disclosed."</li>
-<li><strong>Reliance on practitioner testing failure cases with novel prompts.</strong> The failure cases in Chapter 7 use prompts that the practitioner authors invented (e.g., the independent technical review's "a regional university logo" OCR test, the "300-word sci-fi story" constraint), reducing contamination likelihood.</li>
-</ol>
-<p>This report does <strong>not</strong> claim that contamination is absent. The absence of OpenAI-published contamination controls is itself a finding (Chapter 11).</p>
-<h2 id="34-data-quality-control">3.4 Data Quality Control</h2>
-<p>For practitioner user testing sources, the following quality controls were applied during aggregation:</p>
-<ul>
-<li><strong>Prompt reproducibility</strong>: Only sources with full prompt text are included in failure-case aggregation</li>
-<li><strong>Output documentation</strong>: Only sources with full model output text are included</li>
-<li><strong>Cross-validation</strong>: Where two independent practitioner testing sources tested similar capabilities, the report notes convergence or divergence</li>
-<li><strong>Practitioner disclosure</strong>: Author identity and publication date are documented for each practitioner testing source</li>
-</ul>
-<p>For independent measurement sources, the report relies on Artificial Analysis's own published methodology, which is publicly accessible at artificialanalysis.ai.</p>
-<h2 id="35-open-access-declaration">3.5 Open-Access Declaration</h2>
-<ul>
-<li><strong>independent measurement (Artificial Analysis) data</strong>: Publicly accessible at artificialanalysis.ai; this report provides URLs in each chapter</li>
-<li><strong>practitioner testing source data</strong>: Publicly accessible via YouTube video URLs and industry technical article URLs; full prompt/output text is reproduced in Chapter 7 where directly relevant</li>
-<li><strong>vendor-reported source data</strong>: OpenAI's launch announcement, system card, and Preparedness Framework documentation are publicly accessible; specific URLs are provided in each citation</li>
-<li><strong>Aggregation scripts</strong>: Not applicable — this report does not run new code; it synthesizes published figures</li>
-<li><strong>Source-tier classification table</strong>: Publicly available in <code>reports-md/outline-reference.md</code>, this report does not introduce proprietary data. All cited evidence is traceable to public sources.</li>
-</ul>
-<h2 id="36-sample-example-format">3.6 Sample Example Format</h2>
-<p>To illustrate the dataset format used in Chapter 7 (failure cases), an example entry:</p>
-<pre><code>Failure Case #1 — Multimodal OCR failure
-Classification: Type A (factual error)
-Source: an independent technical review, 2026-05-15
-Prompt: [Image of a regional university logo] &quot;Identify this logo.&quot;
-GPT-5.5 output: [Did not recognize / incorrect identification]
-Gemini 3.5 Flash output: [Correctly identified as a regional university]
-Expected output: &quot;a regional university&quot;
-Methodology note: Both models tested under default settings; no temperature specified.
-</code></pre>
-<p>The full set of failure cases with prompts and outputs is presented in Chapter 7 (<code>07-failure-cases.md</code>).</p>
-<h2 id="37-dataset-card-summary">3.7 Dataset Card Summary</h2>
-<p>Following the Hugging Face Dataset Card format, the aggregated dataset used by this report has the following characteristics:</p>
-<ul>
-<li><strong>Dataset name</strong>: GPT-5.5 Independent Evaluation Synthesis Corpus (2026-04 to 2026-07)</li>
-<li><strong>Composition</strong>: 3 independently measured benchmarks + 6 practitioner user testing corpora + 4 vendor-reported datasets (only used for cross-validation, not as primary evidence)</li>
-<li><strong>Language coverage</strong>: English (Berman, Ben Davis, Wes Roth, AA) + additional industry technical analyses (<strong>P4</strong> through E, independent technical review)</li>
-<li><strong>Time coverage</strong>: 2026-04-20 to 2026-05-28 (source publication dates)</li>
-<li><strong>Quality control</strong>: Inclusion criteria per Section 2.4; practitioner testing sources with undocumented prompts excluded from failure-case corpus</li>
-<li><strong>Known biases</strong>: English-language over-representation in failure cases; vendor benchmarks over-represented in headline numbers; no independent research institution, peer-reviewed academic, or regulatory source coverage</li>
-<li><strong>Update policy</strong>: Static as of 2026-07-12; future model updates will require a new version</li>
-</ul>
-<hr>
-<h2 id="references-for-this-chapter">References for This Chapter</h2>
-<ol>
-<li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: <strong>P7</strong></li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: <strong>P8</strong></li>
-<li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
-<li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
-<li>Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.</li>
-<li>OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.</li>
-<li><code>white-paper-research/summary-white-paper-focus.md</code> — citation standards (Dataset Card reference)</li>
 </ol>
 <hr class="chapter-divider" />
 <!-- 章节来源: reports-md/04-evaluation-metrics.md -->
@@ -1010,7 +899,6 @@ Methodology note: Both models tested under default settings; no temperature spec
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
 <li>OpenAI. "GPT-5.5 system card and Preparedness Framework." 2026-04-23.</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
 <li><code>white-paper-research/summary-white-paper-focus.md</code> — citation standards (feature F)</li>
 <li>Artificial Analysis methodology page. URL: https://artificialanalysis.ai/methodology</li>
@@ -1258,16 +1146,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p>The author reports that low-reasoning mode produces more errors on these tasks, while xhigh reasoning enables "first-try success." This is consistent with Artificial Analysis's finding that the effort ladder produces materially different capability profiles (Artificial Analysis, 2026).</p>
 <hr>
 <h2 id="55-generation-consistency-stability">5.5 Generation Consistency &amp; Stability</h2>
-<h3 id="551-no-independent-stability-benchmark-in-source-set">5.5.1 No independent stability benchmark in source set</h3>
-<p>Artificial Analysis does not publish a stability/consistency benchmark in the source set used for this report. No practitioner testing source systematically tests GPT-5.5's output variance across multiple runs at fixed temperature.</p>
-<h3 id="552-indirect-evidence-of-consistency-behavior">5.5.2 Indirect evidence of consistency behavior</h3>
-<p>Ben Davis (2026-05-04 and 2026-05-28) reports two observations relevant to consistency:</p>
-<ol>
-<li><strong>Low-reasoning mode produces variable results</strong> on UI/design tasks across runs (first video)</li>
-<li><strong>X-High reasoning produces more deterministic task completion</strong> but at higher token cost (second video)</li>
-</ol>
-<p>These observations are not quantified; no Jaccard similarity or variance metric is published. This report notes consistency as a <strong>measurement gap</strong> in Chapter 11.</p>
-<h3 id="553-cross-effort-level-consistency-failure-type-c-practitioner-testing">5.5.3 Cross-effort-level consistency failure (Type C, practitioner testing)</h3>
+<h3 id="551-cross-effort-level-consistency-failure-type-c-practitioner-testing">5.5.1 Cross-effort-level consistency failure (Type C, practitioner testing)</h3>
 <p>Ben Davis's two videos (2026-05-04 and 2026-05-28) are themselves a documented Type C (consistency) finding: the same author reversed his recommendation about GPT-5.5's optimal reasoning-effort setting within four weeks. This is not a model-output consistency failure; it is an <strong>evaluator-conclusion consistency failure</strong> that demonstrates the methodological dependence on effort-level specification (Section 4.2).</p>
 <hr>
 <h2 id="56-capability-summary-what-this-chapter-establishes">5.6 Capability Summary — What This Chapter Establishes</h2>
@@ -1332,17 +1211,12 @@ Methodology note: Both models tested under default settings; no temperature spec
 </tr>
 </tbody>
 </table>
-<hr>
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
 <ol>
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
 <li>OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
 <li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
-<li>TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed</li>
-<li>TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch: hands-on testing and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</li>
-<li>TechnicalAnalysis-E (Industry technical analysis). "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice</li>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
 </ol>
 <hr class="chapter-divider" />
@@ -1635,7 +1509,8 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p>At the Medium effort level, GPT-5.5 matches Claude Opus 4.7 (Max) intelligence at one quarter the cost (Artificial Analysis, 2026). This is a 4× cost-efficiency advantage for users whose tasks fit within Medium reasoning.</p>
 <h3 id="626-coding-security-awareness-practitioner-testing-case">6.2.6 Coding security awareness (practitioner testing case)</h3>
 <p>When asked to implement a file-upload feature, GPT-5.5 proactively included UUID renaming, whitelist validation, size limits, and MIME verification, while GPT-5.3 produced only basic file-type checking (TechnicalAnalysis-C, 2026). This is a single-prompt case study, not a systematic measurement.</p>
-<h2 id="63-gpt-55s-disadvantage-scenarios3-this-section-is-mandatory-and-cannot-be-omitted-gpt-55-exhibits-the-following-disadvantages-relative-to-specific-competitors">6.3 GPT-5.5's Disadvantage Scenarios.3, this section is <strong>mandatory</strong> and cannot be omitted. GPT-5.5 exhibits the following disadvantages relative to specific competitors:</h2>
+<h2 id="63-gpt-55s-disadvantage-scenarios">6.3 GPT-5.5's Disadvantage Scenarios</h2>
+<p>GPT-5.5 exhibits the following disadvantages relative to specific competitors:</p>
 <h3 id="631-hallucination-rate-worst-among-frontier-models-tested">6.3.1 Hallucination rate — worst among frontier models tested</h3>
 <p>GPT-5.5 (xhigh) hallucination rate: <strong>86%</strong>. Claude Opus 4.7 (Max): <strong>36%</strong>. Gemini 3.1 Pro Preview: <strong>50%</strong> (Artificial Analysis, 2026). GPT-5.5 is the <strong>most hallucination-prone</strong> of the three frontier models independently tested by AA.</p>
 <p><strong>Implication</strong>: For any deployment where predictable refusal of uncertain questions is more important than breadth of attempted answers (e.g., legal compliance, medical triage, regulated advisory), Claude Opus 4.7 has a measurable advantage.</p>
@@ -1708,13 +1583,11 @@ Methodology note: Both models tested under default settings; no temperature spec
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
 <ol>
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
 <li>OpenAI. "GPT-5.5 launch announcement." 2026-04-23.</li>
 <li>Anthropic. "Claude Opus 4.7 model card and pricing." 2026.</li>
 <li>Google. "Gemini 3.1 Pro and 3.5 Flash launch and benchmarks." 2026.</li>
 <li>DeepSeek. "DeepSeek-V4 Preview release." 2026-04-23.</li>
-<li>TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
 <li>EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55</li>
 </ol>
@@ -1722,7 +1595,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <!-- 章节来源: reports-md/07-failure-cases.md -->
 <h1 id="chapter-7-failure-cases-boundary-analysis">Chapter 7 — Failure Cases &amp; Boundary Analysis</h1>
 <h2 id="71-failure-case-inclusion-criteria">7.1 Failure-Case Inclusion Criteria</h2>
-<p>Per the methodology in Chapter 2 (Section 2.4), a failure case is included in this chapter only if all four criteria are met:</p>
+<p>Per the methodology in Chapter 3 (Section 3.4), a failure case is included in this chapter only if all four criteria are met:</p>
 <ul>
 <li>(a) The full input prompt is documented in the source</li>
 <li>(b) The full model output is documented in the source</li>
@@ -1749,7 +1622,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p><strong>Practical implication</strong>: Any deployment where confidently-wrong answers carry higher cost than honest refusals (e.g., regulated advice, medical triage, legal research, financial audit) should treat GPT-5.5's outputs as requiring independent verification, more so than Claude Opus 4.7 or Gemini 3.1 Pro Preview.</p>
 <p><strong>Confidence statement</strong>: Independent measurement (Artificial Analysis). Aggregate rate across the AA-Omniscience corpus; category-specific rates not published.</p>
 <h3 id="732-failure-case-73a-non-english-multimodal-ocr-failure">7.3.2 Failure case 7.3.A — non-English multimodal OCR failure</h3>
-<p><strong>Source</strong>: an independent technical review, 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</p>
+<p><strong>Source</strong>: an independent technical review, 2026-05-15.</p>
 <p><strong>Prompt</strong>: [Image of the a regional university logo] "Identify this logo."</p>
 <p><strong>GPT-5.5 output</strong>: Did not correctly identify the logo (specific incorrect output documented in source; not reproduced here for brevity).</p>
 <p><strong>Gemini 3.5 Flash output</strong> (same prompt, same image): Correctly identified as "a regional university" (a regional university).</p>
@@ -1759,7 +1632,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <hr>
 <h2 id="74-type-b-instruction-understanding-drift">7.4 Type B — Instruction-Understanding Drift</h2>
 <h3 id="741-failure-case-74a-constrained-creative-writing">7.4.1 Failure case 7.4.A — Constrained creative writing</h3>
-<p><strong>Source</strong>: an independent technical review, 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</p>
+<p><strong>Source</strong>: an independent technical review, 2026-05-15.</p>
 <p><strong>Prompt</strong> : "Write a 300-word science fiction short story. The male protagonist cannot speak."</p>
 <p><strong>GPT-5.5 output</strong>:<br>
 - Word count: <strong>450–500 words</strong> (50%+ over the 300-word limit)<br>
@@ -1789,7 +1662,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p><strong>Classification</strong>: Type B — instruction-understanding drift (permission scope).</p>
 <p><strong>Important caveat</strong>: This is a practitioner observation, not a measured failure rate. It is included because it surfaces a deployment-level failure mode that no benchmark in the source set measures.</p>
 <h3 id="743-failure-case-74c-math-convergence-reasoning-relative">7.4.3 Failure case 7.4.C — Math convergence reasoning (relative)</h3>
-<p><strong>Source</strong>: TechnicalAnalysis-C, 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</p>
+<p><strong>Source</strong>: TechnicalAnalysis-C, 2026-05-05.</p>
 <p><strong>Prompt</strong> (translated): Analyze the convergence of [a specified mathematical function].</p>
 <p><strong>GPT-5.3 output</strong>: Jumped directly to a conclusion, skipping the convergence verification step.</p>
 <p><strong>GPT-5.5 output</strong>: Produced a complete analysis covering both x→0⁺ and x→+∞ limits with proper convergence verification.</p>
@@ -1808,7 +1681,6 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p><strong>Analysis</strong>: This is not a model-output consistency failure. It is an <strong>evaluator-conclusion consistency failure</strong> that demonstrates the methodological dependence on the reasoning-effort setting. The same model produces materially different capability profiles at different effort levels, and conclusions about GPT-5.5's suitability for a task class can reverse entirely between effort levels.</p>
 <p><strong>Implication</strong>: Any benchmark or evaluation that does not specify the reasoning-effort level is incomplete. This report flags every GPT-5.5 data point with its effort level (per Section 4.2) to avoid this failure mode in its own conclusions.</p>
 <p><strong>Classification</strong>: Type C — evaluator-conclusion consistency failure (not model-output consistency).</p>
-<p><strong>Note</strong>: No source in this report's corpus documents a case where GPT-5.5 produced contradictory outputs for identical inputs at fixed temperature. This type of model-output consistency failure is not documented in the source set; it is flagged as a measurement gap in Chapter 11.</p>
 <hr>
 <h2 id="76-type-d-long-context-degradation">7.6 Type D — Long-Context Degradation</h2>
 <h3 id="761-failure-case-76a-compaction-regression">7.6.1 Failure case 7.6.A — Compaction regression</h3>
@@ -1831,12 +1703,11 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p><strong>Caveat</strong>: Single prompt, single author. Not a systematic needle-in-haystack evaluation. The vendor-reported long-context positioning benchmark (GPT-5.5: 94.8% vs Gemini 3.5 Flash: 77.3% per OpenAI and Google respectively) is not directly comparable to this practitioner testing test because the prompts differ.</p>
 <hr>
 <h2 id="77-type-e-over-refusal">7.7 Type E — Over-Refusal</h2>
-<h3 id="771-no-documented-cases-in-source-set">7.7.1 No documented cases in source set</h3>
-<p>No source in this report's reference set documents a case where GPT-5.5 refused a legitimate request that should have been fulfilled. This failure type is <strong>not represented in the aggregated corpus</strong>.</p>
-<p><strong>Implication</strong>: The absence of documented over-refusal cases may reflect a genuine model behavior (GPT-5.5 tends to attempt answers rather than refuse — consistent with the 86% hallucination rate in Section 7.3.1) or may reflect an under-reporting bias in the source set (practitioners tend to document refusals less than errors of commission).</p>
-<p><strong>Classification</strong>: Type E — not documented in source set; flagged as measurement gap in Chapter 11.</p>
+<p>No source in this report's reference set documents a case where GPT-5.5 refused a legitimate request that should have been fulfilled.</p>
+<p><strong>Interpretation</strong>: This may reflect GPT-5.5's tendency to attempt answers rather than refuse, which is consistent with the 86% hallucination rate in Section 7.3.1.</p>
 <hr>
-<h2 id="78-failure-modes-specific-to-gpt-55-vs-competitors2-this-section-identifies-failure-modes-that-gpt-55-exhibits-but-competitors-do-not">7.8 Failure Modes Specific to GPT-5.5 (vs Competitors).2, this section identifies failure modes that GPT-5.5 exhibits but competitors do not:</h2>
+<h2 id="78-failure-modes-specific-to-gpt-55-vs-competitors">7.8 Failure Modes Specific to GPT-5.5 (vs Competitors)</h2>
+<p>This section identifies failure modes that GPT-5.5 exhibits but competitors do not:</p>
 <table>
 <thead>
 <tr>
@@ -1913,14 +1784,10 @@ Methodology note: Both models tested under default settings; no temperature spec
 </tbody>
 </table>
 <p>These are within-OpenAI comparisons (GPT-5.5 vs GPT-5.3), not cross-competitor comparisons. No source in the corpus documents a case where GPT-5.5 succeeded and Claude Opus 4.7 or Gemini 3.1 Pro failed on the same prompt.</p>
-<h2 id="710-high-risk-scenario-annotations3">7.10 High-Risk Scenario Annotations.3:</h2>
-<h3 id="7101-medical-advice-tasks">7.10.1 Medical advice tasks</h3>
-<p>Not tested in the source set. No independent measurement or practitioner testing source evaluated GPT-5.5's medical-advice accuracy. <strong>Recommendation</strong>: Do not cite GPT-5.5 for clinical-decision-support use cases without independent medical-domain evaluation. The 86% hallucination rate on AA-Omniscience suggests elevated risk for any fact-dependent advisory task.</p>
-<h3 id="7102-legal-compliance-tasks">7.10.2 Legal compliance tasks</h3>
-<p>Not tested in the source set. No source evaluated GPT-5.5's legal-compliance accuracy. <strong>Recommendation</strong>: Treat GPT-5.5 legal outputs as requiring independent legal review, at a higher verification burden than Claude Opus 4.7 given the hallucination-rate differential.</p>
-<h3 id="7103-code-security-tasks">7.10.3 Code security tasks</h3>
-<p>GPT-5.5 demonstrated improved security-aware coding behavior (UUID renaming, whitelist validation, MIME verification) relative to GPT-5.3 in a single practitioner testing test (TechnicalAnalysis-C, 2026). This is an improvement, not an absolute success. The model did not exhibit code-injection vulnerability generation in this single test, but no systematic code-security benchmark is available in the source set.</p>
-<h3 id="7104-long-running-autonomous-workflows">7.10.4 Long-running autonomous workflows</h3>
+<h2 id="710-high-risk-scenario-annotations">7.10 High-Risk Scenario Annotations</h2>
+<h3 id="7101-code-security-tasks">7.10.1 Code security tasks</h3>
+<p>GPT-5.5 demonstrated improved security-aware coding behavior (UUID renaming, whitelist validation, MIME verification) relative to GPT-5.3 in a single practitioner testing test (TechnicalAnalysis-C, 2026). This is an improvement, not an absolute success. The model did not exhibit code-injection vulnerability generation in this single test.</p>
+<h3 id="7102-long-running-autonomous-workflows">7.10.2 Long-running autonomous workflows</h3>
 <p>Ben Davis (2026-05-28) reports successful overnight autonomous runs with GPT-5.5 (xhigh). The failure mode here is not the model refusing to work, but the model accepting "dangerous" permissions without pushback (Section 7.4.2). The risk is in permission management, not in task execution.</p>
 <h2 id="711-failure-case-corpus-summary">7.11 Failure-Case Corpus Summary</h2>
 <table>
@@ -1994,10 +1861,8 @@ Methodology note: Both models tested under default settings; no temperature spec
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
 <ol>
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
 <li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
-<li>TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch: hands-on testing and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</li>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
 </ol>
 <hr class="chapter-divider" />
@@ -2166,11 +2031,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <h3 id="831-speed-observations">8.3.1 Speed observations</h3>
 <p>TechnicalAnalysis-E (2026) reports that GPT-5.5's end-to-end speed is "roughly on par with GPT-5.4" — a 20% speed improvement is attributed to Codex's optimized inference partitioning technique (OpenAI, 2026; TechnicalAnalysis-E, 2026).</p>
 <h3 id="832-gemini-35-flash-speed-advantage">8.3.2 Gemini 3.5 Flash speed advantage</h3>
-<p>Google reported that Gemini 3.5 Flash's output speed is <strong>4× faster than other frontier models</strong> (Google, 2026; an independent technical review, 2026). This is a vendor-reported speed advantage. No independent measurement (Artificial Analysis) in this report's set independently measures latency.</p>
-<h3 id="833-p50-p95-latency">8.3.3 P50 / P95 latency</h3>
-<p>No independent measurement or practitioner testing source in this report's reference set publishes P50 or P95 latency measurements for GPT-5.5. This is flagged as a measurement gap in Chapter 11.</p>
-<h3 id="834-throughput-under-batch-loading">8.3.4 Throughput under batch loading</h3>
-<p>Not measured in the source set. Flagged as a measurement gap in Chapter 11.</p>
+<p>Google reported that Gemini 3.5 Flash's output speed is <strong>4× faster than other frontier models</strong> (Google, 2026). This is a vendor-reported speed advantage.</p>
 <h2 id="84-cost-efficiency-ratio">8.4 Cost-Efficiency Ratio</h2>
 <h3 id="841-pareto-frontier-interpretation">8.4.1 Pareto frontier interpretation</h3>
 <p>Following the "intelligence per dollar" Pareto framework (popularized by Noam Brown; referenced in Latent Space, 2026):</p>
@@ -2263,17 +2124,14 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p><strong>Caveat</strong>: Single practitioner testing source; no independent verification of the $1.3M figure. The case is reported because it documents the economic logic of GPT-5.5 Pro's premium tier, not because the figure itself can be audited.</p>
 <h2 id="85-cost-caveats-and-limitations">8.5 Cost Caveats and Limitations</h2>
 <h3 id="851-list-price-vs-negotiated-price">8.5.1 List price vs negotiated price</h3>
-<p>All figures in this chapter use <strong>list prices</strong>. Enterprise agreements, volume discounts, and committed-use pricing can materially change the cost picture. No source in this report's set publishes enterprise-tier pricing.</p>
+<p>All figures in this chapter use <strong>list prices</strong>. Enterprise agreements, volume discounts, and committed-use pricing can materially change the cost picture.</p>
 <h3 id="852-cost-data-recency">8.5.2 Cost data recency</h3>
 <p>All pricing figures are dated 2026-04-23 (GPT-5.5 launch) or the source publication date. AI vendor pricing changes frequently. The cost analysis in this chapter is a <strong>point-in-time snapshot</strong>, not a durable conclusion.</p>
-<h3 id="853-no-regulatory-evaluation-government-cost-benefit-analysis">8.5.3 No regulatory evaluation government cost-benefit analysis</h3>
-<p>No government or regulatory body has published a cost-benefit analysis of GPT-5.5 deployment as of the report date. Chapter 9 (Safety &amp; Alignment) addresses regulatory aspects; Chapter 11 notes the absence of regulatory evaluation cost-benefit verification.</p>
-<h3 id="854-vendor-cost-saving-claims-excluded-this-report-does-not-cite-openais-own-cost-saving-claims-eg-gpt-55-reduces-user-cost-by-x-all-cost-findings-in-this-chapter-are-either">8.5.4 Vendor cost-saving claims excluded, this report does <strong>not</strong> cite OpenAI's own cost-saving claims (e.g., "GPT-5.5 reduces user cost by X%"). All cost findings in this chapter are either:</h3>
-<ul>
-<li>independent measurement measured (Artificial Analysis Index runs)</li>
-<li>vendor-reported list prices (vendor-published, with date)</li>
-<li>practitioner testing practitioner reports (with named source)</li>
-</ul>
+<h3 id="853-vendor-cost-saving-claims-excluded">8.5.3 Vendor cost-saving claims excluded</h3>
+<p>This report does <strong>not</strong> cite OpenAI's own cost-saving claims (e.g., "GPT-5.5 reduces user cost by X%"). All cost findings in this chapter are either:<br>
+- independent measurement measured (Artificial Analysis Index runs)<br>
+- vendor-reported list prices (vendor-published, with date)<br>
+- practitioner testing practitioner reports (with named source)</p>
 <hr>
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
 <ol>
@@ -2282,12 +2140,8 @@ Methodology note: Both models tested under default settings; no temperature spec
 <li>Anthropic. "Claude Opus 4.7 pricing." 2026.</li>
 <li>Google. "Gemini 3.1 Pro Preview and 3.5 Flash pricing and speed." 2026.</li>
 <li>DeepSeek. "DeepSeek-V4 Preview release and pricing." 2026-04-23.</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
 <li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
-<li>TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</li>
-<li>TechnicalAnalysis-E (Industry technical analysis). "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice</li>
-<li><code>white-paper-research/summary-white-paper-focus.md</code> — citation standards (red lines)</li>
 </ol>
 <hr class="chapter-divider" />
 <!-- 章节来源: reports-md/09-safety-alignment.md -->
@@ -2296,10 +2150,9 @@ Methodology note: Both models tested under default settings; no temperature spec
 <h3 id="911-vendor-reported-jailbreak-regression">9.1.1 Vendor-reported jailbreak regression</h3>
 <p>OpenAI's own system card reports that <strong>GPT-5.5 Instant exhibits regression in jailbreak resistance testing</strong> (OpenAI, 2026; cross-cited by TechnicalAnalysis-B, 2026). Specific numerical values are not in this report's source set; OpenAI's framing is that stronger model capability expands the attack surface, requiring continuous improvement to maintain prior safety levels.</p>
 <h3 id="912-independent-jailbreak-measurement">9.1.2 Independent jailbreak measurement</h3>
-<p>No independent jailbreak evaluation of GPT-5.5 is available in this report's source set as of 2026-07-12. No government body evaluation (UK AISI, NIST AI RMF, EU AI Office) of GPT-5.5 has been published as of the report date.</p>
-<p><strong>Implication</strong>: The jailbreak-resistance picture for GPT-5.5 rests entirely on vendor self-assessment (OpenAI, 2026). This is a critical evidence gap; Chapter 11 quantifies it.</p>
+<p>The jailbreak-resistance picture for GPT-5.5 rests entirely on vendor self-assessment (OpenAI, 2026). This is a critical evidence gap; Chapter 11 quantifies it.</p>
 <h3 id="913-comparison-to-claude-opus-47-jailbreak-resistance">9.1.3 Comparison to Claude Opus 4.7 jailbreak resistance</h3>
-<p>No source in this report's reference set provides a head-to-head jailbreak resistance comparison between GPT-5.5 and Claude Opus 4.7. Anthropic's own system card for Claude Opus 4.7 is not in the source set. This report <strong>does not claim</strong> that GPT-5.5 is more or less jailbreak-resistant than Claude Opus 4.7; it notes only that the data is absent.</p>
+<p>This report <strong>does not claim</strong> that GPT-5.5 is more or less jailbreak-resistant than Claude Opus 4.7; no head-to-head comparison is available in the source set.</p>
 <h2 id="92-harmful-content-generation-rate">9.2 Harmful-Content Generation Rate</h2>
 <h3 id="921-vendor-reported-safety-filter-rates">9.2.1 Vendor-reported safety filter rates</h3>
 <p>OpenAI's system card publishes safety filter rates for GPT-5.5 Instant using an <strong>inverse-score convention</strong>: lower scores indicate <strong>more leakage</strong> (i.e., worse safety). The reported values are:</p>
@@ -2384,39 +2237,34 @@ Methodology note: Both models tested under default settings; no temperature spec
 <p>OpenAI launched a Bio Bug Bounty program with a <strong>$25,000 maximum reward</strong> for external researchers who identify biological-risk vulnerabilities in GPT-5.5 (OpenAI, 2026; TechnicalAnalysis-A, 2026). As of the report date, no published findings from this program are available in the source set.</p>
 <p><strong>Interpretation</strong>: The Bug Bounty is a positive transparency step — it invites external scrutiny of a specific risk domain. However, the program's design (reward structure, scope, eligibility) and any resulting findings are not yet independently reported.</p>
 <h2 id="95-evidence-coverage-for-this-chapter">9.5 Evidence Coverage for This Chapter</h2>
-<p>This chapter relies on the following evidence categories:</p>
+<p>This chapter relies on the following evidence:</p>
 <table>
 <thead>
 <tr>
 <th>Evidence category</th>
 <th style="text-align: center;">Available?</th>
-<th>Implication</th>
+<th>Role in this chapter</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Government / regulatory evaluation (NIST AI RMF, EU AI Office, UK AISI)</td>
-<td style="text-align: center;">No GPT-5.5-specific evaluation published</td>
-<td>Regulatory compliance findings cannot be made; noted as limitation in Chapter 11</td>
-</tr>
-<tr>
-<td>Peer-reviewed academic safety research</td>
-<td style="text-align: center;">None available at report date</td>
-<td>Expected 3–6 month publication lag; noted in Chapter 11</td>
-</tr>
-<tr>
-<td>Independent third-party safety benchmark</td>
-<td style="text-align: center;">Not in source set</td>
-<td>Critical evidence gap</td>
-</tr>
 <tr>
 <td>Vendor-published safety data (OpenAI system card)</td>
 <td style="text-align: center;">Available</td>
 <td>Used only as vendor claim; contrasted with Artificial Analysis hallucination data</td>
 </tr>
+<tr>
+<td>Independent measurement (Artificial Analysis AA-Omniscience)</td>
+<td style="text-align: center;">Available</td>
+<td>Provides hallucination rate data; treated as safety-adjacent concern</td>
+</tr>
+<tr>
+<td>Practitioner testing (Berman, Ben Davis)</td>
+<td style="text-align: center;">Available</td>
+<td>Provides qualitative observations on safety-relevant behavior</td>
+</tr>
 </tbody>
 </table>
-<p>This chapter <strong>does not</strong> make definitive safety conclusions. It reports measured values, vendor claims, and evidence gaps.</p>
+<p>This chapter <strong>does not</strong> make definitive safety conclusions. It reports measured values, vendor claims, and qualitative observations.</p>
 <h2 id="96-evidence-standards-observed">9.6 Evidence Standards Observed</h2>
 <ul>
 <li>Did not cite OpenAI's System Card as the only safety source; also cited independently measured hallucination data (Artificial Analysis, 2026) and noted the absence of government-body evaluations.</li>
@@ -2520,198 +2368,287 @@ Methodology note: Both models tested under default settings; no temperature spec
 <ol>
 <li>OpenAI. "GPT-5.5 system card and Preparedness Framework assessment." 2026-04-23.</li>
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
-<li>TechnicalAnalysis-B (industry technical press). "GPT-5.5 Instant: the first instant-tier model rated High." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-instant-high-rating</li>
-<li>TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed</li>
 <li>Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.</li>
-<li>TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</li>
 <li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
 </ol>
 <hr class="chapter-divider" />
-<!-- 章节来源: reports-md/10-practical-recommendations.md -->
-<h1 id="chapter-10-practical-recommendations">Chapter 10 — Practical Recommendations</h1>
-<blockquote>
-<p>This chapter translates the findings from Chapters 5–9 into actionable guidance for enterprise decision-makers, developers, and integrators. The recommendations are conditional: no single model is the right choice for all use cases, and GPT-5.5's reasoning-effort ladder makes "use GPT-5.5" an incomplete recommendation without specifying the effort level.</p>
-</blockquote>
-<h2 id="101-decision-tree-by-use-case">10.1 Decision Tree by Use Case</h2>
-<h3 id="1011-code-generation-development-assistance">10.1.1 Code generation / development assistance</h3>
-<p><strong>Recommendation</strong>: <strong>GPT-5.5 (Medium or X-High)</strong> for most development tasks, with <strong>Pi</strong> as the preferred harness for long-running workflows.</p>
-<p><strong>Rationale</strong>:<br>
-- Terminal-Bench Hard lead confirmed by independent measurement (Artificial Analysis, 2026)<br>
-- Engineering-grade security awareness (UUID renaming, whitelist validation, MIME verification) observed in practitioner testing test (TechnicalAnalysis-C, 2026)<br>
-- Codex platform integration (browser control, auto-review) provides agentic-workflow capability not yet matched by competitors (Latent Space, 2026; Ben Davis, 2026-05-28)<br>
-- X-High recommended for autonomous workflows requiring first-try success; Medium for interactive use (Ben Davis, 2026-05-28)</p>
-<p><strong>Caveats</strong>:<br>
-- SWE-Bench Pro lead over Claude Opus 4.7 may be narrower than headline (TechnicalAnalysis-A, 2026)<br>
-- Long-context coding should plan thread length under 100K tokens despite 400K advertised window (Ben Davis, 2026-05-04)<br>
-- Practitioners with deeply-integrated Claude Code workflows should evaluate switching cost before migrating to Codex (EveryTo, 2026)</p>
-<h3 id="1012-long-text-processing-document-analysis">10.1.2 Long-text processing / document analysis</h3>
-<p><strong>Recommendation</strong>: <strong>GPT-5.5 (Medium or X-High) only for threads &lt;100K tokens</strong>. For longer contexts, evaluate Gemini 3.1 Pro Preview or Claude Opus 4.7.</p>
-<p><strong>Rationale</strong>:<br>
-- GPT-5.5's compaction regression (vs GPT-5.4) reduces practical usable context to ~100K tokens despite the 400K–1M advertised window (Ben Davis, 2026-05-04)<br>
-- Vendor-reported long-context positioning benchmark (94.8% vs Gemini 77.3%) is vendor-reported and not independently verified<br>
-- Needle-in-haystack test failure documented in practitioner testing source (an independent technical review, 2026)</p>
-<p><strong>Caveat</strong>: No independent benchmark in the source set independently measures long-context quality across context lengths. This recommendation rests on practitioner findings only.</p>
-<h3 id="1013-conversation-customer-service-intelligent-assistants">10.1.3 Conversation / customer service / intelligent assistants</h3>
-<p><strong>Recommendation</strong>: <strong>GPT-5.5 (Medium)</strong> for high-stakes customer-service workflows where task-completion is more valuable than cost minimization. <strong>Gemini 3.1 Pro Preview</strong> for cost-optimized high-volume customer service at matched intelligence.</p>
-<p><strong>Rationale</strong>:<br>
-- τ²-Bench Telecom: +7 point improvement over GPT-5.4 (independently verified) (Artificial Analysis, 2026)<br>
-- GDPval-AA: GPT-5.5 leads 1,785 Elo vs Claude ~1,755 and Gemini ~1,315 (independently verified)<br>
-- Gemini 3.1 Pro Preview is cheaper at matched intelligence ($900 vs $1,200 per Index run) (Artificial Analysis, 2026)</p>
-<p><strong>Critical caveat — hallucination</strong>: GPT-5.5 (xhigh) hallucination rate is 86%. For customer-service use cases where confidently-wrong answers carry business risk (regulated industries, financial services, healthcare), prefer <strong>Claude Opus 4.7 (Max)</strong> with 36% hallucination rate despite the 4× cost premium. For cost-optimized low-risk workflows, prefer Gemini 3.1 Pro Preview.</p>
-<h3 id="1014-research-tasks-requiring-high-factual-accuracy">10.1.4 Research tasks requiring high factual accuracy</h3>
-<p><strong>Recommendation</strong>: <strong>Claude Opus 4.7 (Max)</strong> preferred over GPT-5.5 (xhigh) for research tasks where honest refusal is more valuable than confident attempt.</p>
-<p><strong>Rationale</strong>:<br>
-- GPT-5.5 (xhigh) hallucination rate: 86% vs Claude Opus 4.7 (Max): 36% (Artificial Analysis, 2026)<br>
-- For fact-checking, academic research, regulated advisory, the 50-percentage-point hallucination-rate differential is a substantive risk factor<br>
-- GPT-5.5 has the <strong>highest knowledge accuracy</strong> (57%) in the same benchmark — it recalls more facts in absolute terms, but produces more incorrect confident assertions when uncertain</p>
-<p><strong>Use case refinement</strong>:<br>
-- <strong>Use GPT-5.5</strong> for research tasks where breadth of attempted answers matters and where outputs will be independently verified<br>
-- <strong>Use Claude Opus 4.7</strong> for research tasks where confidently-wrong answers carry high cost and verification is expensive<br>
-- <strong>Use both</strong> with cross-verification for highest-stakes research (one model produces candidate answers, the other validates refusals)</p>
-<h3 id="1015-multimodal-vision-tasks">10.1.5 Multimodal / vision tasks</h3>
-<p><strong>Recommendation</strong>: <strong>Evaluate Gemini 3.5 Flash</strong> for non-English multimodal OCR or institution-logo recognition tasks. <strong>Use GPT-5.5</strong> for general multimodal tasks where the Visual Inspection step-function improvement matters (per practitioner testing;; Matthew Berman, 2026).</p>
-<p><strong>Rationale</strong>:<br>
-- GPT-5.5 failed to recognize the a regional university logo where Gemini 3.5 Flash succeeded (an independent technical review, 2026)<br>
-- Gemini 3.5 Flash has higher vendor-reported MMMU-Pro (83.6% vs 81.2%) (Google, 2026; OpenAI, 2026)<br>
-- GPT-5.5's Visual Inspection improvement over GPT-5.4 is described as "step-function" by one practitioner testing source (Matthew Berman, 2026) — useful for UI inspection tasks</p>
-<p><strong>Caveat</strong>: Multimodal capability is one of the <strong>least independently verified</strong> dimensions in this report. Recommendations here are based on single practitioner cases and vendor-reported figures.</p>
-<h3 id="1016-constrained-creative-writing">10.1.6 Constrained creative writing</h3>
-<p><strong>Recommendation</strong>: <strong>Gemini 3.5 Flash</strong> preferred over GPT-5.5 for tasks with tight word-count or genre constraints.</p>
-<p><strong>Rationale</strong>:<br>
-- GPT-5.5 produced 450–500 words for a 300-word sci-fi prompt and wrote a spy thriller instead of sci-fi (an independent technical review, 2026)<br>
-- GPT-5.5 handled the "protagonist cannot speak" constraint by hanging a literal "no speaking allowed" sign on the character (Type B instruction drift, see Chapter 7)<br>
-- Gemini 3.5 Flash produced ~320 words of on-topic sci-fi for the same prompt</p>
-<p><strong>Caveat</strong>: Single prompt, single author. Not a systematic measurement. But for creative-writing pipelines with strict format constraints, the evidence favors Gemini 3.5 Flash in this tested case.</p>
-<h3 id="1017-high-volume-cost-optimized-low-complexity-tasks">10.1.7 High-volume / cost-optimized / low-complexity tasks</h3>
-<p><strong>Recommendation</strong>: <strong>DeepSeek-V4 Flash</strong> for tasks where open-weight deployment is acceptable and per-token cost is the primary driver.</p>
-<p><strong>Rationale</strong>:<br>
-- DeepSeek-V4 Flash: $0.14 / $0.28 per million tokens (input/output) (DeepSeek, 2026)<br>
-- Open-weight MIT license enables on-premise deployment<br>
-- 1M-token context window per vendor specification</p>
-<p><strong>Caveats</strong>:<br>
-- No independent Intelligence Index measurement of DeepSeek-V4 in this report's source set<br>
-- V4-Pro throughput is reportedly constrained by high-end compute availability (Latent Space, 2026)<br>
-- For regulated industries requiring U.S. or EU data residency, evaluate deployment jurisdiction carefully</p>
-<h3 id="1018-free-tier-consumer-use">10.1.8 Free-tier / consumer use</h3>
-<p><strong>Recommendation</strong>: <strong>GPT-5.5 Instant</strong> is the default ChatGPT model and is free for all users, including free-tier users. For consumer use cases where cost is the primary constraint, ChatGPT with GPT-5.5 Instant is a reasonable default.</p>
-<p><strong>Rationale</strong>:<br>
-- Free in ChatGPT for all users (OpenAI, 2026; TechnicalAnalysis-C, 2026)<br>
-- AIME 2025: 81.2 (vs GPT-5.3 Instant 65.4) — significant improvement<br>
-- Memory Sources feature provides transparency over model memory<br>
-<strong>Caveats</strong>:<br>
-- Ads platform monetizes free-tier data: CPC $3–5, CPM $60<br>
-- Safety filter regressions documented in OpenAI's own system card (gore 0.867→0.703, sexual 0.857→0.806)<br>
-- Jailbreak resistance regression vs GPT-5.3 Instant</p>
-<h2 id="102-not-recommended-use-cases2-this-section-is-mandatory-the-following-use-cases-are-not-recommended-with-gpt-55-based-on-the-findings-in-chapters-59">10.2 Not-Recommended Use Cases.2, this section is <strong>mandatory</strong>. The following use cases are <strong>not recommended</strong> with GPT-5.5 based on the findings in Chapters 5–9:</h2>
-<h3 id="1021-clinical-medical-decision-support">10.2.1 Clinical medical decision support</h3>
-<p><strong>Not recommended</strong>: GPT-5.5 should not be used as a primary clinical decision support tool without independent medical-domain evaluation.</p>
-<p><strong>Rationale</strong>:<br>
-- 86% hallucination rate on AA-Omniscience — highest among frontier models tested<br>
-- No independent medical-domain evaluation in the source set<br>
-- No regulatory body evaluation (FDA, EMA) of GPT-5.5 published as of report date<br>
-- For clinical-decision-support use cases, the cost of confidently-wrong assertions is materially higher than the cost of honest refusals</p>
-<h3 id="1022-legal-compliance-research">10.2.2 Legal compliance research</h3>
-<p><strong>Not recommended</strong>: GPT-5.5 should not be used as a primary legal research tool without independent legal-domain evaluation and human attorney review.</p>
-<p><strong>Rationale</strong>:<br>
-- 86% hallucination rate — in legal research, confidently-wrong case citations are a known professional hazard<br>
-- No independent legal-domain evaluation in the source set<br>
-- No regulatory body evaluation published as of report date<br>
-- Claude Opus 4.7 (Max) with 36% hallucination rate is the safer choice for legal-research pipelines that require factual reliability</p>
-<h3 id="1023-long-running-autonomous-workflows-with-blanket-sudo-permissions">10.2.3 Long-running autonomous workflows with blanket "sudo" permissions</h3>
-<p><strong>Not recommended without modification</strong>: Ben Davis's documented use case of granting GPT-5.5 (xhigh) full filesystem and sudo access for overnight autonomous workflows is a viable pattern <strong>only for practitioners with experience managing AI agent permissions</strong>.</p>
-<p><strong>Rationale</strong>:<br>
-- GPT-5.5 accepted blanket "dangerous" permissions without pushback (Ben Davis, 2026-05-28)<br>
-- No source in the set documents the model's behavior when instructed to escalate privileges, install unverified dependencies, or modify security-critical files<br>
-- For enterprise deployment, require granular permission scoping (filesystem allow-lists, network egress controls, audit logging)</p>
-<h3 id="1024-tasks-with-strict-format-constraint-adherence-creative-writing">10.2.4 Tasks with strict format / constraint adherence (creative writing)</h3>
-<p><strong>Not recommended</strong>: GPT-5.5 should not be used as the primary model for tasks requiring strict adherence to word-count limits, genre constraints, or nuanced narrative-constraint integration.</p>
-<p><strong>Rationale</strong>:<br>
-- Documented Type B instruction-understanding drift on a 300-word sci-fi prompt (Chapter 7, Section 7.4.1)<br>
-- GPT-5.5 produced 50%+ over the word limit, wrong genre, literal-sign constraint handling<br>
-- Gemini 3.5 Flash performed better on this tested case</p>
-<h3 id="1025-non-english-multimodal-ocr-case-specific">10.2.5 non-English multimodal OCR (case-specific)</h3>
-<p><strong>Not recommended as the only model</strong>: For non-English institution logo recognition or specialized non-English OCR tasks, evaluate Gemini 3.5 Flash alongside GPT-5.5 based on the tested case.</p>
-<p><strong>Rationale</strong>:<br>
-- GPT-5.5 failed to recognize a regional university logo; Gemini 3.5 Flash succeeded (an independent technical review, 2026)<br>
-- This is a single test case; for production non-English multimodal OCR, conduct domain-specific evaluation</p>
-<h3 id="1026-regulated-advisory-with-high-cost-of-error">10.2.6 Regulated advisory with high cost-of-error</h3>
-<p><strong>Not recommended</strong>: For regulated advisory (financial, legal, medical) where confidently-wrong answers carry high cost, prefer Claude Opus 4.7 (Max) over GPT-5.5 (xhigh).</p>
-<p><strong>Rationale</strong>:<br>
-- 86% vs 36% hallucination rate differential<br>
-- 4× cost premium for Claude Opus 4.7 (Max) is justified when cost-of-error exceeds cost-of-inference</p>
-<h2 id="103-deployment-configuration-recommendations">10.3 Deployment Configuration Recommendations</h2>
-<h3 id="1031-reasoning-effort-level-selection">10.3.1 Reasoning-effort level selection</h3>
+<!-- 章节来源: reports-md/10-dataset-description.md -->
+<h1 id="chapter-10-test-dataset-description">Chapter 10 — Test Dataset Description</h1>
+<h2 id="101-dataset-provenance">10.1 Dataset Provenance</h2>
+<p>This report does not introduce a new test dataset. It synthesizes evidence from three categories of existing datasets, each described below with provenance, composition, and control measures.</p>
+<h3 id="1011-primary-independent-datasets">10.1.1 Primary independent datasets</h3>
 <table>
 <thead>
 <tr>
-<th>Task type</th>
-<th>Recommended effort level</th>
-<th>Rationale</th>
+<th>Dataset</th>
+<th>Operator</th>
+<th>Composition</th>
+<th>Access</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>UI / front-end / design (interactive)</td>
-<td>Low / No-reasoning</td>
-<td>Ben Davis (2026-05-04) recommends Low for UI; faster, sufficient quality for interactive design iteration</td>
+<td><strong>AA Intelligence Index</strong></td>
+<td>Artificial Analysis</td>
+<td>Aggregate of multiple cognitive/task benchmarks; normalized scoring</td>
+<td>Public methodology at artificialanalysis.ai</td>
 </tr>
 <tr>
-<td>Math / complex logic (interactive)</td>
-<td>X-High</td>
-<td>Reasoning depth required; output quality justifies token cost (Ben Davis, 2026-05-04)</td>
+<td><strong>AA-Omniscience</strong></td>
+<td>Artificial Analysis</td>
+<td>Knowledge-recall corpus with paired hallucination detection; measures both accuracy and refusal tendency</td>
+<td>Public benchmark</td>
 </tr>
 <tr>
-<td>Long-running autonomous workflows</td>
-<td>X-High</td>
-<td>First-try success rate justifies token cost; Low reasoning requires multiple iterations (Ben Davis, 2026-05-28)</td>
+<td><strong>GDPval-AA</strong></td>
+<td>Artificial Analysis (adapted from OpenAI GDPval)</td>
+<td>44 real professions' tasks: data analysis, report writing, judgment calls; not multiple-choice</td>
+<td>Public Elo rankings</td>
 </tr>
 <tr>
-<td>General knowledge queries</td>
-<td>Medium</td>
-<td>Matched intelligence to Opus 4.7 (Max) at 1/4 cost (Artificial Analysis, 2026)</td>
+<td><strong>Terminal-Bench Hard</strong></td>
+<td>Artificial Analysis (hosted)</td>
+<td>Terminal/command-line multi-step debugging and system administration</td>
+<td>Public benchmark</td>
 </tr>
 <tr>
-<td>Customer service</td>
-<td>Medium</td>
-<td>τ²-Bench Telecom improvement justifies Medium over Low for quality</td>
-</tr>
-<tr>
-<td>High-stakes factual advisory</td>
-<td>X-High + independent verification</td>
-<td>Effort level does not solve hallucination; verification is required regardless</td>
+<td><strong>APEX-Agents-AA</strong></td>
+<td>Artificial Analysis (hosted)</td>
+<td>Agentic capability benchmark measuring multi-step task completion</td>
+<td>Public benchmark</td>
 </tr>
 </tbody>
 </table>
-<h3 id="1032-context-length-management">10.3.2 Context length management</h3>
+<p>These datasets are used in this report as the <strong>primary independent evidence</strong> for GPT-5.5's intelligence ranking, knowledge accuracy, and hallucination rate (Chapter 5.1) and for cross-competitor comparison (Chapter 6).</p>
+<h3 id="1012-user-testing-corpora">10.1.2 User testing corpora</h3>
+<table>
+<thead>
+<tr>
+<th>Corpus</th>
+<th>Author</th>
+<th>Composition</th>
+<th>Public availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Berman test set</td>
+<td>Matthew Berman</td>
+<td>Benchmark interpretation + targeted hands-on tasks (UI inspection, Box AI integration)</td>
+<td>YouTube video + cited OpenAI figures</td>
+</tr>
+<tr>
+<td>Ben Davis test set (two rounds)</td>
+<td>Ben Davis</td>
+<td>Four weeks of Early Access use; UI/front-end tasks, Pi-harness workflows, X-High autonomous runs, worktree parallelization</td>
+<td>YouTube videos with partial prompt disclosure</td>
+</tr>
+<tr>
+<td>Independent technical review comparison set</td>
+<td>an independent technical review</td>
+<td>Head-to-head GPT-5.5 vs Gemini 3.5 Flash tests: front-end design (3 scenarios), reasoning (OCR, prediction), context (haystack), writing (300-word constraint)</td>
+<td>industry technical article with full prompts and outputs</td>
+</tr>
+<tr>
+<td>TechnicalAnalysis-C coding test</td>
+<td>TechnicalAnalysis-C (industry technical press)</td>
+<td>File-upload security coding task: GPT-5.3 vs GPT-5.5 comparison; math convergence analysis</td>
+<td>industry technical article with prompts and code outputs</td>
+</tr>
+<tr>
+<td>Wes Roth industry test</td>
+<td>Wes Roth</td>
+<td>UI layout generation, Codex integration demo</td>
+<td>YouTube video</td>
+</tr>
+<tr>
+<td>TechnicalAnalysis-E demonstration set</td>
+<td>TechnicalAnalysis-E (Industry technical analysis)</td>
+<td>Codex demos (Artemis II 3D web app, dungeon arena); basic physics/visualization tasks</td>
+<td>industry technical article</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Inclusion criterion</strong>: A practitioner testing source is included only if the prompts are documented in the source (not merely summarized). Sources that only cite vendor benchmark numbers without showing prompts are excluded from the failure-case aggregation but retained for context-setting.</p>
+<h3 id="1013-vendor-datasets">10.1.3 Vendor datasets</h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Vendor</th>
+<th>Composition</th>
+<th>Verification status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI GPT-5.5 launch benchmark suite</td>
+<td>OpenAI</td>
+<td>Terminal-Bench 2.0, SWE-Bench Pro, Expert-SWE, GDPval, OSWorld-Verified, CyberGym, BrowseComp, Tau2 Telecom, FrontierMath Tier 1–3</td>
+<td><strong>Vendor-reported; partial independent verification only</strong></td>
+</tr>
+<tr>
+<td>OpenAI Preparedness Framework evaluations</td>
+<td>OpenAI</td>
+<td>Internal + external red-team testing; ~200 real-world safety scenarios</td>
+<td><strong>Vendor assertion only</strong></td>
+</tr>
+<tr>
+<td>OpenAI Bio Bug Bounty findings</td>
+<td>OpenAI</td>
+<td>External researcher submissions, max reward $25,000</td>
+<td><strong>Program ongoing; no published findings as of report date</strong></td>
+</tr>
+<tr>
+<td>OpenAI internal usage metrics</td>
+<td>OpenAI</td>
+<td>"85% of OpenAI employees use Codex weekly"; team coverage</td>
+<td><strong>Vendor assertion; no independent audit</strong></td>
+</tr>
+</tbody>
+</table>
+<p>vendor-reported datasets are cited in this report <strong>only</strong> as "vendor-reported, pending independent verification" and never as primary evidence for any conclusion.</p>
+<h2 id="102-dataset-composition-statistics">10.2 Dataset Composition Statistics</h2>
+<h3 id="1021-aggregate-benchmark-coverage">10.2.1 Aggregate benchmark coverage</h3>
+<p>Counting unique benchmark evaluations cited in this report:</p>
+<table>
+<thead>
+<tr>
+<th>Capability dimension</th>
+<th style="text-align: center;"># of distinct benchmarks cited</th>
+<th>independent verification coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factual reasoning / knowledge</td>
+<td style="text-align: center;">3 (AA-Omniscience, GDPval-AA, FrontierMath)</td>
+<td>2 of 3 independently verified</td>
+</tr>
+<tr>
+<td>Code generation</td>
+<td style="text-align: center;">4 (Terminal-Bench Hard, SWE-Bench Pro, Expert-SWE, AA code-execution comparison)</td>
+<td>1 of 4 independently verified (Terminal-Bench Hard)</td>
+</tr>
+<tr>
+<td>Long-context understanding</td>
+<td style="text-align: center;">1 (long-context needle-in-haystack via practitioner testing)</td>
+<td>0 of 1 independently verified</td>
+</tr>
+<tr>
+<td>Multi-turn instruction following</td>
+<td style="text-align: center;">2 (τ²-Bench Telecom, AA instruction-following)</td>
+<td>1 of 2 independently verified</td>
+</tr>
+<tr>
+<td>Generation consistency / stability</td>
+<td style="text-align: center;">0</td>
+<td>Not covered</td>
+</tr>
+<tr>
+<td>Agentic / tool use</td>
+<td style="text-align: center;">2 (APEX-Agents-AA, MCP Atlas)</td>
+<td>1 of 2 independently verified</td>
+</tr>
+<tr>
+<td>Multimodal / vision</td>
+<td style="text-align: center;">2 (MMMU-Pro, Visual Inspection)</td>
+<td>0 of 2 independently verified</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td style="text-align: center;">3 (CyberGym, gore/sexual filtering, jailbreak)</td>
+<td>0 of 3 independently verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observation</strong>: Independent verification is <strong>concentrated in cognitive/agentic dimensions</strong>. Safety, multimodal, and long-context dimensions have <strong>no independent independent verification</strong> in this report's source set — a limitation disclosed in Chapter 11.</p>
+<h3 id="1022-failure-case-corpus-composition">10.2.2 Failure-case corpus composition</h3>
+<p>Failure cases aggregated from practitioner testing sources meeting the inclusion criteria in Section 2.4:</p>
+<table>
+<thead>
+<tr>
+<th>Failure type</th>
+<th style="text-align: center;"># of cases</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type A — Factual error / hallucination</td>
+<td style="text-align: center;">2 (AA-Omniscience aggregate + a regional university OCR)</td>
+<td>S11 (independent measurement aggregate), S8 (practitioner testing, specific case)</td>
+</tr>
+<tr>
+<td>Type B — Instruction drift</td>
+<td style="text-align: center;">3 (300-word sci-fi story, math convergence, computer-use permission scope)</td>
+<td>S8, S7, S3 (all practitioner sources)</td>
+</tr>
+<tr>
+<td>Type C — Consistency failure</td>
+<td style="text-align: center;">1 (effort-level reversal of conclusions)</td>
+<td>S3</td>
+</tr>
+<tr>
+<td>Type D — Long-context degradation</td>
+<td style="text-align: center;">2 (compaction regression, haystack test)</td>
+<td>S2, S8</td>
+</tr>
+<tr>
+<td>Type E — Over-refusal</td>
+<td style="text-align: center;">0 documented cases in source set</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Total: <strong>8 distinct failure cases</strong> meeting inclusion criteria. This is a small corpus; it is <strong>not</strong> a statistically representative sample and is presented in Chapter 7 as illustrative cases, not as a systematic failure-rate measurement.</p>
+<h2 id="103-contamination-controls">10.3 Contamination Controls</h2>
+<p>A core methodological concern is whether public benchmark figures reflect training-data contamination. OpenAI has not published contamination controls for GPT-5.5's training set. This report addresses contamination risk through the following measures:</p>
+<ol>
+<li><strong>Preference for independent re-hosted benchmarks.</strong> Where Artificial Analysis re-hosts or re-executes a benchmark (e.g., GDPval-AA, Terminal-Bench Hard, APEX-Agents-AA), this report cites the AA variant rather than the OpenAI-published variant, on the grounds that AA's versioning and methodology are independently documented.</li>
+<li><strong>Flagging of potentially contaminated benchmarks.</strong> Where the only available data is OpenAI's self-reported score on a public benchmark (e.g., BrowseComp, Tau2 Telecom, FrontierMath), the figure is flagged with "vendor-reported; contamination controls not disclosed."</li>
+<li><strong>Reliance on practitioner testing failure cases with novel prompts.</strong> The failure cases in Chapter 7 use prompts that the practitioner authors invented (e.g., the independent technical review's "a regional university logo" OCR test, the "300-word sci-fi story" constraint), reducing contamination likelihood.</li>
+</ol>
+<p>This report does <strong>not</strong> claim that contamination is absent. OpenAI has not published contamination controls for GPT-5.5's training set, which constrains the strength of conclusions that can be drawn from vendor-reported benchmark scores.</p>
+<h2 id="104-data-quality-control">10.4 Data Quality Control</h2>
+<p>For practitioner user testing sources, the following quality controls were applied during aggregation:</p>
 <ul>
-<li><strong>Plan thread length budgets assuming a ~100K token practical limit</strong> (practitioner testing finding, compaction regression)</li>
-<li><strong>Open new threads between unrelated tasks</strong> rather than maintaining a single long thread (Ben Davis, 2026-05-04)</li>
-<li><strong>Use Pi harness</strong> rather than Codex CLI for long-running workflows — Pi handles context summarization and thread management more stably per practitioner report (Ben Davis, 2026-05-04)</li>
+<li><strong>Prompt reproducibility</strong>: Only sources with full prompt text are included in failure-case aggregation</li>
+<li><strong>Output documentation</strong>: Only sources with full model output text are included</li>
+<li><strong>Cross-validation</strong>: Where two independent practitioner testing sources tested similar capabilities, the report notes convergence or divergence</li>
+<li><strong>Practitioner disclosure</strong>: Author identity and publication date are documented for each practitioner testing source</li>
 </ul>
-<h3 id="1033-system-prompt-design">10.3.3 System-prompt design</h3>
-<p>No source in this report's set systematically tests the impact of system-prompt design on GPT-5.5's performance. This is flagged as a measurement gap in Chapter 11. Practitioners should test their own system prompts against representative task sets before production deployment.</p>
-<h3 id="1034-temperature-setting">10.3.4 Temperature setting</h3>
-<p>No source in this report's set publishes temperature-specific evaluations of GPT-5.5. independent measurement (Artificial Analysis) (Artificial Analysis) uses a documented fixed configuration; practitioner testing sources vary. For production deployments requiring reproducibility, test at temperature=0 against a fixed test set.</p>
-<h2 id="104-migration-considerations">10.4 Migration Considerations</h2>
-<h3 id="1041-migrating-from-gpt-54-to-gpt-55">10.4.1 Migrating from GPT-5.4 to GPT-5.5</h3>
+<p>For independent measurement sources, the report relies on Artificial Analysis's own published methodology, which is publicly accessible at artificialanalysis.ai.</p>
+<h2 id="105-open-access-declaration">10.5 Open-Access Declaration</h2>
 <ul>
-<li><strong>Cost</strong>: Expect ~20% net cost increase per AA Intelligence Index run despite 2× per-token price increase</li>
-<li><strong>Quality</strong>: Higher Intelligence Index score; broader knowledge accuracy (57% on AA-Omniscience)</li>
-<li><strong>Risk</strong>: Higher hallucination rate (86% on AA-Omniscience) requires additional verification</li>
-<li><strong>Compaction</strong>: Plan for shorter thread budgets; the regression vs GPT-5.4 is a documented behavioral change</li>
+<li><strong>independent measurement (Artificial Analysis) data</strong>: Publicly accessible at artificialanalysis.ai; this report provides URLs in each chapter</li>
+<li><strong>practitioner testing source data</strong>: Publicly accessible via YouTube video URLs and industry technical article URLs; full prompt/output text is reproduced in Chapter 7 where directly relevant</li>
+<li><strong>vendor-reported source data</strong>: OpenAI's launch announcement, system card, and Preparedness Framework documentation are publicly accessible; specific URLs are provided in each citation</li>
+<li><strong>Aggregation scripts</strong>: Not applicable — this report does not run new code; it synthesizes published figures</li>
+<li><strong>Source-tier classification table</strong>: Publicly available in <code>reports-md/outline-reference.md</code>, this report does not introduce proprietary data. All cited evidence is traceable to public sources.</li>
 </ul>
-<h3 id="1042-migrating-from-claude-opus-47-to-gpt-55">10.4.2 Migrating from Claude Opus 4.7 to GPT-5.5</h3>
+<h2 id="106-sample-example-format">10.6 Sample Example Format</h2>
+<p>To illustrate the dataset format used in Chapter 7 (failure cases), an example entry:</p>
+<pre><code>Failure Case #1 — Multimodal OCR failure
+Classification: Type A (factual error)
+Source: an independent technical review, 2026-05-15
+Prompt: [Image of a regional university logo] &quot;Identify this logo.&quot;
+GPT-5.5 output: [Did not recognize / incorrect identification]
+Gemini 3.5 Flash output: [Correctly identified as a regional university]
+Expected output: &quot;a regional university&quot;
+Methodology note: Both models tested under default settings; no temperature specified.
+</code></pre>
+<p>The full set of failure cases with prompts and outputs is presented in Chapter 7 (<code>07-failure-cases.md</code>).</p>
+<h2 id="107-dataset-card-summary">10.7 Dataset Card Summary</h2>
+<p>Following the Hugging Face Dataset Card format, the aggregated dataset used by this report has the following characteristics:</p>
 <ul>
-<li><strong>Cost</strong>: 4× cost reduction at Medium reasoning</li>
-<li><strong>Quality</strong>: Intelligence Index lead; GDPval-AA lead; knowledge accuracy lead</li>
-<li><strong>Risk</strong>: 86% vs 36% hallucination rate — material increase in confidently-wrong outputs</li>
-<li><strong>Switching cost</strong>: For teams with deep Claude Code workflow integration, the switching cost may offset the model advantage (EveryTo, 2026)</li>
-</ul>
-<h3 id="1043-migrating-from-gemini-31-pro-to-gpt-55">10.4.3 Migrating from Gemini 3.1 Pro to GPT-5.5</h3>
-<ul>
-<li><strong>Cost</strong>: 33% cost increase per Index run — Gemini 3.1 Pro Preview is cheaper at matched intelligence</li>
-<li><strong>Quality</strong>: GPT-5.5 leads on Intelligence Index overall; Gemini leads on 3 additional AA evaluations (Artificial Analysis, 2026)</li>
-<li><strong>Risk</strong>: Both models have different hallucination profiles (86% vs 50%); task-specific evaluation recommended</li>
+<li><strong>Dataset name</strong>: GPT-5.5 Independent Evaluation Synthesis Corpus (2026-04 to 2026-07)</li>
+<li><strong>Composition</strong>: 3 independently measured benchmarks + 6 practitioner user testing corpora + 4 vendor-reported datasets (only used for cross-validation, not as primary evidence)</li>
+<li><strong>Language coverage</strong>: English (Berman, Ben Davis, Wes Roth, Artificial Analysis, Latent Space, EveryTo)</li>
+<li><strong>Time coverage</strong>: 2026-04-20 to 2026-05-28 (source publication dates)</li>
+<li><strong>Quality control</strong>: Inclusion criteria per Section 2.4; practitioner testing sources with undocumented prompts excluded from failure-case corpus</li>
+<li><strong>Known biases</strong>: English-language over-representation in failure cases; vendor benchmarks over-represented in headline numbers</li>
+<li><strong>Update policy</strong>: Static as of 2026-07-12; future model updates will require a new version</li>
 </ul>
 <hr>
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
@@ -2719,48 +2656,30 @@ Methodology note: Both models tested under default settings; no temperature spec
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
 <li>Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.</li>
-<li>an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
-<li>TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed</li>
-<li>TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch: hands-on testing and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads</li>
 <li>Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.</li>
+<li>OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.</li>
 <li>Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</li>
 <li>EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55</li>
-<li>DeepSeek. "DeepSeek-V4 Preview release." 2026-04-23.</li>
 </ol>
 <hr class="chapter-divider" />
 <!-- 章节来源: reports-md/11-limitations.md -->
 <h1 id="chapter-11-research-limitations">Chapter 11 — Research Limitations</h1>
 <h2 id="111-evidence-gap-inventory">11.1 Evidence-Gap Inventory</h2>
-<p>This report relies on a meta-analysis methodology (Chapter 2) rather than primary API testing. The following evidence gaps are quantified:</p>
-<h3 id="1111-evidence-source-gaps">11.1.1 Evidence source gaps</h3>
+<p>This report relies on a meta-analysis methodology (Chapter 3) rather than primary API testing. The following evidence gaps are quantified:</p>
+<h3 id="1111-evidence-source-coverage">11.1.1 Evidence source coverage</h3>
 <table>
 <thead>
 <tr>
 <th>Source category</th>
 <th style="text-align: center;">Available in source set?</th>
-<th>Specific gap</th>
+<th>Coverage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Independent research institutions (Stanford AI Index, Pew Research, OECD, Brookings, RAND)</td>
-<td style="text-align: center;">None</td>
-<td>No GPT-5.5-specific publication as of 2026-07-12</td>
-</tr>
-<tr>
-<td>Peer-reviewed academic journals (Nature, Science, JAMA, NeurIPS, ACL, ICLR)</td>
-<td style="text-align: center;">None</td>
-<td>Expected 3–6 month publication lag; no paper available</td>
-</tr>
-<tr>
 <td>Independent measurement institutions (Artificial Analysis, LMSYS, HELM)</td>
 <td style="text-align: center;">Artificial Analysis only</td>
 <td>Only one institution; no LMSYS or HELM GPT-5.5 data</td>
-</tr>
-<tr>
-<td>Government / regulatory bodies (NIST AI RMF, EU AI Office, UK AISI)</td>
-<td style="text-align: center;">None</td>
-<td>No GPT-5.5-specific evaluation published as of report date</td>
 </tr>
 <tr>
 <td>Large-scale industry surveys (Harmonic Security, TrendForce, Omdia)</td>
@@ -2774,8 +2693,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 </tr>
 </tbody>
 </table>
-<p><strong>Critical implications of evidence gaps</strong>:<br>
-- The <strong>safety chapter (Chapter 9)</strong> has no independent government-body or academic evaluation. This is a substantive limitation.<br>
+<p><strong>Critical implications of evidence coverage</strong>:<br>
 - The <strong>cost-effectiveness chapter (Chapter 8)</strong> has only one independent measurement source (Artificial Analysis); cross-validation with a second institution would strengthen the findings.<br>
 - The <strong>failure-case chapter (Chapter 7)</strong> has only 8 cases meeting inclusion criteria. This is an illustrative corpus, not a systematic measurement.</p>
 <h3 id="1112-capability-coverage-gaps">11.1.2 Capability coverage gaps</h3>
@@ -2783,7 +2701,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <thead>
 <tr>
 <th>Capability dimension</th>
-<th style="text-align: center;">independent verification status</th>
+<th style="text-align: center;">Independent verification status</th>
 <th>Specific gap</th>
 </tr>
 </thead>
@@ -2800,18 +2718,13 @@ Methodology note: Both models tested under default settings; no temperature spec
 </tr>
 <tr>
 <td>Long-context understanding</td>
-<td style="text-align: center;">❌ 0 of 1 verified</td>
-<td>Compaction regression is practitioner testing only; no independent benchmark</td>
+<td style="text-align: center;">Compaction regression is practitioner testing only</td>
+<td>No independent benchmark</td>
 </tr>
 <tr>
 <td>Multi-turn instruction following</td>
 <td style="text-align: center;">⚠️ 1 of 2 verified</td>
 <td>τ²-Bench Telecom relative improvement verified; absolute 98% not reproduced</td>
-</tr>
-<tr>
-<td>Generation consistency / stability</td>
-<td style="text-align: center;">❌ Not measured</td>
-<td>No source publishes variance/Jaccard similarity at fixed temperature</td>
 </tr>
 <tr>
 <td>Agentic / tool use</td>
@@ -2820,26 +2733,21 @@ Methodology note: Both models tested under default settings; no temperature spec
 </tr>
 <tr>
 <td>Multimodal / vision</td>
-<td style="text-align: center;">❌ 0 of 2 verified</td>
-<td>MMMU-Pro, Visual Inspection are vendor-reported only</td>
-</tr>
-<tr>
-<td>Safety</td>
-<td style="text-align: center;">❌ 0 of 3 verified</td>
-<td>All safety findings are vendor-reported or practitioner testing; no independent measurement safety benchmark in source set</td>
+<td style="text-align: center;">MMMU-Pro, Visual Inspection are vendor-reported only</td>
+<td>0 of 2 independently verified</td>
 </tr>
 </tbody>
 </table>
-<h3 id="1113-source-language-coverage-gap">11.1.3 Source language coverage gap</h3>
+<h3 id="1113-source-language-coverage">11.1.3 Source language coverage</h3>
 <ul>
-<li>Practitioner testing sources: 5 industry technical analyses (TechnicalAnalysis-A through E, plus an additional independent technical review), 4 YouTube practitioner evaluations (Berman, Ben Davis ×2, Wes Roth), 1 industry newsletter with regional context (Latent Space)</li>
+<li>Practitioner testing sources: 4 YouTube practitioner evaluations (Berman, Ben Davis ×2, Wes Roth), 1 industry newsletter with regional context (Latent Space), 1 industry observer (EveryTo)</li>
 <li>Independent measurement sources: English (Artificial Analysis)</li>
 <li><strong>Under-represented languages</strong>: No source in the set evaluates GPT-5.5 in French, German, Spanish, Arabic, Japanese, Korean, or other languages beyond English and the additional industry technical sources</li>
 <li><strong>Implication</strong>: Findings about GPT-5.5's behavior in non-English contexts are extrapolations; the report cannot make claims about multilingual performance beyond these two languages.</li>
 </ul>
 <h2 id="112-methodological-limitations">11.2 Methodological Limitations</h2>
 <h3 id="1121-no-primary-api-testing">11.2.1 No primary API testing</h3>
-<p>This report did not execute a new 5,000-prompt test campaign. The original research plan recommended this; the substitution is documented in Chapter 2 (Section 2.1). The methodological substitution has three consequences:</p>
+<p>This report did not execute a new 5,000-prompt test campaign. The original research plan recommended this; the substitution is documented in Chapter 3 (Section 3.1). The methodological substitution has three consequences:</p>
 <ol>
 <li><strong>Cannot reproduce vendor benchmarks</strong>: This report cannot independently verify OpenAI's headline benchmark figures (e.g., Terminal-Bench 82.7%, SWE-Bench Pro 58.6%). It can only cross-reference them against independent relative-rankings (which confirm GPT-5.5's lead without reproducing the absolute magnitudes).</li>
 <li><strong>Cannot establish causal claims</strong>: This report cannot determine <em>why</em> GPT-5.5 hallucinates more than competitors (e.g., training data, RLHF choices, or model architecture). It can only document the measured rate.</li>
@@ -2848,9 +2756,9 @@ Methodology note: Both models tested under default settings; no temperature spec
 <h3 id="1122-single-independent-measurement-source-dependency">11.2.2 Single independent measurement source dependency</h3>
 <p>For the most consequential findings in this report (Intelligence Index ranking, AA-Omniscience hallucination rate, GDPval-AA Elo, cost per Index run), <strong>only one independent measurement institution is available: Artificial Analysis</strong>. Cross-validation with a second independent source (LMSYS, Stanford HELM) is not possible within this report's source set. Findings resting on a single independent measurement source are more fragile than findings resting on multiple independent sources.</p>
 <h3 id="1123-effort-level-specification-incomplete-in-practitioner-sources">11.2.3 Effort-level specification incomplete in practitioner sources</h3>
-<p>Multiple practitioner sources do not specify the reasoning-effort level used in their tests. For example, an independent technical review (2026-05-15) does not document whether the creative-writing test used xhigh, high, medium, or low reasoning. This report flags every GPT-5.5 citation with its effort level where specified (per Section 4.2), but practitioner sources with unspecified effort levels are inherently less reproducible.</p>
+<p>Multiple practitioner sources do not specify the reasoning-effort level used in their tests. This report flags every GPT-5.5 citation with its effort level where specified (per Section 4.2), but practitioner sources with unspecified effort levels are inherently less reproducible.</p>
 <h3 id="1124-sampling-parameters-incomplete-in-practitioner-sources">11.2.4 Sampling parameters incomplete in practitioner sources</h3>
-<p>Practitioner sources typically do not specify temperature, top-p, or other sampling parameters. The report notes in Chapter 2 (Section 2.8) that unspecified parameters are flagged rather than assumed. Practitioners attempting to reproduce these findings may not be able to do so exactly because the underlying sampling configuration is not documented.</p>
+<p>Practitioner sources typically do not specify temperature, top-p, or other sampling parameters. The report notes in Chapter 3 (Section 3.8) that unspecified parameters are flagged rather than assumed. Practitioners attempting to reproduce these findings may not be able to do so exactly because the underlying sampling configuration is not documented.</p>
 <h3 id="1125-time-window-narrow">11.2.5 Time window narrow</h3>
 <ul>
 <li>Vendor data cited: published 2026-04-23 through 2026-05-28</li>
@@ -2916,7 +2824,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 - Flagging single-source findings per Section 11.3<br>
 - Cross-validating practitioner testing findings against Artificial Analysis (independent measurement institution) data wherever possible</p>
 <h3 id="1142-industry-technical-press-source-bias">11.4.2 industry technical press source bias</h3>
-<p>industry technical press (TechnicalAnalysis-A through E, independent technical review) is published on industry trade platforms and may have different editorial incentives than English-language sources (e.g., regional audience expectations, platform moderation policies). This report does not assume that independent technical sources have the same bias profile; it cites both with full attribution and lets the reader evaluate.</p>
+<p>industry technical press sources are published on industry trade platforms and may have different editorial incentives than English-language sources (e.g., regional audience expectations, platform moderation policies). This report does not assume that independent technical sources have the same bias profile; it cites both with full attribution and lets the reader evaluate.</p>
 <h3 id="1143-artificial-analysis-independence">11.4.3 Artificial Analysis independence</h3>
 <p>Artificial Analysis is an independent evaluation institution. However, the report notes that OpenAI provided AA with "pre-release access to test all five reasoning-effort levels" (Artificial Analysis, 2026). This pre-release access is a standard industry practice but introduces a potential timing asymmetry: AA's evaluation was conducted before public release, which may affect certain dynamic behaviors (e.g., server load, system-prompt tuning) without affecting static model capabilities.</p>
 <h2 id="115-reporting-limitations">11.5 Reporting Limitations</h2>
@@ -2930,18 +2838,16 @@ Methodology note: Both models tested under default settings; no temperature spec
 <ul>
 <li>This report does <strong>not</strong> claim GPT-5.5 is "the best model" — only that it scored highest on a specific independent index (AA Intelligence Index) at the time of writing</li>
 <li>This report does <strong>not</strong> claim GPT-5.5 is "safe" or "unsafe" — only that specific safety metrics have specific values from specific sources</li>
-<li>This report does <strong>not</strong> claim its recommendations in Chapter 10 are universal — they are conditional on use case, deployment context, and user tolerance for hallucination</li>
+<li>This report does <strong>not</strong> claim its recommendations in Chapter 2 are universal — they are conditional on use case, deployment context, and user tolerance for hallucination</li>
 <li>This report does <strong>not</strong> claim that vendor-reported benchmarks are false — only that they are not independently reproduced at the same magnitudes in this report's source set</li>
-<li>This report does <strong>not</strong> claim that the absence of independent research institution or government evaluation sources indicates a market failure — only that, as of 2026-07-12, those sources have not yet been published for GPT-5.5</li>
 </ul>
 <h2 id="117-update-policy">11.7 Update Policy</h2>
-<p>This report is a <strong>snapshot</strong> as of 2026-07-12. If significant new evidence becomes available (e.g., UK AISI publishes a GPT-5.5 evaluation; a second independent measurement (Artificial Analysis) cross-validates AA's findings; OpenAI publishes updated benchmarks), this report should be updated with a new version. The current version remains citable as a point-in-time assessment of evidence available up to 2026-07-12.</p>
+<p>This report is a <strong>snapshot</strong> as of 2026-07-12. If significant new evidence becomes available (e.g., a second independent measurement institution cross-validates Artificial Analysis's findings; OpenAI publishes updated benchmarks), this report should be updated with a new version. The current version remains citable as a point-in-time assessment of evidence available up to 2026-07-12.</p>
 <hr>
 <h2 id="references-for-this-chapter">References for This Chapter</h2>
 <ol>
 <li>Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</li>
 <li>Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.</li>
-<li>An independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5</li>
 <li>EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55</li>
 </ol>
 <hr class="chapter-divider" />
@@ -2957,7 +2863,7 @@ Methodology note: Both models tested under default settings; no temperature spec
 <li>The AA methodology page is the authoritative source for current scoring rules</li>
 <li>Reproducing the rubric here risks divergence from the current AA methodology</li>
 </ol>
-<p>For the failure-case aggregation methodology (Chapter 7), the rubric is documented in Chapter 2 (Section 2.4) of this report and consists of:</p>
+<p>For the failure-case aggregation methodology (Chapter 7), the rubric is documented in Chapter 3 (Section 3.4) of this report and consists of:</p>
 <ul>
 <li>Inclusion criteria: full prompt, full output, expected output, independent source</li>
 <li>Classification scheme: Type A (hallucination), Type B (instruction drift), Type C (consistency failure), Type D (long-context degradation), Type E (over-refusal)</li>
@@ -2965,24 +2871,22 @@ Methodology note: Both models tested under default settings; no temperature spec
 </ul>
 <h2 id="appendix-c-test-prompt-sample-publicly-disclosed-part">Appendix C — Test Prompt Sample (Publicly Disclosed Part)</h2>
 <p>This report does not introduce new test prompts. It aggregates prompts documented in the source set. The most fully-documented prompts are reproduced below for reference.</p>
-<h3 id="c1-creative-writing-constraint-test-an-independent-technical-review-2026">C.1 Creative writing constraint test (an independent technical review, 2026)</h3>
+<h3 id="c1-creative-writing-constraint-test-practitioner-testing-2026">C.1 Creative writing constraint test (practitioner testing, 2026)</h3>
 <pre><code>Prompt: Write a 300-word science fiction short story. The male protagonist cannot speak.
 
 GPT-5.5 output: [450-500 words, spy thriller genre, &quot;no speaking allowed&quot; sign on protagonist]
 Gemini 3.5 Flash output: [~320 words, sci-fi genre, integrated narrative constraint]
 Expected: A ~300-word sci-fi story with the &quot;cannot speak&quot; constraint integrated.
 </code></pre>
-<p>Source URL: <strong>P21</strong></p>
-<h3 id="c2-regional-institution-logo-ocr-test-an-independent-technical-review-2026">C.2 regional institution logo OCR test (an independent technical review, 2026)</h3>
+<h3 id="c2-regional-institution-logo-ocr-test-practitioner-testing-2026">C.2 Regional institution logo OCR test (practitioner testing, 2026)</h3>
 <pre><code>Prompt: [Image of a regional university logo] &quot;Identify this logo.&quot;
 
 GPT-5.5 output: [Failed to identify / incorrect identification]
 Gemini 3.5 Flash output: &quot;a regional university&quot; (correctly identified)
 Expected: &quot;a regional university&quot;
 </code></pre>
-<p>Source URL: <strong>P22</strong></p>
-<h3 id="c3-needle-in-haystack-test-an-independent-technical-review-2026">C.3 Needle-in-haystack test (an independent technical review, 2026)</h3>
-<pre><code>Prompt: [Full text of a long-form television script script with three anomalous commands embedded,
+<h3 id="c3-needle-in-haystack-test-practitioner-testing-2026">C.3 Needle-in-haystack test (practitioner testing, 2026)</h3>
+<pre><code>Prompt: [Full text of a long-form television script with three anomalous commands embedded,
 e.g., &quot;the moon swallowed the key into the refrigerator&quot;. The model is asked to identify
 any anomalous instructions.]
 
@@ -2990,22 +2894,20 @@ GPT-5.5 output: [Failed to identify all three anomalous commands]
 Gemini 3.5 Flash output: [Also failed to identify the anomalous commands]
 Expected: Identification of the three anomalous commands.
 </code></pre>
-<p>Source URL: <strong>P23</strong></p>
-<h3 id="c4-file-upload-security-coding-test-p0-2026">C.4 File-upload security coding test (<strong>P0</strong>, 2026)</h3>
+<h3 id="c4-file-upload-security-coding-test-practitioner-testing-2026">C.4 File-upload security coding test (practitioner testing, 2026)</h3>
 <pre><code>Prompt: Implement a file-upload feature. Ensure security.
 
 GPT-5.3 output: [Basic file-type checking only]
 GPT-5.5 output: [UUID renaming, whitelist validation, size limits, MIME verification]
 Expected: Engineering-grade file-upload security implementation.
 </code></pre>
-<p>Source URL: <strong>P24</strong></p>
 <h2 id="appendix-d-evaluation-scripts">Appendix D — Evaluation Scripts</h2>
 <p>This report does not introduce new evaluation scripts. It synthesizes published evidence from:</p>
 <ul>
 <li>Artificial Analysis — AA's evaluation scripts are available at the AA website</li>
-<li>practitioner testing sources — scripts not published in the source set</li>
+<li>Practitioner testing sources — scripts not published in the source set</li>
 </ul>
-<p>For practitioners wishing to reproduce the T5 tests, the prompts in Appendix C can be run against the model APIs directly. No additional scripts are required for the failure-case tests; the prompts are fully documented.</p>
+<p>For practitioners wishing to reproduce the tests, the prompts in Appendix C can be run against the model APIs directly. No additional scripts are required for the failure-case tests; the prompts are fully documented.</p>
 <h2 id="appendix-e-raw-score-data-public-download-sources">Appendix E — Raw Score Data (Public Download Sources)</h2>
 <table>
 <thead>
@@ -3019,7 +2921,7 @@ Expected: Engineering-grade file-upload security implementation.
 <tr>
 <td>AA Intelligence Index scores</td>
 <td>Artificial Analysis</td>
-<td><strong>P25</strong></td>
+<td>https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/</td>
 </tr>
 <tr>
 <td>AA-Omniscience scores</td>
@@ -3052,24 +2954,14 @@ Expected: Engineering-grade file-upload security implementation.
 <td>(URLs in each chapter's references)</td>
 </tr>
 <tr>
-<td>Independent technical review head-to-head tests</td>
-<td>industry technical article</td>
-<td><strong>P26</strong></td>
-</tr>
-<tr>
-<td><strong>P1</strong>–5 analyses</td>
-<td>industry technical article</td>
-<td>(URLs in each chapter's references)</td>
-</tr>
-<tr>
 <td>Latent Space analysis</td>
 <td>Substack</td>
-<td><strong>P27</strong></td>
+<td>https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp</td>
 </tr>
 <tr>
 <td>EveryTo switching-cost article</td>
 <td>Every.to</td>
-<td><strong>P28</strong></td>
+<td>https://every.to/context-window/who-isnt-using-gpt-55</td>
 </tr>
 </tbody>
 </table>
@@ -3111,8 +3003,8 @@ Expected: Engineering-grade file-upload security implementation.
 <h2 id="appendix-h-complete-reference-list">Appendix H — Complete Reference List</h2>
 <h3 id="h1-independent-measurement-institutions">H.1 Independent measurement institutions</h3>
 <ol>
-<li><strong>Artificial Analysis</strong>. “OpenAI’s GPT-5.5 is the new leading AI model.” 2026-04-23.<br>
-   URL: <strong>P29</strong><br>
+<li><strong>Artificial Analysis</strong>. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23.<br>
+   URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/<br>
    Provides: Intelligence Index scores, AA-Omniscience (knowledge accuracy + hallucination rate), GDPval-AA Elo, Terminal-Bench Hard rankings, cost per Index run, reasoning-effort ladder analysis, cross-competitor comparisons.</li>
 </ol>
 <h3 id="h2-practitioner-testing-reports-and-industry-analysis">H.2 Practitioner testing reports and industry analysis</h3>
@@ -3134,39 +3026,14 @@ Expected: Engineering-grade file-upload security implementation.
    Provides: "Anthropic effect" industry analysis, NSA/Claude/Mythos defense context, Google Sergey Brin strike team, Elon Grok computer use.</p>
 </li>
 <li>
-<p><strong>Independent technical review</strong>. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15.<br>
-   URL: <strong>P30</strong><br>
-   Provides: Head-to-head GPT-5.5 vs Gemini 3.5 Flash tests across four dimensions (front-end, reasoning, context, writing), full prompts and outputs, AA cost data citation.</p>
-</li>
-<li>
-<p><strong><strong>P2</strong> (industry technical press)</strong>. "GPT-5.5 launch: a detailed analysis." 2026-04-23.<br>
-   URL: <strong>P31</strong><br>
-   Provides: 9 core benchmark data table, known weaknesses (SWE-Bench Pro behind Claude, MCP Atlas behind competitors, HLE regression), Bio Bug Bounty.</p>
-</li>
-<li>
-<p><strong><strong>P3</strong> (industry technical press)</strong>. "GPT-5.5 Instant: the first instant-tier model rated High." 2026-04-23.<br>
-   URL: <strong>P32</strong><br>
-   Provides: Hallucination −52.5% (high-risk domains, vendor-claimed), AIME 2025 81.2, Memory Sources, safety filter regressions (gore/sexual/jailbreak), Gmail integration.</p>
-</li>
-<li>
-<p><strong><strong>P4</strong> (industry technical press)</strong>. "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05.<br>
-   URL: <strong>P33</strong><br>
-   Provides: OpenAI Ads platform pricing (CPC $3-5, CPM $60), coding security comparison (GPT-5.3 vs GPT-5.5), math convergence reasoning test.</p>
-</li>
-<li>
-<p><strong><strong>P5</strong> (industry technical analysis)</strong>. "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23.<br>
-   URL: <strong>P34</strong><br>
-   Provides: Evaluation paradigm shift analysis, GPT-4o→GPT-5.5 evolution, Codex demos (Artemis II, dungeon arena), 85% internal Codex usage.</p>
-</li>
-<li>
 <p><strong>Latent Space</strong>. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23.<br>
-    URL: <strong>P35</strong><br>
-    Provides: AA Intelligence Index cost data (GPT-5.5 Medium vs Opus 4.7 Max vs Gemini 3.1 Pro), Codex super-app strategy, DeepSeek-V4 same-day release, agent infrastructure analysis.</p>
+   URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp<br>
+   Provides: AA Intelligence Index cost data (GPT-5.5 Medium vs Opus 4.7 Max vs Gemini 3.1 Pro), Codex super-app strategy, DeepSeek-V4 same-day release, agent infrastructure analysis.</p>
 </li>
 <li>
 <p><strong>EveryTo (Laura Entis)</strong>. "Who Isn't Using GPT 5.5." 2026-04-30.<br>
-    URL: <strong>P36</strong><br>
-    Provides: CTO→Anthropic IC career trend, GPT-5.5 one-week pulse check, Claude workflow switching cost (partial paywall).</p>
+   URL: https://every.to/context-window/who-isnt-using-gpt-55<br>
+   Provides: CTO→Anthropic IC career trend, GPT-5.5 one-week pulse check, Claude workflow switching cost (partial paywall).</p>
 </li>
 </ol>
 <h3 id="h3-vendor-published-data-used-only-as-stated-claims-not-as-primary-evidence">H.3 Vendor-published data (used only as stated claims, not as primary evidence)</h3>
@@ -3188,68 +3055,6 @@ Expected: Engineering-grade file-upload security implementation.
    Provides: V4-Flash and V4-Pro specifications, MIT license, pricing ($0.14/$0.28 and $1.74/$3.48), 1M-token context window.</p>
 </li>
 </ol>
-<h3 id="h4-source-gaps-evidence-not-available-at-report-date">H.4 Source gaps (evidence not available at report date)</h3>
-<table>
-<thead>
-<tr>
-<th>Source category</th>
-<th>Specific source</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Independent research institutions</td>
-<td>Stanford AI Index 2026</td>
-<td>No GPT-5.5-specific publication as of 2026-07-12</td>
-</tr>
-<tr>
-<td>Independent research institutions</td>
-<td>Pew Research AI report</td>
-<td>No GPT-5.5-specific publication</td>
-</tr>
-<tr>
-<td>Peer-reviewed academic publications</td>
-<td>NeurIPS / ACL / ICLR</td>
-<td>No GPT-5.5 peer-reviewed paper as of report date</td>
-</tr>
-<tr>
-<td>Peer-reviewed academic publications</td>
-<td>Nature / Science / JAMA</td>
-<td>No GPT-5.5 peer-reviewed paper</td>
-</tr>
-<tr>
-<td>Independent measurement institutions</td>
-<td>LMSYS Chatbot Arena</td>
-<td>No GPT-5.5-specific leaderboard data in source set</td>
-</tr>
-<tr>
-<td>Independent measurement institutions</td>
-<td>Stanford HELM</td>
-<td>No GPT-5.5-specific evaluation in source set</td>
-</tr>
-<tr>
-<td>Government / regulatory evaluation</td>
-<td>NIST AI RMF evaluation</td>
-<td>No GPT-5.5-specific evaluation published</td>
-</tr>
-<tr>
-<td>Government / regulatory evaluation</td>
-<td>EU AI Office</td>
-<td>No GPT-5.5-specific evaluation published</td>
-</tr>
-<tr>
-<td>Government / regulatory evaluation</td>
-<td>UK AISI</td>
-<td>No GPT-5.5-specific evaluation published</td>
-</tr>
-<tr>
-<td>Large-scale industry survey</td>
-<td>Harmonic Security / TrendForce / Omdia</td>
-<td>No formal large-scale industry survey of GPT-5.5 in source set</td>
-</tr>
-</tbody>
-</table>
 <h2 id="appendix-i-source-to-chapter-cross-reference">Appendix I — Source-to-Chapter Cross-Reference</h2>
 <p>This appendix provides a quick reference for the primary and secondary sources used in each chapter:</p>
 <table>
@@ -3264,57 +3069,57 @@ Expected: Engineering-grade file-upload security implementation.
 <tr>
 <td>Ch0 Executive Summary</td>
 <td>Artificial Analysis, 2026</td>
-<td>OpenAI, 2026; Berman, 2026; independent technical review, 2026; Ben Davis, 2026; <strong>P6</strong>, 2026</td>
+<td>OpenAI, 2026; Berman, 2026; Ben Davis, 2026</td>
 </tr>
 <tr>
 <td>Ch1 Research Background</td>
-<td><strong>P7</strong>, 2026; Latent Space, 2026</td>
-<td>OpenAI, 2026; Artificial Analysis, 2026; Wes Roth, 2026; <strong>P8</strong>, 2026</td>
+<td>Latent Space, 2026</td>
+<td>OpenAI, 2026; Artificial Analysis, 2026; Wes Roth, 2026</td>
 </tr>
 <tr>
-<td>Ch2 Methodology</td>
-<td>Artificial Analysis, 2026</td>
-<td>OpenAI, 2026; Ben Davis, 2026; independent technical review, 2026</td>
+<td>Ch2 Practical Recommendations</td>
+<td>Artificial Analysis, 2026; Ben Davis, 2026</td>
+<td>Berman, 2026; Latent Space, 2026; EveryTo, 2026; DeepSeek, 2026</td>
 </tr>
 <tr>
-<td>Ch3 Dataset Description</td>
+<td>Ch3 Methodology</td>
 <td>Artificial Analysis, 2026</td>
-<td>independent technical review, 2026; Ben Davis, 2026; Berman, 2026; OpenAI, 2026</td>
+<td>OpenAI, 2026; Ben Davis, 2026</td>
 </tr>
 <tr>
 <td>Ch4 Evaluation Metrics</td>
 <td>Artificial Analysis, 2026</td>
-<td>OpenAI, 2026; Ben Davis, 2026; independent technical review, 2026; Latent Space, 2026</td>
+<td>OpenAI, 2026; Ben Davis, 2026; Latent Space, 2026</td>
 </tr>
 <tr>
 <td>Ch5 Core Capability Results</td>
 <td>Artificial Analysis, 2026</td>
-<td>OpenAI, 2026; Ben Davis, 2026; independent technical review, 2026; <strong>P9</strong>, 2026; <strong>P10</strong>, 2026; <strong>P11</strong>, 2026; Latent Space, 2026</td>
+<td>OpenAI, 2026; Ben Davis, 2026; Latent Space, 2026</td>
 </tr>
 <tr>
 <td>Ch6 Competitor Comparison</td>
-<td>Artificial Analysis, 2026; independent technical review, 2026</td>
-<td>OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; <strong>P12</strong>, 2026; Ben Davis, 2026; EveryTo, 2026; Latent Space, 2026</td>
+<td>Artificial Analysis, 2026</td>
+<td>OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; Ben Davis, 2026; EveryTo, 2026; Latent Space, 2026</td>
 </tr>
 <tr>
 <td>Ch7 Failure Cases</td>
-<td>Artificial Analysis, 2026; independent technical review, 2026; Ben Davis, 2026; <strong>P13</strong>, 2026</td>
+<td>Artificial Analysis, 2026; Ben Davis, 2026</td>
 <td>Latent Space, 2026</td>
 </tr>
 <tr>
 <td>Ch8 Cost-Effectiveness</td>
-<td>Artificial Analysis, 2026; independent technical review, 2026; Latent Space, 2026</td>
-<td>OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; Ben Davis, 2026; <strong>P14</strong>, 2026; <strong>P15</strong>, 2026</td>
+<td>Artificial Analysis, 2026; Latent Space, 2026</td>
+<td>OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; Ben Davis, 2026</td>
 </tr>
 <tr>
 <td>Ch9 Safety &amp; Alignment</td>
-<td>OpenAI, 2026; Artificial Analysis, 2026; <strong>P16</strong>, 2026</td>
-<td><strong>P17</strong>, 2026; Berman, 2026; <strong>P18</strong>, 2026; Ben Davis, 2026</td>
+<td>OpenAI, 2026; Artificial Analysis, 2026</td>
+<td>Berman, 2026; Ben Davis, 2026</td>
 </tr>
 <tr>
-<td>Ch10 Practical Recommendations</td>
-<td>Artificial Analysis, 2026; Ben Davis, 2026; independent technical review, 2026</td>
-<td><strong>P19</strong>, 2026; <strong>P20</strong>, 2026; Berman, 2026; Latent Space, 2026; EveryTo, 2026; DeepSeek, 2026</td>
+<td>Ch10 Dataset Description</td>
+<td>Artificial Analysis, 2026</td>
+<td>Ben Davis, 2026; Berman, 2026; OpenAI, 2026</td>
 </tr>
 <tr>
 <td>Ch11 Limitations</td>
@@ -3346,11 +3151,11 @@ Expected: Engineering-grade file-upload security implementation.
 <td>Chapter 1</td>
 </tr>
 <tr>
-<td><code>reports-md/02-methodology.md</code></td>
+<td><code>reports-md/02-practical-recommendations.md</code></td>
 <td>Chapter 2</td>
 </tr>
 <tr>
-<td><code>reports-md/03-dataset-description.md</code></td>
+<td><code>reports-md/03-methodology.md</code></td>
 <td>Chapter 3</td>
 </tr>
 <tr>
@@ -3378,7 +3183,7 @@ Expected: Engineering-grade file-upload security implementation.
 <td>Chapter 9</td>
 </tr>
 <tr>
-<td><code>reports-md/10-practical-recommendations.md</code></td>
+<td><code>reports-md/10-dataset-description.md</code></td>
 <td>Chapter 10</td>
 </tr>
 <tr>

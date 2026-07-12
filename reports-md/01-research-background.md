@@ -43,7 +43,7 @@ The existing public evaluation literature on GPT-5.5 has four gaps that this rep
 
 ## 1.4 Research Questions
 
-This white paper addresses the following specific questions, each citable by journalists:
+This white paper addresses the following specific questions:
 
 **RQ1.** On independently hosted benchmarks (Artificial Analysis Intelligence Index, GDPval-AA, AA-Omniscience), does GPT-5.5 reproduce the leading position claimed by OpenAI's vendor-reported benchmarks?
 
@@ -65,14 +65,6 @@ This chapter and the rest of the report draw on three categories of source:
 | **Practitioner testing** | YouTube practitioners (Berman, Ben Davis, Wes Roth), industry technical press, Latent Space | Hands-on observations, failure case documentation, qualitative findings |
 | **Vendor-reported data** | OpenAI-published benchmarks, system card | Cited only as "vendor-reported, pending independent verification"; never as primary evidence |
 
-**Notably absent from this report's source set**:
-
-- Independent research institutions (Stanford AI Index, Pew Research): no GPT-5.5-specific publication as of 2026-07-12
-- Peer-reviewed academic journals: no GPT-5.5-specific publication as of 2026-07-12 (expected lag of 3–6 months)
-- Government / regulatory body reports (NIST AI RMF, UK AISI, EU AI Office): no GPT-5.5-specific evaluation published as of the report date
-
-The absence of these source categories is itself a finding, documented in Chapter 11 (Limitations).
-
 ## 1.6 Evidence Standards Observed in This Chapter
 
 - This chapter does not cite OpenAI's technical report as the only background source — independent measurement and practitioner testing sources are also cited.
@@ -83,13 +75,8 @@ The absence of these source categories is itself a finding, documented in Chapte
 ## References for This Chapter
 
 1. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
-2. TechnicalAnalysis-E (Industry technical analysis). "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice
 3. OpenAI. "GPT-5.5 launch announcement." 2026-04-23.
 4. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
 5. Wes Roth. "OpenAI's GPT 5.5 is wild.." YouTube. 2026-04-20.
-6. TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
 7. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
 8. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-9. TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed
-10. TechnicalAnalysis-B (industry technical press). "GPT-5.5 Instant: the first instant-tier model rated High." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-instant-high-rating
-11. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5

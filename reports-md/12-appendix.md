@@ -14,7 +14,7 @@ The scoring rubric used by Artificial Analysis (the primary independent measurem
 2. The AA methodology page is the authoritative source for current scoring rules
 3. Reproducing the rubric here risks divergence from the current AA methodology
 
-For the failure-case aggregation methodology (Chapter 7), the rubric is documented in Chapter 2 (Section 2.4) of this report and consists of:
+For the failure-case aggregation methodology (Chapter 7), the rubric is documented in Chapter 3 (Section 3.4) of this report and consists of:
 
 - Inclusion criteria: full prompt, full output, expected output, independent source
 - Classification scheme: Type A (hallucination), Type B (instruction drift), Type C (consistency failure), Type D (long-context degradation), Type E (over-refusal)
@@ -24,7 +24,7 @@ For the failure-case aggregation methodology (Chapter 7), the rubric is document
 
 This report does not introduce new test prompts. It aggregates prompts documented in the source set. The most fully-documented prompts are reproduced below for reference.
 
-### C.1 Creative writing constraint test (an independent technical review, 2026)
+### C.1 Creative writing constraint test (practitioner testing, 2026)
 
 ```
 Prompt: Write a 300-word science fiction short story. The male protagonist cannot speak.
@@ -34,9 +34,7 @@ Gemini 3.5 Flash output: [~320 words, sci-fi genre, integrated narrative constra
 Expected: A ~300-word sci-fi story with the "cannot speak" constraint integrated.
 ```
 
-Source URL: __P21__
-
-### C.2 regional institution logo OCR test (an independent technical review, 2026)
+### C.2 Regional institution logo OCR test (practitioner testing, 2026)
 
 ```
 Prompt: [Image of a regional university logo] "Identify this logo."
@@ -46,12 +44,10 @@ Gemini 3.5 Flash output: "a regional university" (correctly identified)
 Expected: "a regional university"
 ```
 
-Source URL: __P22__
-
-### C.3 Needle-in-haystack test (an independent technical review, 2026)
+### C.3 Needle-in-haystack test (practitioner testing, 2026)
 
 ```
-Prompt: [Full text of a long-form television script script with three anomalous commands embedded,
+Prompt: [Full text of a long-form television script with three anomalous commands embedded,
 e.g., "the moon swallowed the key into the refrigerator". The model is asked to identify
 any anomalous instructions.]
 
@@ -60,9 +56,7 @@ Gemini 3.5 Flash output: [Also failed to identify the anomalous commands]
 Expected: Identification of the three anomalous commands.
 ```
 
-Source URL: __P23__
-
-### C.4 File-upload security coding test (__P0__, 2026)
+### C.4 File-upload security coding test (practitioner testing, 2026)
 
 ```
 Prompt: Implement a file-upload feature. Ensure security.
@@ -72,32 +66,28 @@ GPT-5.5 output: [UUID renaming, whitelist validation, size limits, MIME verifica
 Expected: Engineering-grade file-upload security implementation.
 ```
 
-Source URL: __P24__
-
 ## Appendix D — Evaluation Scripts
 
 This report does not introduce new evaluation scripts. It synthesizes published evidence from:
 
 - Artificial Analysis — AA's evaluation scripts are available at the AA website
-- practitioner testing sources — scripts not published in the source set
+- Practitioner testing sources — scripts not published in the source set
 
-For practitioners wishing to reproduce the T5 tests, the prompts in Appendix C can be run against the model APIs directly. No additional scripts are required for the failure-case tests; the prompts are fully documented.
+For practitioners wishing to reproduce the tests, the prompts in Appendix C can be run against the model APIs directly. No additional scripts are required for the failure-case tests; the prompts are fully documented.
 
 ## Appendix E — Raw Score Data (Public Download Sources)
 
 | Data type | Source | URL |
 |-----------|--------|-----|
-| AA Intelligence Index scores | Artificial Analysis | __P25__ |
+| AA Intelligence Index scores | Artificial Analysis | https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/ |
 | AA-Omniscience scores | Artificial Analysis | (AA methodology page) |
 | GDPval-AA Elo rankings | Artificial Analysis | (AA GDPval page) |
 | Terminal-Bench Hard scores | Artificial Analysis | (AA Terminal-Bench page) |
 | OpenAI launch benchmarks | OpenAI | (OpenAI GPT-5.5 announcement page) |
 | OpenAI system card | OpenAI | (OpenAI system card PDF) |
 | Ben Davis hands-on reports | YouTube | (URLs in each chapter's references) |
-| Independent technical review head-to-head tests | industry technical article | __P26__ |
-| __P1__–5 analyses | industry technical article | (URLs in each chapter's references) |
-| Latent Space analysis | Substack | __P27__ |
-| EveryTo switching-cost article | Every.to | __P28__ |
+| Latent Space analysis | Substack | https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp |
+| EveryTo switching-cost article | Every.to | https://every.to/context-window/who-isnt-using-gpt-55 |
 
 All cited evidence is traceable to public sources. This report does not introduce proprietary data.
 
@@ -127,8 +117,8 @@ This is the first version of this report. Subsequent updates will be triggered b
 
 ### H.1 Independent measurement institutions
 
-1. **Artificial Analysis**. “OpenAI’s GPT-5.5 is the new leading AI model.” 2026-04-23.
-   URL: __P29__
+1. **Artificial Analysis**. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23.
+   URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
    Provides: Intelligence Index scores, AA-Omniscience (knowledge accuracy + hallucination rate), GDPval-AA Elo, Terminal-Bench Hard rankings, cost per Index run, reasoning-effort ladder analysis, cross-competitor comparisons.
 
 ### H.2 Practitioner testing reports and industry analysis
@@ -145,33 +135,13 @@ This is the first version of this report. Subsequent updates will be triggered b
 4. **Wes Roth**. "OpenAI's GPT 5.5 is wild.." YouTube. 2026-04-20.
    Provides: "Anthropic effect" industry analysis, NSA/Claude/Mythos defense context, Google Sergey Brin strike team, Elon Grok computer use.
 
-5. **Independent technical review**. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15.
-   URL: __P30__
-   Provides: Head-to-head GPT-5.5 vs Gemini 3.5 Flash tests across four dimensions (front-end, reasoning, context, writing), full prompts and outputs, AA cost data citation.
+5. **Latent Space**. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23.
+   URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
+   Provides: AA Intelligence Index cost data (GPT-5.5 Medium vs Opus 4.7 Max vs Gemini 3.1 Pro), Codex super-app strategy, DeepSeek-V4 same-day release, agent infrastructure analysis.
 
-6. **__P2__ (industry technical press)**. "GPT-5.5 launch: a detailed analysis." 2026-04-23.
-   URL: __P31__
-   Provides: 9 core benchmark data table, known weaknesses (SWE-Bench Pro behind Claude, MCP Atlas behind competitors, HLE regression), Bio Bug Bounty.
-
-7. **__P3__ (industry technical press)**. "GPT-5.5 Instant: the first instant-tier model rated High." 2026-04-23.
-   URL: __P32__
-   Provides: Hallucination −52.5% (high-risk domains, vendor-claimed), AIME 2025 81.2, Memory Sources, safety filter regressions (gore/sexual/jailbreak), Gmail integration.
-
-8. **__P4__ (industry technical press)**. "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05.
-   URL: __P33__
-   Provides: OpenAI Ads platform pricing (CPC $3-5, CPM $60), coding security comparison (GPT-5.3 vs GPT-5.5), math convergence reasoning test.
-
-9. **__P5__ (industry technical analysis)**. "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23.
-   URL: __P34__
-   Provides: Evaluation paradigm shift analysis, GPT-4o→GPT-5.5 evolution, Codex demos (Artemis II, dungeon arena), 85% internal Codex usage.
-
-10. **Latent Space**. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23.
-    URL: __P35__
-    Provides: AA Intelligence Index cost data (GPT-5.5 Medium vs Opus 4.7 Max vs Gemini 3.1 Pro), Codex super-app strategy, DeepSeek-V4 same-day release, agent infrastructure analysis.
-
-11. **EveryTo (Laura Entis)**. "Who Isn't Using GPT 5.5." 2026-04-30.
-    URL: __P36__
-    Provides: CTO→Anthropic IC career trend, GPT-5.5 one-week pulse check, Claude workflow switching cost (partial paywall).
+6. **EveryTo (Laura Entis)**. "Who Isn't Using GPT 5.5." 2026-04-30.
+   URL: https://every.to/context-window/who-isnt-using-gpt-55
+   Provides: CTO→Anthropic IC career trend, GPT-5.5 one-week pulse check, Claude workflow switching cost (partial paywall).
 
 ### H.3 Vendor-published data (used only as stated claims, not as primary evidence)
 
@@ -187,38 +157,23 @@ This is the first version of this report. Subsequent updates will be triggered b
 4. **DeepSeek**. "DeepSeek-V4 Preview release." 2026-04-23.
    Provides: V4-Flash and V4-Pro specifications, MIT license, pricing ($0.14/$0.28 and $1.74/$3.48), 1M-token context window.
 
-### H.4 Source gaps (evidence not available at report date)
-
-| Source category | Specific source | Status |
-|----------------|----------------|--------|
-| Independent research institutions | Stanford AI Index 2026 | No GPT-5.5-specific publication as of 2026-07-12 |
-| Independent research institutions | Pew Research AI report | No GPT-5.5-specific publication |
-| Peer-reviewed academic publications | NeurIPS / ACL / ICLR | No GPT-5.5 peer-reviewed paper as of report date |
-| Peer-reviewed academic publications | Nature / Science / JAMA | No GPT-5.5 peer-reviewed paper |
-| Independent measurement institutions | LMSYS Chatbot Arena | No GPT-5.5-specific leaderboard data in source set |
-| Independent measurement institutions | Stanford HELM | No GPT-5.5-specific evaluation in source set |
-| Government / regulatory evaluation | NIST AI RMF evaluation | No GPT-5.5-specific evaluation published |
-| Government / regulatory evaluation | EU AI Office | No GPT-5.5-specific evaluation published |
-| Government / regulatory evaluation | UK AISI | No GPT-5.5-specific evaluation published |
-| Large-scale industry survey | Harmonic Security / TrendForce / Omdia | No formal large-scale industry survey of GPT-5.5 in source set |
-
 ## Appendix I — Source-to-Chapter Cross-Reference
 
 This appendix provides a quick reference for the primary and secondary sources used in each chapter:
 
 | Chapter | Primary source | Secondary sources |
 |---------|---------------|-------------------|
-| Ch0 Executive Summary | Artificial Analysis, 2026 | OpenAI, 2026; Berman, 2026; independent technical review, 2026; Ben Davis, 2026; __P6__, 2026 |
-| Ch1 Research Background | __P7__, 2026; Latent Space, 2026 | OpenAI, 2026; Artificial Analysis, 2026; Wes Roth, 2026; __P8__, 2026 |
-| Ch2 Methodology | Artificial Analysis, 2026 | OpenAI, 2026; Ben Davis, 2026; independent technical review, 2026 |
-| Ch3 Dataset Description | Artificial Analysis, 2026 | independent technical review, 2026; Ben Davis, 2026; Berman, 2026; OpenAI, 2026 |
-| Ch4 Evaluation Metrics | Artificial Analysis, 2026 | OpenAI, 2026; Ben Davis, 2026; independent technical review, 2026; Latent Space, 2026 |
-| Ch5 Core Capability Results | Artificial Analysis, 2026 | OpenAI, 2026; Ben Davis, 2026; independent technical review, 2026; __P9__, 2026; __P10__, 2026; __P11__, 2026; Latent Space, 2026 |
-| Ch6 Competitor Comparison | Artificial Analysis, 2026; independent technical review, 2026 | OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; __P12__, 2026; Ben Davis, 2026; EveryTo, 2026; Latent Space, 2026 |
-| Ch7 Failure Cases | Artificial Analysis, 2026; independent technical review, 2026; Ben Davis, 2026; __P13__, 2026 | Latent Space, 2026 |
-| Ch8 Cost-Effectiveness | Artificial Analysis, 2026; independent technical review, 2026; Latent Space, 2026 | OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; Ben Davis, 2026; __P14__, 2026; __P15__, 2026 |
-| Ch9 Safety & Alignment | OpenAI, 2026; Artificial Analysis, 2026; __P16__, 2026 | __P17__, 2026; Berman, 2026; __P18__, 2026; Ben Davis, 2026 |
-| Ch10 Practical Recommendations | Artificial Analysis, 2026; Ben Davis, 2026; independent technical review, 2026 | __P19__, 2026; __P20__, 2026; Berman, 2026; Latent Space, 2026; EveryTo, 2026; DeepSeek, 2026 |
+| Ch0 Executive Summary | Artificial Analysis, 2026 | OpenAI, 2026; Berman, 2026; Ben Davis, 2026 |
+| Ch1 Research Background | Latent Space, 2026 | OpenAI, 2026; Artificial Analysis, 2026; Wes Roth, 2026 |
+| Ch2 Practical Recommendations | Artificial Analysis, 2026; Ben Davis, 2026 | Berman, 2026; Latent Space, 2026; EveryTo, 2026; DeepSeek, 2026 |
+| Ch3 Methodology | Artificial Analysis, 2026 | OpenAI, 2026; Ben Davis, 2026 |
+| Ch4 Evaluation Metrics | Artificial Analysis, 2026 | OpenAI, 2026; Ben Davis, 2026; Latent Space, 2026 |
+| Ch5 Core Capability Results | Artificial Analysis, 2026 | OpenAI, 2026; Ben Davis, 2026; Latent Space, 2026 |
+| Ch6 Competitor Comparison | Artificial Analysis, 2026 | OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; Ben Davis, 2026; EveryTo, 2026; Latent Space, 2026 |
+| Ch7 Failure Cases | Artificial Analysis, 2026; Ben Davis, 2026 | Latent Space, 2026 |
+| Ch8 Cost-Effectiveness | Artificial Analysis, 2026; Latent Space, 2026 | OpenAI, 2026; Anthropic, 2026; Google, 2026; DeepSeek, 2026; Ben Davis, 2026 |
+| Ch9 Safety & Alignment | OpenAI, 2026; Artificial Analysis, 2026 | Berman, 2026; Ben Davis, 2026 |
+| Ch10 Dataset Description | Artificial Analysis, 2026 | Ben Davis, 2026; Berman, 2026; OpenAI, 2026 |
 | Ch11 Limitations | Synthesis of all chapters' evidence gaps | — |
 | Ch12 Appendix | This file | — |
 
@@ -228,15 +183,15 @@ This appendix provides a quick reference for the primary and secondary sources u
 |------|---------|
 | `reports-md/00-executive-summary.md` | Chapter 0 |
 | `reports-md/01-research-background.md` | Chapter 1 |
-| `reports-md/02-methodology.md` | Chapter 2 |
-| `reports-md/03-dataset-description.md` | Chapter 3 |
+| `reports-md/02-practical-recommendations.md` | Chapter 2 |
+| `reports-md/03-methodology.md` | Chapter 3 |
 | `reports-md/04-evaluation-metrics.md` | Chapter 4 |
 | `reports-md/05-core-capability-results.md` | Chapter 5 |
 | `reports-md/06-competitor-comparison.md` | Chapter 6 |
 | `reports-md/07-failure-cases.md` | Chapter 7 |
 | `reports-md/08-cost-effectiveness.md` | Chapter 8 |
 | `reports-md/09-safety-alignment.md` | Chapter 9 |
-| `reports-md/10-practical-recommendations.md` | Chapter 10 |
+| `reports-md/10-dataset-description.md` | Chapter 10 |
 | `reports-md/11-limitations.md` | Chapter 11 |
 | `reports-md/12-appendix.md` | Chapter 12 (this file) |
 

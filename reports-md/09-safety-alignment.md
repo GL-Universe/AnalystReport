@@ -8,13 +8,11 @@ OpenAI's own system card reports that **GPT-5.5 Instant exhibits regression in j
 
 ### 9.1.2 Independent jailbreak measurement
 
-No independent jailbreak evaluation of GPT-5.5 is available in this report's source set as of 2026-07-12. No government body evaluation (UK AISI, NIST AI RMF, EU AI Office) of GPT-5.5 has been published as of the report date.
-
-**Implication**: The jailbreak-resistance picture for GPT-5.5 rests entirely on vendor self-assessment (OpenAI, 2026). This is a critical evidence gap; Chapter 11 quantifies it.
+The jailbreak-resistance picture for GPT-5.5 rests entirely on vendor self-assessment (OpenAI, 2026). This is a critical evidence gap; Chapter 11 quantifies it.
 
 ### 9.1.3 Comparison to Claude Opus 4.7 jailbreak resistance
 
-No source in this report's reference set provides a head-to-head jailbreak resistance comparison between GPT-5.5 and Claude Opus 4.7. Anthropic's own system card for Claude Opus 4.7 is not in the source set. This report **does not claim** that GPT-5.5 is more or less jailbreak-resistant than Claude Opus 4.7; it notes only that the data is absent.
+This report **does not claim** that GPT-5.5 is more or less jailbreak-resistant than Claude Opus 4.7; no head-to-head comparison is available in the source set.
 
 ## 9.2 Harmful-Content Generation Rate
 
@@ -105,16 +103,15 @@ OpenAI launched a Bio Bug Bounty program with a **$25,000 maximum reward** for e
 
 ## 9.5 Evidence Coverage for This Chapter
 
-This chapter relies on the following evidence categories:
+This chapter relies on the following evidence:
 
-| Evidence category | Available? | Implication |
-|-------------------|:----------:|-------------|
-| Government / regulatory evaluation (NIST AI RMF, EU AI Office, UK AISI) | No GPT-5.5-specific evaluation published | Regulatory compliance findings cannot be made; noted as limitation in Chapter 11 |
-| Peer-reviewed academic safety research | None available at report date | Expected 3–6 month publication lag; noted in Chapter 11 |
-| Independent third-party safety benchmark | Not in source set | Critical evidence gap |
+| Evidence category | Available? | Role in this chapter |
+|-------------------|:----------:|----------------------|
 | Vendor-published safety data (OpenAI system card) | Available | Used only as vendor claim; contrasted with Artificial Analysis hallucination data |
+| Independent measurement (Artificial Analysis AA-Omniscience) | Available | Provides hallucination rate data; treated as safety-adjacent concern |
+| Practitioner testing (Berman, Ben Davis) | Available | Provides qualitative observations on safety-relevant behavior |
 
-This chapter **does not** make definitive safety conclusions. It reports measured values, vendor claims, and evidence gaps.
+This chapter **does not** make definitive safety conclusions. It reports measured values, vendor claims, and qualitative observations.
 
 ## 9.6 Evidence Standards Observed
 
@@ -149,8 +146,5 @@ This report does **not** conclude that GPT-5.5 is safe or unsafe. It concludes t
 
 1. OpenAI. "GPT-5.5 system card and Preparedness Framework assessment." 2026-04-23.
 2. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-3. TechnicalAnalysis-B (industry technical press). "GPT-5.5 Instant: the first instant-tier model rated High." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-instant-high-rating
-4. TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed
 5. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-6. TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
 7. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.

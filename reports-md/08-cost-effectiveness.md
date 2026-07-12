@@ -85,15 +85,7 @@ The comparison that matters depends on which Gemini variant a user would otherwi
 TechnicalAnalysis-E (2026) reports that GPT-5.5's end-to-end speed is "roughly on par with GPT-5.4" — a 20% speed improvement is attributed to Codex's optimized inference partitioning technique (OpenAI, 2026; TechnicalAnalysis-E, 2026).
 
 ### 8.3.2 Gemini 3.5 Flash speed advantage
-Google reported that Gemini 3.5 Flash's output speed is **4× faster than other frontier models** (Google, 2026; an independent technical review, 2026). This is a vendor-reported speed advantage. No independent measurement (Artificial Analysis) in this report's set independently measures latency.
-
-### 8.3.3 P50 / P95 latency
-
-No independent measurement or practitioner testing source in this report's reference set publishes P50 or P95 latency measurements for GPT-5.5. This is flagged as a measurement gap in Chapter 11.
-
-### 8.3.4 Throughput under batch loading
-
-Not measured in the source set. Flagged as a measurement gap in Chapter 11.
+Google reported that Gemini 3.5 Flash's output speed is **4× faster than other frontier models** (Google, 2026). This is a vendor-reported speed advantage.
 
 ## 8.4 Cost-Efficiency Ratio
 
@@ -150,17 +142,15 @@ Ben Davis (2026-05-28) reports a case study of a practitioner ("Peter") spending
 
 ### 8.5.1 List price vs negotiated price
 
-All figures in this chapter use **list prices**. Enterprise agreements, volume discounts, and committed-use pricing can materially change the cost picture. No source in this report's set publishes enterprise-tier pricing.
+All figures in this chapter use **list prices**. Enterprise agreements, volume discounts, and committed-use pricing can materially change the cost picture.
 
 ### 8.5.2 Cost data recency
 
 All pricing figures are dated 2026-04-23 (GPT-5.5 launch) or the source publication date. AI vendor pricing changes frequently. The cost analysis in this chapter is a **point-in-time snapshot**, not a durable conclusion.
 
-### 8.5.3 No regulatory evaluation government cost-benefit analysis
+### 8.5.3 Vendor cost-saving claims excluded
 
-No government or regulatory body has published a cost-benefit analysis of GPT-5.5 deployment as of the report date. Chapter 9 (Safety & Alignment) addresses regulatory aspects; Chapter 11 notes the absence of regulatory evaluation cost-benefit verification.
-
-### 8.5.4 Vendor cost-saving claims excluded, this report does **not** cite OpenAI's own cost-saving claims (e.g., "GPT-5.5 reduces user cost by X%"). All cost findings in this chapter are either:
+This report does **not** cite OpenAI's own cost-saving claims (e.g., "GPT-5.5 reduces user cost by X%"). All cost findings in this chapter are either:
 - independent measurement measured (Artificial Analysis Index runs)
 - vendor-reported list prices (vendor-published, with date)
 - practitioner testing practitioner reports (with named source)
@@ -174,9 +164,5 @@ No government or regulatory body has published a cost-benefit analysis of GPT-5.
 3. Anthropic. "Claude Opus 4.7 pricing." 2026.
 4. Google. "Gemini 3.1 Pro Preview and 3.5 Flash pricing and speed." 2026.
 5. DeepSeek. "DeepSeek-V4 Preview release and pricing." 2026-04-23.
-6. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
-7. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
-8. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-9. TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch, hands-on testing, and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
-10. TechnicalAnalysis-E (Industry technical analysis). "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice
-11. `white-paper-research/summary-white-paper-focus.md` — citation standards (red lines)
+6. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
+7. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.

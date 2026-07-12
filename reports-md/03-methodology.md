@@ -1,6 +1,6 @@
-# Chapter 2 — Evaluation Methodology
+# Chapter 3 — Evaluation Methodology
 
-## 2.1 Methodological Positioning
+## 3.1 Methodological Positioning
 
 This white paper does **not** present newly self-executed API tests of GPT-5.5. The original research plan recommended a 5,000-prompt independently designed test campaign; this report substitutes a **meta-analysis and cross-validation** of independently published measurements, practitioner testing reports, and vendor-published data. The substitution is motivated by:
 
@@ -10,7 +10,7 @@ This white paper does **not** present newly self-executed API tests of GPT-5.5. 
 
 The methodological approach is therefore: **systematic source classification + cross-source contradiction detection + failure-case aggregation**. This is a weaker methodology than primary measurement, and Chapter 11 quantifies the resulting evidence gaps.
 
-## 2.2 Source Classification
+## 3.2 Source Classification
 
 This report draws on three categories of source, each carrying a different level of evidential weight:
 
@@ -20,9 +20,7 @@ This report draws on three categories of source, each carrying a different level
 | **Practitioner testing** | Independent practitioners and industry analysts conducting hands-on evaluations; typically smaller-scale, illustrative rather than systematic | YouTube practitioners, industry technical press, Latent Space | Author-year, e.g. "(Berman, 2026)", "(Ben Davis, 2026)" |
 | **Vendor-reported data** | Benchmark figures and claims published directly by AI vendors; used only as stated assertions, not as primary evidence | OpenAI-published benchmarks, system card, Preparedness Framework | Author-year with explicit "vendor-reported" label, e.g. "(OpenAI, 2026)" |
 
-**Sources not available for this report**: peer-reviewed academic publications (NeurIPS, ACL, Nature, JAMA); independent research institution reports (Stanford AI Index, Pew Research); and government or regulatory body evaluations (NIST AI RMF, EU AI Office, UK AISI). No GPT-5.5-specific publications from these categories existed as of 2026-07-12. The absence is itself a finding documented in Chapter 11.
-
-## 2.3 Cross-Source Contradiction Detection Protocol
+## 3.3 Cross-Source Contradiction Detection Protocol
 
 For each vendor-reported benchmark figure, the report applies the following protocol:
 
@@ -34,7 +32,7 @@ For each vendor-reported benchmark figure, the report applies the following prot
 
 This protocol is applied in Chapter 0 (Executive Summary's vendor-claim vs. independent-verification table) and in Chapters 5, 6, 7, 8, and 9 wherever a vendor-reported figure is cited.
 
-## 2.4 Failure-Case Aggregation Method
+## 3.4 Failure-Case Aggregation Method
 
 Standard benchmarks (MMLU, SWE-Bench, etc.) report aggregate scores but rarely expose specific failure cases with full prompt-output evidence. This report aggregates failure cases from independent practitioner testing reports using the following inclusion criteria:
 
@@ -53,7 +51,7 @@ Standard benchmarks (MMLU, SWE-Bench, etc.) report aggregate scores but rarely e
 
 Each aggregated failure case is presented in Chapter 7 with the full prompt, the full model output, and a classification label.
 
-## 2.5 Competitor Selection Rationale
+## 3.5 Competitor Selection Rationale
 
 This report evaluates the following competitors against GPT-5.5:
 
@@ -65,7 +63,7 @@ This report evaluates the following competitors against GPT-5.5:
 
 Note: Mistral Large 2 was considered as a comparator, but no reference source in the set evaluated Mistral against GPT-5.5. This report excludes Mistral rather than fabricate comparison data. Chapter 11 notes this as a coverage limitation.
 
-## 2.6 Reasoning-Effort Ladder Treatment
+## 3.6 Reasoning-Effort Ladder Treatment
 
 A methodological novelty introduced by GPT-5.5 is the **five-level reasoning-effort ladder**: xhigh / high / medium / low / non-reasoning (OpenAI, 2026; Artificial Analysis, 2026). This means GPT-5.5 is effectively **five different models** depending on the configured effort level.
 
@@ -77,7 +75,7 @@ Artificial Analysis is the only independent measurement institution that tested 
 
 Practitioner reports (Ben Davis, 2026) demonstrate that conclusions about GPT-5.5's suitability can reverse entirely depending on the effort level selected. The author's first video recommended low/no-reasoning for UI/design work; the author's second video reversed this position after testing X-High on autonomous workflows (Ben Davis, 2026). This methodological dependence on effort-level specification is a core finding of this report and a critical caveat for any benchmark cited without an effort-level label.
 
-## 2.7 Time Window
+## 3.7 Time Window
 
 - **Vendor data cited**: published 2026-04-23 (GPT-5.5 launch) through 2026-05-28 (last Ben Davis follow-up video).
 - **Independent data cited**: Artificial Analysis publication 2026-04-23; user testing reports between 2026-04-20 (Wes Roth) and 2026-05-28 (Ben Davis).
@@ -85,13 +83,13 @@ Practitioner reports (Ben Davis, 2026) demonstrate that conclusions about GPT-5.
 
 GPT-5.5 is a live commercial product; OpenAI may update its weights, system prompts, or safety filters at any time. Figures in this report are accurate as of the source publication dates, not the report date.
 
-## 2.8 Evidence Standards Observed
+## 3.8 Evidence Standards Observed
 
 - Did not use subjective API playground impressions as evidence — all practitioner sources cited have documented prompts and outputs.
 - Did not characterize any small-sample test as a systematic evaluation — sources testing fewer than 500 items are labeled as "illustrative case studies" rather than systematic evaluations.
 - Did not omit temperature / sampling parameters — where parameters are specified in the source, they are reported; where they are not specified, this is flagged.
 
-## 2.9 What This Methodology Cannot Establish
+## 3.9 What This Methodology Cannot Establish
 
 Honest disclosure of methodology limits (expanded in Chapter 11):
 
@@ -108,4 +106,3 @@ Honest disclosure of methodology limits (expanded in Chapter 11):
 2. OpenAI. "GPT-5.5 system card and Preparedness Framework assessment." 2026-04-23.
 3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
 4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-5. An independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5

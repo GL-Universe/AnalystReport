@@ -165,19 +165,7 @@ The author reports that low-reasoning mode produces more errors on these tasks, 
 
 ## 5.5 Generation Consistency & Stability
 
-### 5.5.1 No independent stability benchmark in source set
-
-Artificial Analysis does not publish a stability/consistency benchmark in the source set used for this report. No practitioner testing source systematically tests GPT-5.5's output variance across multiple runs at fixed temperature.
-
-### 5.5.2 Indirect evidence of consistency behavior
-Ben Davis (2026-05-04 and 2026-05-28) reports two observations relevant to consistency:
-
-1. **Low-reasoning mode produces variable results** on UI/design tasks across runs (first video)
-2. **X-High reasoning produces more deterministic task completion** but at higher token cost (second video)
-
-These observations are not quantified; no Jaccard similarity or variance metric is published. This report notes consistency as a **measurement gap** in Chapter 11.
-
-### 5.5.3 Cross-effort-level consistency failure (Type C, practitioner testing)
+### 5.5.1 Cross-effort-level consistency failure (Type C, practitioner testing)
 
 Ben Davis's two videos (2026-05-04 and 2026-05-28) are themselves a documented Type C (consistency) finding: the same author reversed his recommendation about GPT-5.5's optimal reasoning-effort setting within four weeks. This is not a model-output consistency failure; it is an **evaluator-conclusion consistency failure** that demonstrates the methodological dependence on effort-level specification (Section 4.2).
 
@@ -198,16 +186,10 @@ Ben Davis's two videos (2026-05-04 and 2026-05-28) are themselves a documented T
 | Code security awareness | **Improved** over GPT-5.3 (UUID/whitelist/MIME) | practitioner testing only (single case) |
 | Output consistency | Not measured | Measurement gap |
 
----
-
 ## References for This Chapter
 
 1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
 2. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
 3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
 4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-5. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
-6. TechnicalAnalysis-A (industry technical press). "GPT-5.5 launch: a detailed analysis." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-launch-detailed
-7. TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch: hands-on testing and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
-8. TechnicalAnalysis-E (Industry technical analysis). "GPT-5.5 in practice: hands-on evaluation for real workloads." 2026-04-23. URL: https://example.com/technical-analysis/gpt-5.5-in-practice
 9. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
