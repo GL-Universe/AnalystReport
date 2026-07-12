@@ -1,6 +1,15 @@
 {
   "reports": [
     {
+      "title": "GPT-5.5 Model Service Evaluation White Paper",
+      "description": "Independent evaluation white paper covering intelligence index, cost-efficiency, hallucination, failure cases, and safety of GPT-5.5 vs Claude Opus 4.7 / Gemini 3.1 Pro / DeepSeek-V4.",
+      "date": "2026-07-12",
+      "author": "AnalystReport",
+      "icon": "📄",
+      "tags": ["ai", "evaluation"],
+      "file": "reports/gpt-5.5-evaluation-whitepaper.html"
+    },
+    {
       "title": "示例报告：2026 上半年科技行业趋势分析",
       "description": "涵盖人工智能、云计算、半导体等关键领域的市场趋势、投融资数据及未来展望。",
       "date": "2026-07-01",

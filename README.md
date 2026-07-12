@@ -14,10 +14,20 @@ AnalystReport/
 ├── frontend/              # 🚀 前端代码（GitHub Pages 根目录）
 │   ├── index.html          #    首页：报告列表
 │   ├── assets/             #    样式与脚本
+│   │   ├── css/style.css            #     首页 + 示例报告样式
+│   │   ├── css/github-markdown.css  #     多章节合并报告样式（GitHub 风格）
+│   │   └── js/main.js               #     卡片动态加载脚本
 │   ├── data/reports.json   #    报告注册表
 │   └── reports/            #    HTML 报告详情页
+│       ├── sample-report.html
+│       └── gpt-5.5-evaluation-whitepaper.html  # GPT-5.5 评测白皮书
 │
 ├── reports-md/             # 📝 Markdown 报告源文件
+│   ├── 00-executive-summary.md ~ 12-appendix.md  # GPT-5.5 白皮书 13 章
+│   └── sample-report.md
+│
+├── scripts/               # 🧰 构建脚本
+│   └── build_report.py     #   将 reports-md/NN-*.md 合并为 HTML 报告
 │
 ├── skills/                 # 🛠️ AI 技能集合
 │   ├── report-generator/   #    报告生成 skill
@@ -33,8 +43,9 @@ AnalystReport/
 ## 🔄 核心工作流
 
 ```
-[1] report-generator skill  →  产出 reports-md/*.md
-[2] page-builder skill      →  md 转 frontend/reports/*.html + 更新 reports.json
+[1] report-generator skill  →  产出 reports-md/*.md（单篇报告）
+[2] page-builder skill      →  md 转 frontend/reports/*.html + 更新 reports.json（单篇报告）
+[2'] scripts/build_report.py →  多章节 NN-*.md 批量合并为 frontend/reports/*.html（多章节报告）
 [3] git push                →  GitHub Actions 自动部署到 Pages
 [4] Progress/changelog.md   →  追加变更记录
 ```

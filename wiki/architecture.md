@@ -14,11 +14,21 @@ AnalystReport/
 ├── frontend/              # 前端代码（GitHub Pages 根目录）
 │   ├── index.html         # 首页：报告列表
 │   ├── assets/            # 静态资源
+│   │   ├── css/
+│   │   │   ├── style.css          # 首页 + 示例报告样式
+│   │   │   └── github-markdown.css# 多章节合并报告样式（GitHub 风格精简）
+│   │   └── js/main.js            # 异步加载 reports.json 渲染卡片
 │   ├── data/reports.json  # 报告元数据注册表
 │   └── reports/           # 转换后的 HTML 报告
+│       ├── sample-report.html
+│       └── gpt-5.5-evaluation-whitepaper.html  # 多章节合并白皮书
 │
 ├── reports-md/            # Markdown 报告源文件
-│   └── *.md               # 含 front-matter 的 md 文件
+│   ├── 00-executive-summary.md ... 12-appendix.md  # GPT-5.5 白皮书 13 章
+│   └── sample-report.md                              # 单篇示例
+│
+├── scripts/              # 构建脚本
+│   └── build_report.py   # 将 reports-md/NN-*.md 合并为 frontend/reports/*.html
 │
 ├── skills/                # AI 技能集合
 │   ├── report-generator/  # 报告生成 skill
@@ -48,7 +58,8 @@ AnalystReport/
 | 文件 | 作用 |
 |------|------|
 | `index.html` | 首页，展示报告卡片列表 |
-| `assets/css/style.css` | 全局样式（首页 + 详情页共用） |
+| `assets/css/style.css` | 首页 + 示例报告样式（含渐变/卡片/阴影） |
+| `assets/css/github-markdown.css` | 多章节合并报告样式（GitHub README 风格，约 180 行） |
 | `assets/js/main.js` | 异步加载 `data/reports.json` 渲染卡片 |
 | `data/reports.json` | 报告注册表，决定首页显示哪些报告 |
 | `reports/*.html` | 单个报告详情页 |
@@ -60,15 +71,45 @@ reports.json ──fetch──> main.js ──渲染──> index.html 卡片
                                        └──点击──> reports/*.html
 ```
 
+**报告样式分发**：
+
+| 报告类型 | 引用 CSS |
+|----------|---------|
+| 单篇示例（`sample-report.html`） | `style.css`（卡片渐变样式） |
+| 多章节合并（`gpt-5.5-evaluation-whitepaper.html`） | `github-markdown.css`（GitHub README 风格） |
+
 ### 3.2 `reports-md/` - Markdown 报告源
 
-**职责**：保存 AI 生成的分析报告 Markdown 源文件。每个 md 含 YAML front-matter 元数据 + 正文。
+**职责**：保存 AI 生成的分析报告 Markdown 源文件。
 
-**命名规范**：`{slug}.md`，slug 为 kebab-case（如 `2026-ai-market-trend.md`）。
+**两种组织模式**：
 
-**与 HTML 的关系**：一份 md 对应一份 `frontend/reports/{slug}.html`，由 `page-builder` skill 转换。
+1. **单篇模式**：一个 `.md` 文件对应一份报告，含 YAML front-matter 元数据 + 正文
+   - 命名规范：`{slug}.md`（如 `sample-report.md`）
+   - 由 `page-builder` skill 转换为 `frontend/reports/{slug}.html`
 
-### 3.3 `skills/` - AI 技能集合
+2. **多章节模式**：一个目录下的多个 `NN-*.md` 文件按文件名顺序合并为一份完整报告
+   - 命名规范：`NN-{chapter-name}.md`（如 `00-executive-summary.md`）
+   - 由 `scripts/build_report.py` 合并并转换为 `frontend/reports/{slug}.html`
+   - 当前示例：`reports-md/00-*.md` ~ `12-*.md` → `frontend/reports/gpt-5.5-evaluation-whitepaper.html`
+
+### 3.3 `scripts/` - 构建脚本
+
+**职责**：将多章节 Markdown 合并为完整 HTML 报告。
+
+| 脚本 | 输入 | 输出 |
+|------|------|------|
+| `build_report.py` | `reports-md/NN-*.md`（自动按文件名顺序） | `frontend/reports/gpt-5.5-evaluation-whitepaper.html` |
+
+**使用方式**：
+
+```bash
+python3 scripts/build_report.py
+```
+
+**依赖**：Python `markdown` 库（`pip3 install markdown`）。
+
+### 3.4 `skills/` - AI 技能集合
 
 **职责**：封装可复用的 AI 工作流，每个 skill 是一个 `.md` 定义文件，由 AI agent 调用。
 
@@ -79,15 +120,15 @@ reports.json ──fetch──> main.js ──渲染──> index.html 卡片
 
 详见 [`skills/README.md`](../skills/README.md)。
 
-### 3.4 `wiki/` - 项目文档
+### 3.5 `wiki/` - 项目文档
 
 **职责**：说明项目的架构与工作流，供人类开发者阅读。
 
-### 3.5 `Progress/` - 进展记录
+### 3.6 `Progress/` - 进展记录
 
 **职责**：按时间顺序记录项目的关键变更，作为「项目记忆」。
 
-### 3.6 `.github/workflows/` - CI/CD
+### 3.7 `.github/workflows/` - CI/CD
 
 **职责**：`deploy-pages.yml` 在每次推送 `main` 分支时，将 `frontend/` 目录上传到 GitHub Pages。
 

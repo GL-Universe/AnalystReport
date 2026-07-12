@@ -71,6 +71,76 @@ use_skill(skill_name="page-builder", reason="将 reports-md/*.md 转为 HTML")
 - [ ] 详情页样式渲染正常（表格、引用块、标签）
 - [ ] 返回按钮可回到首页
 
+### 3.5 子流程 A：单篇 md 转 HTML
+
+适用：`reports-md/{slug}.md`（含 front-matter 的单文件报告）。
+
+由 `page-builder` skill 按 `sample-report.html` 风格手写 HTML，引用 `assets/css/style.css`。
+
+### 3.6 子流程 B：多章节 md 批量合并
+
+适用：`reports-md/` 下含多个 `NN-*.md` 章节文件（如 GPT-5.5 白皮书的 00 ~ 12 章）。
+
+使用构建脚本一键生成：
+
+```bash
+python3 scripts/build_report.py
+```
+
+脚本逻辑：
+1. 自动收集 `reports-md/` 下匹配 `^\d{2}-.+\.md# 🔄 工作流说明
+
+本文档说明 AnalystReport 项目的三种核心工作流：报告生成、页面搭建、部署上线。
+
+## 1. 完整工作流概览
+
+```
+[1] 报告生成      →  reports-md/*.md
+[2] 页面搭建      →  frontend/reports/*.html + reports.json
+[3] 部署上线      →  git push → GitHub Pages
+[4] 进展记录      →  Progress/changelog.md
+```
+
+---
+
+## 2. 工作流 1：报告生成
+
+### 2.1 触发方式
+
+用户对 AI 说：
+- 「帮我生成一份关于 XX 的分析报告」
+- 「调研一下 XX 行业，整理成报告」
+
+### 2.2 调用 skill
+
+```python
+use_skill(skill_name="report-generator", reason="生成 XX 主题分析报告")
+```
+
+详见 [`skills/report-generator/SKILL.md`](../skills/report-generator/SKILL.md)。
+
+### 2.3 产出
+
+- 文件路径：`reports-md/{slug}.md`
+- 文件结构：YAML front-matter + Markdown 正文
+
+### 2.4 校验
+
+- [ ] front-matter 含 title、description、date、author、icon、tags、slug
+- [ ] 正文含「核心摘要」+ 编号章节 + 「展望与建议」
+- [ ] 数据有来源标注
+- [ ] 字数符合深度要求（brief 800 / standard 1500 / deep 3000）
+
+---
+
+ 的章节文件，按文件名升序
+2. 用 Python `markdown` 库渲染（启用 `tables` / `fenced_code` / `toc` / `sane_lists` / `nl2br`）
+3. 自动生成章节目录（h1 锚点列表）注入页面顶部
+4. 套用 HTML 模板（含返回链接、CSS 引用、footer）
+5. 输出到 `frontend/reports/gpt-5.5-evaluation-whitepaper.html`，引用 `assets/css/github-markdown.css`
+
+脚本完成后需手动更新 `frontend/data/reports.json` 追加条目。
+
 ---
 
 ## 4. 工作流 3：部署上线

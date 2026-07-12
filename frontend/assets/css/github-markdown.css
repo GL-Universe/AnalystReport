@@ -1,0 +1,246 @@
+/* AnalystReport - GitHub 风格精简样式
+   用于多章节合并报告（gpt-5.5-evaluation-whitepaper 等）
+   设计目标：模仿 GitHub README 渲染样式，最小化样式代码量 */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1f2328;
+  --color-text-secondary: #656d76;
+  --color-border: #d0d7de;
+  --color-border-muted: #d8dee4;
+  --color-accent-bg: #ddf4ff;
+  --color-accent-border: #54aeff;
+  --color-link: #0969da;
+  --color-link-hover: #0550ae;
+  --color-code-bg: #eff1f0;
+  --color-pre-bg: #f6f8fa;
+  --color-table-header-bg: #f6f8fa;
+  --color-blockquote-text: #656d76;
+  --color-mark: #fff8c5;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { color: var(--color-link-hover); text-decoration: underline; }
+
+/* --- 页面布局 --- */
+.page-header {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 24px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header .back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.page-header .report-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.page-header .report-meta {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.markdown-body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.page-footer {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* --- 章节目录 --- */
+.toc {
+  background: var(--color-pre-bg);
+  border: 1px solid var(--color-border-muted);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+}
+
+.toc h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.toc li { margin: 4px 0; }
+
+/* --- Markdown 标题层级 --- */
+.markdown-body h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 48px 0 16px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--color-border-muted);
+  line-height: 1.25;
+}
+
+.markdown-body h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  line-height: 1.25;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 24px 0 8px;
+  line-height: 1.25;
+}
+
+/* --- 段落 / 列表 --- */
+.markdown-body p {
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0 0 16px;
+  padding-left: 28px;
+}
+
+.markdown-body li { margin: 4px 0; }
+.markdown-body li > ul, .markdown-body li > ol { margin: 4px 0; }
+
+/* --- 表格 --- */
+.markdown-body table {
+  display: block;
+  width: 100%;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 0 0 16px;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+  background: var(--color-table-header-bg);
+}
+
+.markdown-body table tr:nth-child(2n) td {
+  background: var(--color-pre-bg);
+}
+
+/* --- 引用块 --- */
+.markdown-body blockquote {
+  margin: 0 0 16px;
+  padding: 0 16px;
+  color: var(--color-blockquote-text);
+  border-left: 4px solid var(--color-border);
+}
+
+.markdown-body blockquote > :first-child { margin-top: 0; }
+.markdown-body blockquote > :last-child { margin-bottom: 0; }
+
+/* --- 代码 --- */
+.markdown-body code {
+  font-family: var(--font-mono);
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  background: var(--color-code-bg);
+  border-radius: 6px;
+}
+
+.markdown-body pre {
+  margin: 0 0 16px;
+  padding: 16px;
+  overflow-x: auto;
+  background: var(--color-pre-bg);
+  border-radius: 6px;
+  line-height: 1.45;
+}
+
+.markdown-body pre code {
+  padding: 0;
+  background: transparent;
+  font-size: 100%;
+  border-radius: 0;
+}
+
+/* --- 分隔线 / 强调 / 删除 --- */
+.markdown-body hr {
+  height: 1px;
+  margin: 32px 0;
+  border: 0;
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body hr.chapter-divider {
+  margin: 48px 0;
+  border-top: 2px dashed var(--color-border);
+}
+
+.markdown-body strong { font-weight: 600; }
+.markdown-body em { font-style: italic; }
+.markdown-body del { text-decoration: line-through; }
+.markdown-body mark { background: var(--color-mark); border-radius: 3px; padding: 0 2px; }
+
+/* --- 图片 / 水平滚动 --- */
+.markdown-body img { max-width: 100%; vertical-align: middle; }
+
+/* --- 响应式：窄屏减少边距 --- */
+@media (max-width: 768px) {
+  .page-header { padding: 24px 16px 12px; }
+  .page-header .report-title { font-size: 1.5rem; }
+  .markdown-body { padding: 24px 16px 48px; }
+}
