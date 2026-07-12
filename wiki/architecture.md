@@ -2,9 +2,9 @@
 
 ## 1. 设计原则
 
-- **职责分离**：前端代码、Markdown 源、AI skill、文档、进展记录各自独立
+- **职责分离**：前端代码、Markdown 源、文档、进展记录各自独立
 - **零依赖**：前端纯静态 HTML/CSS/JS，无需构建工具
-- **可自动化**：通过 GitHub Actions 自动部署，AI skill 自动化内容生产
+- **可自动化**：通过 GitHub Actions 自动部署到 Pages
 - **可追溯**：所有变更记录在 `Progress/changelog.md`
 
 ## 2. 顶层目录结构
@@ -29,10 +29,6 @@ AnalystReport/
 │
 ├── scripts/              # 构建脚本
 │   └── build_report.py   # 将 reports-md/NN-*.md 合并为 frontend/reports/*.html
-│
-├── skills/                # AI 技能集合
-│   ├── report-generator/  # 报告生成 skill
-│   └── page-builder/      # 页面搭建 skill
 │
 ├── wiki/                  # 项目文档
 │   ├── architecture.md    # 本文件
@@ -80,13 +76,13 @@ reports.json ──fetch──> main.js ──渲染──> index.html 卡片
 
 ### 3.2 `reports-md/` - Markdown 报告源
 
-**职责**：保存 AI 生成的分析报告 Markdown 源文件。
+**职责**：保存分析报告 Markdown 源文件。
 
 **两种组织模式**：
 
 1. **单篇模式**：一个 `.md` 文件对应一份报告，含 YAML front-matter 元数据 + 正文
    - 命名规范：`{slug}.md`（如 `sample-report.md`）
-   - 由 `page-builder` skill 转换为 `frontend/reports/{slug}.html`
+   - 手动或通过脚本转换为 `frontend/reports/{slug}.html`
 
 2. **多章节模式**：一个目录下的多个 `NN-*.md` 文件按文件名顺序合并为一份完整报告
    - 命名规范：`NN-{chapter-name}.md`（如 `00-executive-summary.md`）
@@ -109,26 +105,15 @@ python3 scripts/build_report.py
 
 **依赖**：Python `markdown` 库（`pip3 install markdown`）。
 
-### 3.4 `skills/` - AI 技能集合
-
-**职责**：封装可复用的 AI 工作流，每个 skill 是一个 `.md` 定义文件，由 AI agent 调用。
-
-| Skill | 输入 | 输出 |
-|-------|------|------|
-| `report-generator` | 报告主题 | `reports-md/*.md` |
-| `page-builder` | md 文件路径 | `frontend/reports/*.html` + 更新 `reports.json` |
-
-详见 [`skills/README.md`](../skills/README.md)。
-
-### 3.5 `wiki/` - 项目文档
+### 3.4 `wiki/` - 项目文档
 
 **职责**：说明项目的架构与工作流，供人类开发者阅读。
 
-### 3.6 `Progress/` - 进展记录
+### 3.5 `Progress/` - 进展记录
 
 **职责**：按时间顺序记录项目的关键变更，作为「项目记忆」。
 
-### 3.7 `.github/workflows/` - CI/CD
+### 3.6 `.github/workflows/` - CI/CD
 
 **职责**：`deploy-pages.yml` 在每次推送 `main` 分支时，将 `frontend/` 目录上传到 GitHub Pages。
 
@@ -136,12 +121,7 @@ python3 scripts/build_report.py
 
 ```
                 ┌─────────────────────┐
-                │  用户提需求          │
-                └──────────┬──────────┘
-                           ▼
-                ┌─────────────────────┐
-                │  report-generator   │
-                │  skill (AI)         │
+                │  作者撰写 Markdown   │
                 └──────────┬──────────┘
                            ▼
                 ┌─────────────────────┐
@@ -149,8 +129,8 @@ python3 scripts/build_report.py
                 └──────────┬──────────┘
                            ▼
                 ┌─────────────────────┐
-                │  page-builder skill │
-                │  (AI)               │
+                │ scripts/build_report │
+                │  .py  (多章节合并)    │
                 └──────────┬──────────┘
                            ▼
               ┌────────────┴────────────┐
@@ -182,8 +162,8 @@ python3 scripts/build_report.py
 
 ### 5.1 为什么前端在 `frontend/` 而非根目录？
 
-- 隔离前端代码与文档/skill，避免目录混乱
-- GitHub Actions 部署时只上传 `frontend/`，文档和 skill 不会暴露到 Pages
+- 隔离前端代码与文档，避免目录混乱
+- GitHub Actions 部署时只上传 `frontend/`，文档不会暴露到 Pages
 - 仓库根目录保持「项目元信息」角色（README、Progress、wiki）
 
 ### 5.2 为什么用 `reports.json` 注册表而非自动扫描？
@@ -196,7 +176,6 @@ python3 scripts/build_report.py
 
 - 元数据与正文同文件，便于维护
 - 标准 YAML 格式，工具兼容性好
-- `page-builder` 解析简单
 
 ## 6. 扩展性
 
@@ -204,5 +183,4 @@ python3 scripts/build_report.py
 
 - 🌐 多语言支持（`reports-md/en/`、`reports-md/zh/`）
 - 📊 数据可视化（在 HTML 报告中嵌入图表库）
-- 🔄 md 自动监听（git hook 触发 page-builder）
 - 📈 访问统计（接入 Plausible / Umami）

@@ -12,8 +12,8 @@
 
 ## 📌 当前状态
 
-- **最新版本**：v0.3.4
-- **状态**：项目文档结构整理完成
+- **最新版本**：v0.3.5
+- **状态**：移除 skills 目录，清理文档引用
 - **网站**：https://gl-universe.github.io/AnalystReport
 - **仓库**：https://github.com/GL-Universe/AnalystReport
 
@@ -21,6 +21,7 @@
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| v0.3.5 | 2026-07-12 | 移除 skills 目录，清理文档引用 |
 | v0.3.4 | 2026-07-12 | 项目文档结构整理（新增 whitepaper-build-guide、移动 todo 到 Progress/） |
 | v0.3.3 | 2026-07-12 | References 全局合并（12 章末尾 References → Appendix H 单一列表） |
 | v0.3.2 | 2026-07-12 | 读者视角七项修订（删除 example.com、章节重排、删除无数据维度） |

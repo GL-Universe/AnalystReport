@@ -98,7 +98,6 @@
 
 ### 🔥 高优先级 - 即将推进
 
-- [ ] **将大纲同步到 `skills/report-generator/SKILL.md`**：作为报告生成的章节模板，让 AI skill 调用时直接产出符合主流媒体引用模式的报告
 - [ ] **按大纲重写 `reports-md/sample-report.md` 示例**：用真实主题演示 11 章节结构 + A-J 引用类型的落地形态
 - [ ] **在报告 front-matter 增加 `evidence_types` 字段**：标注该报告用了哪些引用类型（A-J），便于首页展示评测严谨度
 
@@ -106,13 +105,11 @@
 
 - [ ] **确认报告文件夹命名方案**：上一轮对话讨论的「顺序控制文件 + 章节文件」模式（一份报告对应一个文件夹，内含 `index.md` 顺序控制文件 + 多个按章节语义命名的 `.md` 文件），等待用户最终确认
 - [ ] **更新 `frontend/data/reports.json` 结构**：如确认上述命名方案，需相应调整注册表字段以支持多章节报告
-- [ ] **更新 `skills/page-builder/SKILL.md`**：让 page-builder 能识别新的「文件夹 + index.md + 章节文件」结构并正确转换为 HTML
 
 ### 🟢 低优先级 - 未来扩展（来自 `wiki/architecture.md` 第 6 节）
 
 - [ ] 🌐 多语言支持（`reports-md/en/`、`reports-md/zh/`）
 - [ ] 📊 数据可视化（在 HTML 报告中嵌入图表库）
-- [ ] 🔄 md 自动监听（git hook 触发 page-builder）
 - [ ] 📈 访问统计（接入 Plausible / Umami）
 
 ---
@@ -126,9 +123,9 @@
 | 阶段三：媒体引用模式研究 | ✅ 完成 | 8/8 |
 | 阶段四：大纲文件输出 | ✅ 完成 | 2/2 |
 | 阶段五：GPT-5.5 白皮书撰写与四轮修订 | ✅ 完成 | 35/35 |
-| 阶段六：大纲落地到 skill & 示例 | 🔥 进行中 | 0/3 |
-| 阶段七：报告文件夹结构升级 | 🟡 待确认 | 0/3 |
-| 阶段八：未来扩展 | 🟢 待启动 | 0/4 |
+| 阶段六：示例报告与 front-matter 增强 | 🔥 进行中 | 0/2 |
+| 阶段七：报告文件夹结构升级 | 🟡 待确认 | 0/2 |
+| 阶段八：未来扩展 | 🟢 待启动 | 0/3 |
 
 ---
 
@@ -141,7 +138,6 @@
 - 📰 媒体引用模式研究：`wiki/media-citation-patterns.md`
 - 📝 白皮书构建指南：`wiki/whitepaper-build-guide.md`
 - 📋 评测报告大纲 v1：`report-outline-v1.md`
-- 🛠️ Skills 总览：`skills/README.md`
 
 ---
 
@@ -151,3 +147,4 @@
 - 新增事项时，按优先级归类到「待办事项」对应分区
 - 每个阶段完成后，在 `Progress/changelog.md` 追加版本记录
 - 本文件位于 `Progress/todo.md`（v0.3.4 起从项目根目录移到 Progress/）
+- v0.3.5 起 `skills/` 目录已删除，所有文档不再引用 skills

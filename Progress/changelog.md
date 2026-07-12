@@ -6,6 +6,33 @@
 
 ---
 
+## [v0.3.5] - 2026-07-12 - 移除 skills 目录
+
+**变更类型**: refactor
+**影响范围**: README.md、wiki/、Progress/
+
+### 变更内容
+
+- 🗑️ **删除 `skills/` 目录**：移除 `skills/README.md`、`skills/report-generator/SKILL.md`、`skills/page-builder/SKILL.md`
+- 📖 **更新 `README.md`**：
+  - 顶层目录表格移除 `skills/` 行
+  - 核心工作流概览移除 `[1] report-generator skill` 和 `[2] page-builder skill` 两行，改为"撰写 Markdown 报告源"
+  - "如何添加新报告"移除"方式 1：使用 AI Skill"小节，原方式 2/3 改为方式 1/2
+  - 文档导航"其他"移除 "🛠️ [AI Skills](./skills/README.md)"
+  - 技术栈移除"AI Skill 驱动内容生产"
+- 📖 **更新 `wiki/architecture.md`**：移除 §3.4 `skills/` 小节、数据流向图中的 skill 节点、设计决策中的 skill 引用
+- 📖 **重写 `wiki/workflow.md`**：移除所有"调用 skill"小节（原 §2.2、§3.2），改为作者直接撰写 Markdown + 运行构建脚本的工作流；修复原文中重复嵌套的内容
+- 📖 **更新 `wiki/README.md`**：移除"AI Skills"链接和相关资源中的 `skills/` 引用
+- 📖 **更新 `wiki/media-citation-patterns.md`**：移除 `report-generator` skill 相关引用，改为"给报告作者的输入"
+- 📋 **更新 `Progress/todo.md`**：移除阶段六"大纲落地到 skill & 示例"中的 skill 相关待办
+
+### 设计动机
+
+- skills 目录已不再使用，需要清理文档中对 skills 的所有引用，避免指向已删除的文件
+- 项目当前工作流是"作者直接撰写 Markdown + 运行构建脚本"，不再依赖 AI skill 自动化
+
+---
+
 ## [v0.3.4] - 2026-07-12 - 项目文档结构整理
 
 **变更类型**: docs
