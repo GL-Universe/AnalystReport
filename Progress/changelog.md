@@ -6,7 +6,104 @@
 
 ---
 
+## [v0.3.4] - 2026-07-12 - 项目文档结构整理
+
+**变更类型**: docs
+**影响范围**: wiki/、Progress/、README.md、todo.md
+
+### 变更内容
+
+- 📝 **新增白皮书构建指南**：`wiki/whitepaper-build-guide.md`
+  - 记录 GPT-5.5 白皮书撰写过程，作为案例研究便于以后查阅
+  - 包含项目概览、关键依赖文件、关键输出、撰写过程关键决策、最终章节顺序、快速查阅
+- 📦 **整理文档职责分工**：
+  - `Progress/` 专注时间维度（变更日志、任务追踪），`wiki/` 专注结构维度（架构、工作流、案例研究）
+  - 不合并两个目录，但明确各自唯一职责
+- 📋 **移动 `todo.md` 到 `Progress/todo.md`**：任务追踪与变更日志同属"时间维度"，归集到 Progress 目录
+- 📖 **更新 `README.md`**：添加项目目录与文件定位说明，简化重复内容为概览+链接
+- 📚 **更新 `wiki/README.md`** 索引添加 whitepaper-build-guide
+- 📈 **更新 `Progress/README.md`** 版本概览表到 v0.3.4
+
+### 设计动机
+
+- 随着白皮书撰写四轮修订累积，现有文档出现内容重复、定位混乱、内容陈旧问题
+- 需明确各文档唯一职责，避免重复，便于以后查阅
+
+---
+
+## [v0.3.3] - 2026-07-12 - References 全局合并
+
+**变更类型**: refactor
+**影响范围**: reports-md/
+
+### 变更内容
+
+- 📚 **合并 12 个章节末尾 References 为全局唯一列表**：
+  - 删除所有 12 个章节文件（`00-*.md` ~ `11-*.md`）的 `## References for This Chapter` 节
+  - 在 `12-appendix.md` 重写 Appendix H 为单一连续编号列表（1-12），按作者字母序排列
+  - 合并同一来源的多个标题变体（OpenAI 5 条→1 条，Anthropic 2 条→1 条，Google 2 条→1 条，DeepSeek 2 条→1 条）
+  - 添加"Independent technical review"条目（之前隐式存在于正文中）
+- 🗑️ **清理内部文件引用残留**：
+  - 删除 `04-evaluation-metrics.md` 中 `summary-white-paper-focus.md` 引用
+  - 删除 `10-dataset-description.md` 中 `outline-reference.md` 引用
+
+### 设计动机
+
+- 用户明确要求："对于最终汇总的完整报告而言，只需要有一个部分罗列所有 Reference 内容，不需要在每个章节内的结尾去进行 Reference 汇总"
+- 章节内引用保持 `(Author, Year)` 形式，不依赖编号
+
+---
+
+## [v0.3.2] - 2026-07-12 - 读者视角七项修订
+
+**变更类型**: refactor
+**影响范围**: reports-md/
+
+### 变更内容
+
+- 🗑️ **删除媒体推销语**：删除 "each citable by journalists" 等表述
+- 🗑️ **删除 example.com 占位 URL**：41 处 `https://example.com/...` 引用 + 对应参考文献条目
+- 🗑️ **删除 "Notably absent" meta-commentary**：章节中显式列举缺失来源类型的段落
+- 🗑️ **删除无数据维度段落**：P50/P95 latency、generation consistency/stability、medical/legal domain evaluations 等"无数据声明"整段
+- 🔄 **章节重排**：
+  - 原 Ch 10 (Practical Recommendations) → 新 Ch 2
+  - 原 Ch 2 (Methodology) → 新 Ch 3
+  - 原 Ch 3 (Dataset Description) → 新 Ch 10（Safety 之后）
+- 📝 **更新所有内部 "Chapter N" 引用**：章节重排后内部交叉引用同步更新
+- 📝 **更新 Appendix I 与 Appendix J**：source-to-chapter 表格与文件列表反映新顺序
+
+### 设计动机
+
+- 从读者视角进一步打磨白皮书，使其更符合行业规范
+- 章节重排将 Practical Recommendations 提前到 Ch 2（先讲推荐再讲方法论），Dataset Description 作为补充材料放到 Safety 之后
+
+---
+
+## [v0.3.1] - 2026-07-12 - 引用格式行业惯例化
+
+**变更类型**: refactor
+**影响范围**: reports-md/
+
+### 变更内容
+
+- 🏷️ **删除 Tier 标签**：从内联引用 `(Author, Year, T3)` 改为行业惯例 `(Author, Year)` 形式
+- 🏷️ **正文 Tier 缩写替换为描述性语言**：T3 → independent measurement，T5 → practitioner testing，T6 → vendor-reported 等
+- 🗑️ **删除 CNN/BBC media-targeting meta-commentary**：14+ 处 "citable by CNN/BBC" 等内部备注
+- 🗑️ **删除内部项目文件引用**：`summary-white-paper-focus.md`、`GPT5.5outline.md` 在正文中的引用
+- ✏️ **COI 声明从 code block 改为普通段落**
+- ✏️ **"Core Findings (Citable by Journalists)" 改为 "Key Findings"**
+- ✏️ **Source Tier 分类表改为标准 Source Classification 格式**
+- ✏️ **Appendix H/I/J 去除 Tier 编码**
+
+### 设计动机
+
+- Tier 标签是内部自定义分类系统，非行业惯例，外部读者看不懂
+- CNN/BBC meta-commentary 是内部写作备注，不应出现在发布版白皮书
+
+---
+
 ## [v0.3.0] - 2026-07-12 - GPT-5.5 评测白皮书上线
+
 
 **变更类型**: feat
 **影响范围**: frontend/、scripts/、reports-md/
