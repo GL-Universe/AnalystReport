@@ -1,0 +1,909 @@
+So, I know I'm a little late on this
+one. 5.5 has been out for about a week
+now, but I really did want to make a
+video on this cuz I have a lot of
+feelings. I've actually been using this
+model for about 4 weeks. Open AI was
+kind enough to give me early access to
+it. I have personally been loving this
+model. There is a ton to talk about with
+how different it is. This is not a 0.1
+increase. One of the things I've
+actually been complaining about a ton
+with this model is that I hate the name
+GPT 5.5. I know what they're going for
+there. Like last year, we had GPT 4.5
+come out and that was like the halfway
+point to GPT 5. I think it had like it
+was a really, really big model with I
+think new pre-training or something like
+that. I don't know the exact details,
+but it was kind of like the beginning of
+what would become GPT 5 and that is
+definitely what we're dealing with here.
+GPT 5.5 is the beginning of what will
+become six. And I know why it's not six.
+It can't be six because if they had
+called this GPT 6, the economy would
+have collapsed in on itself. The problem
+with just naming things is just the way
+humans work. It's dumb, but it's true.
+The name carries a lot of weight and GPT
+6 needs to be a cataclysmic model. Like
+it needs to be the model. GPT 5 was
+really good, but it did not live up to
+the hype of GPT 5 and if this was GPT 6
+and it didn't feel like a freely
+available Mythos model, it didn't live
+up to Anthropic's Mythos hype, the
+economy would be [ __ ] So, I get why
+they didn't do it. This is definitely
+not the final evolution of what this new
+model is, but it is a new model. This is
+not just a slight evolution on top of
+5.4. This is a fundamentally different
+experience and it is an experience that
+I personally love. Throughout my time
+using this model, I've pretty much
+entirely been using it on low reasoning.
+This is something that they kind of
+keyed us into early on during the
+testing that like, "Hey, this model is
+really strong right out of the box. You
+don't need high reasoning anymore. You
+can use it on low reasoning or even no
+reasoning and it will actually perform
+really, really well." So, for most of my
+work, I've been using it GPT 5.5 on low
+reasoning within Pi. We're going to talk
+about Pi a little bit later in this
+video just cuz I've been having so much
+[ __ ] fun with it. But also, I've been
+posting this a lot and I'm going to say
+this a lot in this video. I'm going to
+be very insufferable about the fact that
+you need to use GPT 5.5 on low
+reasoning. The thing about old OpenAI
+models, like if you go back to GPT 5.4,
+the base model, like the foundational
+pre-training layer of just like the core
+corpus of knowledge was kind of [ __ ]
+[ __ ] Like it was not very good. If you
+use GPT 5.4 on no reasoning or low
+reasoning, it was a very unimpressive
+model, which is why everyone would
+default to GPT 5.4 on high reasoning on
+fast mode because that would get you all
+of the benefits of OpenAI's R Ling.
+They're really, really good at
+reasoning. They know how to make amazing
+reasoning models. They did an incredible
+job on 5.4 and were able to take what
+was a pretty weak model and make it
+incredible through reasoning. The thing
+about GPT 5.5 is like I said, this is a
+new model. This is new pre-training and
+what that means is that the foundational
+base model is actually finally good.
+This is the thing that Anthropic has had
+over the other labs for a while. Like if
+you go back and watch my old videos from
+last fall, I was super hyped on
+Anthropic models and I actually really
+liked using Anthropic models with low to
+no reasoning because the core base model
+was really, really good. And when you
+have a smart base model, you no longer
+need the reasoning. And since 5.5 is
+smart, you can just get away with not
+giving it a ton of reasoning and what
+the reasoning serves to do is it serves
+to give the model cycles to overthink
+things. Because this model is incredibly
+smart, it is also very um I don't know
+what the right word for it is. I'm going
+to use aligned here, although may- that
+word's kind of loaded at this point. It
+does what you tell it to a fault. Like
+to a insane degree, it will do exactly
+what you tell it and it is a little
+prone to overthinking things. I've
+noticed if you give it like higher
+reasoning, it's going to do some weird
+[ __ ] Like a good example of this is
+when uh Julius was trying out the model,
+he was having it remove a feature from
+T3 Co cuz there was like some legacy
+thing that they didn't want anymore. So
+we had the model remove it, it removed
+it correctly, all was good, but then the
+model added [ __ ] regression tests to
+ensure that the feature was actually
+removed. It literally added in a test to
+make sure that when you run the
+function, it doesn't exist. That is a
+level of stupid that just [ __ ] sucks.
+That is like the the thing that 5.4
+always did where it was super super
+thorough. It is that to an obscene
+degree that just [ __ ] no, it's
+terrible. So, that's the kind of weird
+thing that it can end up doing if you
+just let it go off the rails with too
+much reasoning. But, when you have it on
+low reasoning, this thing is insanely
+fast. It is really smart. It will do
+exactly what you tell it to, and I have
+personally been having an incredible
+time actually using it. The only thing
+I've been liking better than this model,
+though, is today's sponsor. I've been
+building so much more over the last
+couple of months. These coding agents
+make building things so much more fun,
+so much more productive, at least until
+you need to deploy it. I've been
+constant need of more VMs, more
+databases, more Redis instances, more
+storage buckets. All of these things
+constantly have to be hooked up to all
+of my different projects, and it just
+kind of sucks. Unless you're using
+today's sponsor, Railway. They are the
+best place to deploy pretty much
+anything. I have an insane amount of
+stuff already running on Railway. You
+can see this one, for example, has a
+TanStack Start app, a SvelteKit app, a
+normal Hono API, another SvelteKit app,
+and a Redis instance, all running on
+Railway's bare metal VMs, which are
+absurdly fast. You can easily see what's
+going on with this really nice
+dashboard. And on top of all of that,
+the pricing is insane. Even though
+Railway isn't a true serverless
+platform, you're getting long-running
+instances, which is a very powerful
+thing to have. You get the serverless
+benefit of only being billed when you're
+actually using the CPU, which means that
+the days of over-provisioning and losing
+a bunch of money at night when your CPU
+just isn't getting hit, but you're
+paying for some super big CPU that you
+need during peak traffic, all of that is
+gone with Railway. And on top of all of
+that, they are the best platform to let
+your coding agents actually deploy
+stuff. This is one of the biggest
+problems I've been running into is it's
+really really annoying to hook up all of
+these cloud services using these agents.
+Railway just kind of solved it. Their
+agent directory has support for
+basically every single coding agent you
+would care about. Personally, I'm a
+Codex guy, so I have the Railway skill
+set up globally within my Codex
+instance, so at any time I want to
+deploy one of my apps or add a database
+or add some Redis or set up a storage
+bucket, I can just tell the agent to do
+it. It'll use Railway's really powerful
+CLI, get it all done, and it just kind
+of works. There's really nowhere else I
+would recommend deploying in 2026. You
+should really go check out Railway at
+davis7.link/railway.
+So, before we talk about what I've been
+using it for, I do want to address the
+pricing. Cuz you just go look at their
+pricing page, it looks really bad.
+GPT-5.4 was $2.50 in, $15 out. GPT-5.5
+is $5 in, $30 out. It is literally
+double the price of the old model,
+which, again, on paper looks really,
+really bad. You are just going to be
+doubling your cost, doubling your usage
+in Codex. It is just you're not going to
+get as much value out of the model. The
+price is getting squeezed, blah, blah,
+blah. I actually haven't found that to
+be happening nearly as much as I
+expected. Yes, the core of the model is
+much more expensive, but it is also much
+more efficient. I found that, generally
+speaking, for the same exact tasks, I'm
+using probably about 50% or less of the
+tokens that I would have used with 5.4.
+Because, again, remember, with this
+model, 90% of the time you should be
+using it on low reasoning. And when
+you're using it on low reasoning, it is
+incredibly efficient. It does not use
+that many tool calls. It's super
+accurate to only use the exact ones that
+you need exactly when you need it. It
+doesn't think too much cuz it's on low
+reasoning. And since the base model is
+just naturally really smart, it doesn't
+need to go that long or that hard. And
+as a result, you're not going to be
+accruing nearly as much cost as it feels
+like you might be. I've been tracking
+this pretty closely within my Codex
+dashboard. Unfortunately, I can't show
+it cuz it has like personal information
+in there. You just have to take my word
+for it that like I've been going very
+hard on this both in my coding agents
+like Pi, Codex, T3 Code, all that stuff.
+I've also been using it a ton on my Open
+Claw instance cuz I have set that up.
+I'm sorry in advance for the psychosis
+that I have been subjected to via G
+stack. It's It's a thing. We'll talk
+about it later. But, the thing is, I've
+been going very hard with this. I've
+done a fuckload of tokens with it, and
+it's like my usage is never dropped
+below 90%. It just like doesn't hit it
+at all because it's so [ __ ]
+efficient, and open AI doesn't really
+have a problem running the model, it
+seems. For reference, this quote tweet
+from Tibo on the one of the many
+Anthropic shooting themselves in the
+foot post that they've been doing lately
+where he basically just said like Codex
+will continue to be available in both
+the free and plus $20 a month plans. We
+have the computes and efficient models
+to support it. And that's just kind of
+what it seems. It seems like they can
+run this model really well. If you go to
+open writer and you look at the
+throughput for GPT 5.5 on Azure and
+actual open AI servers, it looks really
+bad, like 39 TPS, 11 TPS. This is I
+mean, this is just Azure things. Like,
+what what are you going to do? It's
+Azure, come on.
+But like, even on open AI, this looks
+really bad. But it's not been my
+experience at all, especially on low
+reasoning. Like, I don't know if they're
+just juicing it through the Codex stuff.
+I haven't tried it too much over API
+dedicated. But if I just do a quick
+thing here, and if I just give it like a
+very simple prompt of like, "What does
+this project actually do?" And you just
+send it this prompt, watch it go.
+If you just look at this generation,
+it's really, really fast. I have a
+very naive TPS tracker that is vibe
+coded into my pie instance. But like,
+you know, it's averaging out to be not
+93 tokens per second. Like, it's kind of
+flying. I This model does not feel like
+it is doing 30 tokens per second at
+[ __ ] all. It's quite quick. There's
+another thing here that I didn't know if
+I was going to talk about because I
+don't know if people are quite ready to
+hear this yet. But 5.5 with no reasoning
+is also extremely good. It's been a long
+time since any of us were using no
+reasoning models. They've kind of just
+become the default from every lab, so it
+feels weird to turn reasoning off. But I
+would recommend giving it a shot on this
+model. Is it what I would use for all my
+day-to-day coding? No, but like this
+reply from Mario, who's the guy who
+created Pi, I trust him a lot on this
+stuff. So that I am ready for that
+combo. That's how I make it bash my
+computers and it's glorious. Like a
+super smart and fast Haiku. That is
+actually kind of the thing that I've
+been feeling with this model. This post
+from Sunil also sums up my thoughts
+pretty well. That 5.5 is just better
+than 4.7 referring to Opus now for me.
+It's smarter, faster, doesn't try too
+much. I don't need X higher or whatever.
+I prefer the shorter hops and letting me
+participate. This I think is the most
+important piece here. If you really just
+like letting your models go off and do
+stuff in the background and like not
+paying too much attention and just kind
+of writing some vague thing and letting
+it reason it out for you. This model's
+probably not going to feel nearly as
+good because of some of the shortcomings
+it has, which we'll talk about in a
+second here. If you're the type who
+really likes babysitting these things
+more and paying more attention as the
+agents are actually doing stuff and
+directing them. If you like look at a
+project, you see the thing you want to
+do and you're like, "Okay, I have these
+three experiments I want to run. I want
+to do this, this, and this." This is a
+beautiful model for it. If you can
+define the outputs for it, it will work
+really, really well. They even mention
+this within the prompting guide that
+shorter outcome first prompts usually
+work better than process heavy prompt
+stacks because like a lot of the old
+models, if you gave it a ton of
+direction on exactly how you want it to
+do things, this one you kind of just
+like tell it the outcome and let it go
+do its actual thing. They also call out
+specifically that efficient reasoning
+means medium effort should be
+reevaluated before escalating it and you
+should just be testing this within your
+day-to-day work. Generally speaking, at
+least until you've really got a good
+feeling for what should be used when, I
+would just default to the lower
+reasoning and if it really can't do it,
+then you up the reasoning from there
+because the problem, as I mentioned
+earlier, is that it will just kind of
+overthink itself into weird, weird
+places. I remember I signed a thing
+about the model when we were recording
+the podcast episode about it last week
+when we were down in Miami and he at the
+end of it compared the model to Grok
+code fast as an attempt to dunk on and
+bully me for it, which little did he
+know I love Grok code fast. Please give
+me Grok code fast V2. I do not care. But
+actually like this model does kind of
+have some weirdly similar
+characteristics to that model. It is
+again really fast. It really likes
+jumping to actually solving things, and
+the way you use it is very different
+from the old models. It's got that GPT
+accuracy like I said, but I do want to
+talk about the big downside this thing
+has, and that is twofold. One, the
+compaction in this thing is a lot weaker
+than it was in 5.4. 5.4 made Ralph loops
+pretty much completely obsolete. If
+you're not familiar with what a Ralph
+loop is, it's effectively just taking a
+plan you make with the model, you split
+it up into seven sections call it. Each
+of those seven sections becomes a
+dedicated prompt, and then you make a
+little bash script that will trigger
+your coding agent like Codex in a while
+loop. So you'll have the first iteration
+will do step one, second iteration will
+do step two, third iteration will do
+step three. And the point of this is to
+make sure that the model never overloads
+its context window. If you're only
+having it do bite-size pieces and then
+having the models leave critical notes
+in between the steps, that was a really
+good solution for models that just
+couldn't handle compaction, would just
+lose too much context and would just
+kind of get stupid when it happened. 5.4
+pretty much entirely solved this.
+Julius, the guy behind T3 code, he has
+did not love the model at first. he's
+kind of coming around to it, but I don't
+want to put words in his mouth, but he
+had a lot of issues with it, and one of
+the things that he likes doing is he
+likes having these gigantic health
+threads, where he will literally just
+have billions of tokens go through one
+single Codex thread because it doesn't
+matter. The model can just keep
+compacting every single time it hits it,
+and you just don't have to pay any
+attention. Ralph loops were dead because
+you could just write out that crazy
+plan, and even if that plan would take
+10 hours to implement, you can just give
+it to Codex and trust it to compact
+nicely as it's going, and not have any
+issues. 5.5 is not quite as good at
+that, and the reason is because it is
+super sensitive to everything that is in
+its context window. If you tell the
+model at any point within a thread,
+"Hey, could you commit this change once
+you're done making this?" Every single
+time it makes a change after that, even
+like after you had sent that message and
+it done the commit, it will do that
+again. That thread is now poisoned with
+that information, and you can tell it
+like, "Hey, stop doing that." It's 50/50
+on whether or not it's actually going to
+follow that instruction. It does not
+seem to do a very good job of discerning
+the hierarchy of user instructions,
+where like you gave it an opinion early
+in a thread, and then gave it a
+contradicting opinion later in the
+thread, it will not weight the later one
+higher the way it should. It sometimes
+it will, but I've noticed this is a
+recurring pattern and recurring issue
+with the model. It struggles with longer
+context. And this is definitely a model
+where you need to use it differently.
+You need to use it on low reasoning. You
+need to use it in something like Pi or
+Codex or whatever. I'm a huge Pi guy,
+and we'll talk about that in a second.
+But, the biggest thing is you need to be
+constantly making new threads. I have
+almost never let a thread with 5.5 go
+beyond 100,000 tokens within the context
+window. I A haven't needed to because
+that's a lot of space for 5.5 because
+again, it doesn't reason all that much.
+It doesn't do that many tool calls cuz
+it's super [ __ ] efficient and smart.
+So, you can do like I've had 50-plus
+message long threads that only had
+90,000 tokens in the context within code
+bases that had two to 300 files in them.
+Like it's not unheard of for the model
+to not have that many issues. But, if
+you're doing like a deep dive and a deep
+refactor of something and you needed to
+an explore an entire code base, I would
+recommend doing that on high reasoning,
+especially if it needs to do research.
+You let it do the research, you let it
+do the plan, you let it do the
+exploration, you let it formulate out
+all the notes it needs. You maybe go
+back and forth a little bit on the plan.
+Then when you're done with that, if you
+were doing this in 5.4 times, you would
+just like be like, "Okay, cool, looks
+good, implement it, go away." You can't
+do that now. You need to persist the
+plan to a markdown file somewhere, then
+open up a new thread, set it to low
+reasoning, tell it to implement the
+plan, and even then sometimes it also
+suffers from the not biasing towards
+action enough thing, where like Claude
+models will naturally just go and do
+things regardless of what you tell them
+to do, they'll just [ __ ] send it,
+which can make them feel really fun to
+work with, but also can result in them
+doing some really stupid [ __ ] sometimes,
+which is why I don't really trust them
+all that much. This model is not going
+to do that, and it's still going to be a
+little overly cautious at times, which
+can be kind of [ __ ] annoying, where
+like I've had uh 10-step plans I've
+given it, and it will get to like step
+four and a half, and be like, "Okay, I I
+finished step four and a half. What
+would you like to do now?" And I'm like,
+"Finish the [ __ ] plan, you dumbass."
+It's not without flaws. Would I call it
+AGI? No. But would I call it an
+extraordinarily useful model? Yes. I
+have been using the [ __ ] out of this
+thing, and for day-to-day work, it is
+insanely useful. It's great for writing
+code. It's amazing at like actually
+using computers and doing computer use
+type stuff. It's really useful for like
+weird G stack style workflows, where you
+have like a bunch of markdown and
+internal tools stuff that you're having
+the model orchestrate and control. I've
+been really enjoying using it within
+like open claw and stuff like that. It's
+even like actually pretty competent at
+front end. Is this the best-looking site
+ever made? No, but it's a very
+competent, decently well-put-together
+site, and basically all of the UI on
+this, the UI pass that I did recently,
+was done with the new model. I've also
+been working a ton on the new version of
+the BTCA web app. If you're familiar
+with the old BTCA CLI thing that I made,
+I've actually completely deprecated the
+CLI, because while it was a very cool
+idea, I've realized that there is a much
+better way to do this, and that's the
+way I've been doing it for the last
+couple weeks. So, I open up my Pi
+instance here, and before you would have
+done like BTCA, get your little twoy, or
+whatever. This is my Pi instance. I'm
+going to do {slash} BTCA, which is a
+skill. So, I have a global skill that's
+BTCA local. I run this. It's going to
+give the model a prompt that defines how
+it should run this program. It's going
+to tell me like, "Hey, these are the
+things that we've previously searched."
+Like, okay.
+To look
+into the AI SDK, would you give me a
+getting started guide on using the
+OpenAI API with GPT 5.5? So now it's
+doing the exact same thing that the old
+version of BTCA would have done within
+the CLI, just within your own coding
+agent. And you can stick this into any
+session, you can pull it up at any time.
+It works a lot better and you don't have
+to remake the actual TUI or agent, which
+both just kind of suck. But the web app
+isn't quite in that bucket. app is
+specifically there so that you can do
+this wherever, you can save the threads,
+you can copy paste them into other
+things. I've mostly just been doing this
+as like a research project for myself to
+try and figure out what does it look
+like to have a useful agent hosted in
+the cloud, what's the right architecture
+for this. Should definitely do a follow
+video on this once I release it in the
+next couple days here. We'll do that
+another time. The point I was really
+just trying to get to here is the UI for
+this homepage, which again isn't the
+nicest thing ever. No, but this is 5.5.
+This is all generated by 5.5 and also
+slightly by GPT ImageGen 2. Not the
+point of this video. If you look at this
+little section right here, this is a
+direct like quote from GPT ImageGen. So
+I like fed the code base into GPT 5.5. I
+told it to do a deep analysis of all the
+styles and branding and all that stuff,
+and then feed that into GPT ImageGen to
+come up with a like design system and
+design palette. And once I'd done that,
+I then took that palette and I gave it
+back to GPT 5.5. I was like, "Okay, do a
+deep audit of the entire code base and
+make sure that we are following this new
+design palette." And the palette was
+[ __ ] killer. Cuz the level of design
+that the ImageGen model can do is pretty
+insane. So I fed it back in there, went
+back and forth a little bit, and the end
+result was this. And like one of the
+things too with 5.5 is that right out of
+the box the design stuff is still GPT.
+Is it better than 5.4? Yeah, it's it's a
+lot better, but it is not at the level
+of something like a Claude model out of
+the box. It will still bias towards the
+stupid card design things that we're all
+very sick of by now. But again, you can
+get around this. You can give it
+references. You can give it skills that
+will lobotomize that specific piece of
+its behavior out of it. There are ways
+to solve this problem. And with how
+steerable this model is, I find those
+problems to be fairly easy to solve. I
+won't go too deep into it during this
+video, but just to give you a high-level
+overview, I did a bunch of very
+complicated architectural re factors on
+this project to really try and figure
+out what is the right way to have
+durable streams running in the
+background that required a lot of
+research, a lot of weird over the
+network boundary stuff, and it was able
+to handle all of it. This model is very,
+very smart. It's very, very capable. You
+just kind of have to really know what
+you're doing when you're using it. I
+think that transitions well into what I
+want to talk about now, which is pie, my
+favorite way to use this model. If you
+don't know anything about coding and
+you're just trying to vibe code out a
+project, this model is probably not
+going to be your friend. It really
+requires you to really be paying
+attention and really know what the [ __ ]
+you're doing. I like pie a ton for this
+because I've done a ton of work. And
+really, it's not a ton of work. I've
+just done a lot of customizations to
+this harness to set it up to my liking
+and make sure it works correctly. The
+kind of the the trifecta that I've been
+using for the vast majority of my dev
+work has been pie for the harness and to
+a GPT 5.5 on low reasoning for the model
+and tmux for the actual terminal. I was
+kind of iffy on tmux when it came out a
+couple months ago. I really expected
+this to just be one of those projects
+that comes and goes pretty quickly. It
+wouldn't have much staying power and
+would kind of just get forgotten about,
+but that hasn't actually happened. It's
+in fact gotten better over time, like a
+lot better. And it's in a really good
+state right now. So, what I've been
+doing is my general workflow. If you
+were looking over my shoulder while I
+was working day-to-day, typically
+speaking, there would be like two things
+open here. So, I'll like do a VP dev.
+I've been using V plus a ton. Really
+like it. So, like this is one of the
+things I've been working on. I do a
+bunch of data analytics stuff on the
+YouTube channels that I work on and for.
+So, I have this little project that I've
+been doing with GPT 5.5. I have my dev
+server running over here, then I'll have
+a pie instance running here, and
+typically speaking, I'll have like
+three-ish tabs here and maybe two to
+three tabs over here as well. I'm just
+constantly cycling between new pie
+sessions. On the channels page, the UI
+is kind of cardy, specifically the top
+level stats at the top of it. Can you
+make those not look like cards and just
+kind of be floating there naturally in a
+way that looks good and fits with the
+design system. So, just being here, I'd
+fire off a prompt like this, and then I
+would go over to some other part of the
+project and start working on it because
+one of the things that I used to do a
+ton of is I would be working on like six
+different projects at once. I was trying
+to do that. These models are magical for
+letting you parallelize because even as
+fast as GPT 5.5 is, you know, I've been
+talking for 30 seconds here, it's still
+going, and it's going to be going for
+another probably two-ish minutes. This
+is enough time to go check on another
+thread from another model and just see
+what's happening here. I guess in this
+case it is now done. So, we go back here
+and yeah, beautiful. It like actually
+did the thing. Look at that. So, if I
+wanted to go in and review this, I would
+just do {slash} diff, and then this
+gives me a list of files that I could
+open in Zed. So, I'll open this one up
+in Zed, take a look at what it did here,
+and you get the general point of this.
+And then when I'm done with this, I
+would just maybe do like {slash} eat,
+which is a little extension command here
+to tell the model, "Hey, commit and push
+all the changes up to main, whatever." I
+really like parallelizing work within
+one project. I find it much easier. You
+can still parallelize with these models,
+you should, but doing it across projects
+found me understanding what was actually
+happening a lot less, getting a lot more
+confused, getting a lot more fatigued. I
+have a lot more endurance, and it feels
+way better to instead be working on at
+the front end and the database layer and
+the sync layer for one project at one
+time. That is a better way of doing
+things. Another thing that you might be
+a little confused at looking at this is
+if you download and install pie for
+yourself, it is going to look nothing
+like this. I'm am going to do a
+dedicated video on this very soon, but
+the gist of this is that this is
+actually a very customized pie setup.
+It's very easy to customize pie because
+all you have to do is just open up a new
+pie instance and be like, "Hey, can you
+add in XYZ functionality?" That's
+actually how I've been working on this
+is I will be doing some work in one of
+these sessions like this, and as I'm
+doing it, I'm like, "Man, I really wish
+I had an extension or a command for
+going to the files I edited." Like that
+diff command or that yeet command. Those
+are all little papercuts that I found
+myself feeling wishing they existed. And
+the way I solve that problem is I just
+jumped over to a new tab. So, I just
+tell it to like, "Hey, can you change
+the theme of this little like pie logo
+thing up here?" It knows where the
+actual pie stuff is because it's in the
+system prompt of pie where pie stuff
+lives. So, it can go find that in here.
+It's going to do some searching, do some
+changes. Now, if I do {slash} reload, um
+actually I need to do {slash} new. There
+we go. It is now green. So, yeah, it's
+super customizable. I fully open sourced
+my setup for pie. It's just I'll have
+this link down below. Again, I don't
+actually recommend you directly copy my
+setup. You should make it your own.
+That's the point of pie. The point of
+pie is not to import someone else's
+opinions. There are a lot of other
+harnesses that have much better opinions
+than I am going to have. My opinion is
+that I like super minimal harnesses and
+I'm just adding in little useful
+utilities for myself. That's all I need.
+But, for a lot of people, they really
+like the way something like cursor or
+open code or droid or code X or cloud
+code. I don't know who likes cloud code,
+but someone probably does. The way all
+of those feel, you should probably just
+pick one of those if you don't care
+enough to go and customize it yourself.
+But, if you do just want to see what's
+possible and screw with that, this is a
+good place to start. You can just clone
+the repo into root home directory {dot}
+pie {slash} agent. Super simple to set
+up. That's literally all you have to do
+and it'll just work. The extension
+system is magical. This is, um,
+genuinely one of the best projects I've
+ever seen. Last thing before I close, I
+probably should have mentioned this a a
+earlier, but, um, this model writes the
+best code of any model I've ever seen.
+It is the first model that truly shows
+restraint in its outputs. A lot of these
+models will just over-engineer the [ __ ]
+out of the solution because it is
+easier. Models and humans are both lazy,
+but the way their laziness shows up is
+very different. And I actually find the
+laziness of models to be a lot more
+destructive in programming than the
+laziness of humans because human
+laziness will result in simpler, better
+code because they just don't want to
+deal with a bunch of crap. Models don't
+care. It takes effort and intelligence
+and time to figure out a way to make
+something super simple and lazy and
+boring. It does not take a lot of effort
+to add in every single possible edge
+case and write 10,000 lines to solve a
+simple problem. That is the easy way to
+do it for a model because they are not
+constrained by time or anything like
+that. They're constrained by
+intelligence. And this model is very
+intelligent. I have been using the site
+models.dev. It's super useful, very good
+open-source project that is linked to
+the models.json directory thing. It's
+what Open Code and Pine a lot of other
+different harnesses and just general
+model providers use as a giant
+open-source data set for the price and
+other useful information for basically
+every single AI model that is hosted and
+matters. They have a site for this to
+actually view all of these and it's
+fine. It's not great. The performance is
+not amazing on the scroll. Like I'm
+scrolling as fast as I can. You can see
+like the flickering kind of sucks here.
+Do I do this all the time? No, but like
+it takes a while to load. It doesn't
+feel very good. I wanted a better
+version of this, especially since the
+data set is open-source. So, I made a
+better version of this. And I had the
+model make the better version of this.
+This is a SvelteKit site. It is super
+simple. It is in SPA mode. It fetches
+the data from their JSON API, so it's
+always up to date, which can be a little
+bit slow. Like if I refresh the page,
+it'll take a second to load from
+models.dev. But once it shows up, the
+actual performance here is absurd. Go
+back to all and just start scrolling
+down here. It is beautiful how well this
+thing scrolls cuz this is a really nice
+virtual scroll implementation in Svelte
+that the model wrote. And when I saw the
+code, it blew my mind cuz it is the
+simplest code I have ever seen a model
+write. I've tested this with a couple
+other different models. They will do a
+bunch of weird [ __ ] to like come up with
+a super custom like virtual scroll
+implementation that like does a bunch of
+random stuff, and it will end up being
+like 30-ish lines long typically. But
+they won't correctly use the like Svelte
+built-ins like the bind directive and
+some of the weird attachment behaviors
+you can do to divs to make this a very
+easy trivial problem if you deeply
+understand Svelte. This model figured it
+out. It knew how to do it correctly. It
+wrote like a 10-line solution for the
+scroll box, which is just killer. It is
+so [ __ ] good. I am so happy with the
+code that this thing outputted. This was
+the first thing I tested with the model.
+I was pretty blown away. I'm still
+pretty blown away. It's been my daily
+driver ever since. Currently, the only
+models I'm really using heavily
+day-to-day are GPT 5.5 on low reasoning,
+high reasoning if I really need the
+planning. Um occasionally using the
+Claude Opus models if I like really need
+to break them out for design stuff, but
+that's pretty rare at this point,
+especially since there's really cool
+projects and solutions like this
+Impeccable project. Uh these will be a
+dedicated video in the future, too,
+where like it's just a super powerful
+skill to make the models create actually
+good designs. It's pretty damn sick.
+I've also been experimenting a little
+bit with some of the open-source models
+and local models. Uh worth talking
+about, but probably not worth it in your
+day-to-day, I think at least as of right
+now until Google responds or XAI
+responds or anyone responds. This is the
+model. This is the one that I would use
+for everything, and if it feels weird to
+you, just give it a real shot. They'll
+figure it out. OpenAI did really good
+here. Very curious and excited to see
+where this goes because if this is the
+beginning of GPT-6, hopefully the real
+thing is substantially better. Although
+looking back on Opus 4.5 up to 4.7,
+nothing is really a guarantee these
+days. If you like this video, make sure
+you like and subscribe and yeah.

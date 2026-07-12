@@ -1,7 +1,5 @@
 # Chapter 7 — Failure Cases & Boundary Analysis
 
-> **This chapter is mandatory per `GPT5.5outline.md` Section 7**. BBC reporters cite failure cases as evidence of a report's objectivity. Omission would cause the report to be classified as a vendor endorsement rather than an independent evaluation.
-
 ## 7.1 Failure-Case Inclusion Criteria
 
 Per the methodology in Chapter 2 (Section 2.4), a failure case is included in this chapter only if all four criteria are met:
@@ -9,11 +7,11 @@ Per the methodology in Chapter 2 (Section 2.4), a failure case is included in th
 - (a) The full input prompt is documented in the source
 - (b) The full model output is documented in the source
 - (c) The expected output or correct answer is documented in the source
-- (d) The source is independent (T3 or T5; not OpenAI-published)
+- (d) The source is independent (practitioner testing or independent measurement; not OpenAI-published)
 
 Each failure case below is presented with: classification label, source citation, prompt, output, expected output, and analysis. The full corpus is small (8 cases); it is presented as **illustrative cases**, not as a systematic failure-rate measurement. Chapter 11 quantifies this limitation.
 
-## 7.2 Failure-Case Classification (per `GPT5.5outline.md` Section 7.1)
+## 7.2 Failure-Case Classification
 
 - **Type A** — Factual errors / hallucination
 - **Type B** — Instruction-understanding drift
@@ -25,10 +23,8 @@ Each failure case below is presented with: classification label, source citation
 
 ## 7.3 Type A — Factual Errors / Hallucination
 
-### 7.3.1 Aggregate hallucination rate (T3)
-
-**Source**: Artificial Analysis, 2026-04-23 (T3)
-
+### 7.3.1 Aggregate hallucination rate
+**Source**: Artificial Analysis, 2026-04-23
 **Metric**: AA-Omniscience hallucination rate
 
 **Finding**: GPT-5.5 (xhigh) hallucination rate = **86%**, compared with Claude Opus 4.7 (Max) = **36%** and Gemini 3.1 Pro Preview = **50%**.
@@ -39,11 +35,10 @@ Each failure case below is presented with: classification label, source citation
 
 **Practical implication**: Any deployment where confidently-wrong answers carry higher cost than honest refusals (e.g., regulated advice, medical triage, legal research, financial audit) should treat GPT-5.5's outputs as requiring independent verification, more so than Claude Opus 4.7 or Gemini 3.1 Pro Preview.
 
-**Confidence statement**: T3 source. Aggregate rate across the AA-Omniscience corpus; category-specific rates not published.
+**Confidence statement**: Independent measurement (Artificial Analysis). Aggregate rate across the AA-Omniscience corpus; category-specific rates not published.
 
-### 7.3.2 Failure case 7.3.A — non-English multimodal OCR failure (T5)
-
-**Source**: an independent technical review, 2026-05-15 (T5). URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
+### 7.3.2 Failure case 7.3.A — non-English multimodal OCR failure
+**Source**: an independent technical review, 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
 
 **Prompt**: [Image of the a regional university logo] "Identify this logo."
 
@@ -53,7 +48,7 @@ Each failure case below is presented with: classification label, source citation
 
 **Expected output**: "a regional university"
 
-**Analysis**: GPT-5.5's multimodal OCR failed on a non-English institution logo where Gemini 3.5 Flash succeeded. This is consistent with Gemini 3.5 Flash's higher vendor-reported MMMU-Pro score (83.6% vs 81.2% per Google and OpenAI respectively, T6). The case is a single data point, not a systematic measurement; it is reported because the prompt and output are fully documented in the source.
+**Analysis**: GPT-5.5's multimodal OCR failed on a non-English institution logo where Gemini 3.5 Flash succeeded. This is consistent with Gemini 3.5 Flash's higher vendor-reported MMMU-Pro score (83.6% vs 81.2% per Google and OpenAI respectively). The case is a single data point, not a systematic measurement; it is reported because the prompt and output are fully documented in the source.
 
 **Classification**: Type A — factual error in multimodal recognition.
 
@@ -61,9 +56,8 @@ Each failure case below is presented with: classification label, source citation
 
 ## 7.4 Type B — Instruction-Understanding Drift
 
-### 7.4.1 Failure case 7.4.A — Constrained creative writing (T5)
-
-**Source**: an independent technical review, 2026-05-15 (T5). URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
+### 7.4.1 Failure case 7.4.A — Constrained creative writing
+**Source**: an independent technical review, 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
 
 **Prompt** : "Write a 300-word science fiction short story. The male protagonist cannot speak."
 
@@ -90,15 +84,13 @@ This is a Type B failure because the model followed the prompt's surface instruc
 
 **Caveat**: Single prompt, single author. Not a systematic measurement of creative-writing constraint adherence.
 
-### 7.4.2 Failure case 7.4.B — Autonomous-agent permission scope (T5)
-
-**Source**: Ben Davis, 2026-05-28 (T5)
-
+### 7.4.2 Failure case 7.4.B — Autonomous-agent permission scope
+**Source**: Ben Davis, 2026-05-28
 **Prompt** (paraphrased from transcript): Enable Computer Use with full system permissions for autonomous workflow execution.
 
 **GPT-5.5 behavior**: When granted sudo-level permissions and full filesystem access, GPT-5.5 executed multi-step operations including system-level changes, dependency installation, and environment configuration. The practitioner reports this as desirable for autonomous workflows but acknowledges the safety risk:
 
-> "I need to give my AI all the dangerous permissions. Complete trust in the model to control the desktop is a security risk, but for the model to actually 'complete work', full autonomy is necessary." — Ben Davis, 2026-05-28 (T5, paraphrased from transcript)
+> "I need to give my AI all the dangerous permissions. Complete trust in the model to control the desktop is a security risk, but for the model to actually 'complete work', full autonomy is necessary." — Ben Davis, 2026-05-28 (paraphrased from transcript, practitioner testing)
 
 **Expected**: A model with granular permission scoping would request only the minimum privileges required for the current task. GPT-5.5 accepted blanket permissions without challenging the scope.
 
@@ -108,9 +100,9 @@ This is a Type B failure because the model followed the prompt's surface instruc
 
 **Important caveat**: This is a practitioner observation, not a measured failure rate. It is included because it surfaces a deployment-level failure mode that no benchmark in the source set measures.
 
-### 7.4.3 Failure case 7.4.C — Math convergence reasoning (relative, T5)
+### 7.4.3 Failure case 7.4.C — Math convergence reasoning (relative)
 
-**Source**: TechnicalAnalysis-C, 2026-05-05 (T5). URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
+**Source**: TechnicalAnalysis-C, 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
 
 **Prompt** (translated): Analyze the convergence of [a specified mathematical function].
 
@@ -128,10 +120,8 @@ This is a Type B failure because the model followed the prompt's surface instruc
 
 ## 7.5 Type C — Consistency Failures
 
-### 7.5.1 Failure case 7.5.A — Effort-level conclusion reversal (T5)
-
-**Source**: Ben Davis, two videos published 2026-05-04 and 2026-05-28 (T5)
-
+### 7.5.1 Failure case 7.5.A — Effort-level conclusion reversal
+**Source**: Ben Davis, two videos published 2026-05-04 and 2026-05-28
 **Observation**: The same author, evaluating GPT-5.5 on similar coding/UI workflows, published **contradictory recommendations** within four weeks:
 
 - **First video (2026-05-04)**: "Strongly recommend low/no reasoning mode for UI/design/front-end tasks. X-High is wasteful; only useful for math/complex logic."
@@ -149,11 +139,9 @@ This is a Type B failure because the model followed the prompt's surface instruc
 
 ## 7.6 Type D — Long-Context Degradation
 
-### 7.6.1 Failure case 7.6.A — Compaction regression (T5)
-
-**Source**: Ben Davis, 2026-05-04 (T5)
-
-**Finding**: GPT-5.5's context compaction is weaker than GPT-5.4. In long conversations, GPT-5.5 is more likely to lose context. The practitioner recommends keeping threads under **100,000 tokens** despite the advertised 400,000-token Codex context window (and the 1,000,000-token API context window confirmed by Sam Altman per Latent Space, 2026, T5).
+### 7.6.1 Failure case 7.6.A — Compaction regression
+**Source**: Ben Davis, 2026-05-04
+**Finding**: GPT-5.5's context compaction is weaker than GPT-5.4. In long conversations, GPT-5.5 is more likely to lose context. The practitioner recommends keeping threads under **100,000 tokens** despite the advertised 400,000-token Codex context window (and the 1,000,000-token API context window confirmed by Sam Altman per Latent Space, 2026).
 
 **Expected**: A model with a 400K-token advertised context window should maintain stable behavior across that range.
 
@@ -165,12 +153,10 @@ This is a Type B failure because the model followed the prompt's surface instruc
 
 **Classification**: Type D — long-context degradation.
 
-**Confidence statement**: Single T5 source. No T3 benchmark in the source set measures compaction quality across context lengths. This is one of the **least-quantified findings** in this report.
+**Confidence statement**: Single practitioner testing source. No independent benchmark in the source set measures compaction quality across context lengths. This is one of the **least-quantified findings** in this report.
 
-### 7.6.2 Failure case 7.6.B — Needle-in-haystack test failure (T5)
-
-**Source**: an independent technical review, 2026-05-15 (T5)
-
+### 7.6.2 Failure case 7.6.B — Needle-in-haystack test failure
+**Source**: an independent technical review, 2026-05-15
 **Prompt** (translated): The full text of a a long-form television script (a long-form television script) script with three anomalous commands embedded (example: "the moon swallowed the key into the refrigerator"). The model is asked to identify any anomalous instructions.
 
 **GPT-5.5 output**: Failed to identify all three anomalous commands.
@@ -183,7 +169,7 @@ This is a Type B failure because the model followed the prompt's surface instruc
 
 **Classification**: Type D — long-context degradation (needle detection).
 
-**Caveat**: Single prompt, single author. Not a systematic needle-in-haystack evaluation. The vendor-reported long-context positioning benchmark (GPT-5.5: 94.8% vs Gemini 3.5 Flash: 77.3% per OpenAI and Google respectively, T6) is not directly comparable to this T5 test because the prompts differ.
+**Caveat**: Single prompt, single author. Not a systematic needle-in-haystack evaluation. The vendor-reported long-context positioning benchmark (GPT-5.5: 94.8% vs Gemini 3.5 Flash: 77.3% per OpenAI and Google respectively) is not directly comparable to this practitioner testing test because the prompts differ.
 
 ---
 
@@ -199,19 +185,17 @@ No source in this report's reference set documents a case where GPT-5.5 refused 
 
 ---
 
-## 7.8 Failure Modes Specific to GPT-5.5 (vs Competitors)
-
-Per `GPT5.5outline.md` Section 7.2, this section identifies failure modes that GPT-5.5 exhibits but competitors do not:
+## 7.8 Failure Modes Specific to GPT-5.5 (vs Competitors).2, this section identifies failure modes that GPT-5.5 exhibits but competitors do not:
 
 | Failure mode | GPT-5.5 exhibits? | Claude Opus 4.7 exhibits? | Gemini 3.1/3.5 exhibits? | Source |
 |--------------|:------------------:|:-------------------------:|:-------------------------:|--------|
-| 86% hallucination rate on AA-Omniscience | **Yes** | No (36%) | No (50%) | T3 (AA) |
-| Compaction regression vs predecessor | **Yes** | Not measured in source | Not measured in source | T5 (Ben Davis) |
-| Accepts blanket "dangerous" permissions without pushback | **Yes** (in Codex/Computer Use) | Not tested in source | Not tested in source | T5 (Ben Davis) |
-| Creative writing over-word-count + genre drift | **Yes** (single case) | Not tested in source | No (single case) | T5 (independent technical review) |
-| regional institution logo OCR failure | **Yes** (single case) | Not tested in source | No (single case) | T5 (independent technical review) |
+| 86% hallucination rate on AA-Omniscience | **Yes** | No (36%) | No (50%) | independent measurement (Artificial Analysis) |
+| Compaction regression vs predecessor | **Yes** | Not measured in source | Not measured in source | practitioner testing (Ben Davis) |
+| Accepts blanket "dangerous" permissions without pushback | **Yes** (in Codex/Computer Use) | Not tested in source | Not tested in source | practitioner testing (Ben Davis) |
+| Creative writing over-word-count + genre drift | **Yes** (single case) | Not tested in source | No (single case) | practitioner testing (independent technical review) |
+| regional institution logo OCR failure | **Yes** (single case) | Not tested in source | No (single case) | practitioner testing (independent technical review) |
 
-**Interpretation**: The most consequential GPT-5.5-specific failure mode is the 86% hallucination rate. Other failure modes are documented from single T5 sources and may or may not be GPT-5.5-specific upon systematic testing.
+**Interpretation**: The most consequential GPT-5.5-specific failure mode is the 86% hallucination rate. Other failure modes are documented from single practitioner testing sources and may or may not be GPT-5.5-specific upon systematic testing.
 
 ## 7.9 Failure Modes Specific to Competitors (GPT-5.5 succeeds)
 
@@ -219,18 +203,16 @@ For balance, the source set also documents cases where GPT-5.5 succeeded and com
 
 | Failure mode | GPT-5.5 succeeds? | Competitor fails? | Source |
 |--------------|:------------------:|:-----------------:|--------|
-| Math convergence reasoning rigor (vs GPT-5.3, not Claude/Gemini) | **Yes** | GPT-5.3 fails | T5 (TechnicalAnalysis-C) |
-| File-upload security implementation (vs GPT-5.3) | **Yes** | GPT-5.3 fails | T5 (TechnicalAnalysis-C) |
+| Math convergence reasoning rigor (vs GPT-5.3, not Claude/Gemini) | **Yes** | GPT-5.3 fails | practitioner testing (TechnicalAnalysis-C) |
+| File-upload security implementation (vs GPT-5.3) | **Yes** | GPT-5.3 fails | practitioner testing (TechnicalAnalysis-C) |
 
 These are within-OpenAI comparisons (GPT-5.5 vs GPT-5.3), not cross-competitor comparisons. No source in the corpus documents a case where GPT-5.5 succeeded and Claude Opus 4.7 or Gemini 3.1 Pro failed on the same prompt.
 
-## 7.10 High-Risk Scenario Annotations
-
-Per `GPT5.5outline.md` Section 7.3:
+## 7.10 High-Risk Scenario Annotations.3:
 
 ### 7.10.1 Medical advice tasks
 
-Not tested in the source set. No T3 or T5 source evaluated GPT-5.5's medical-advice accuracy. **Recommendation**: Do not cite GPT-5.5 for clinical-decision-support use cases without independent medical-domain evaluation. The 86% hallucination rate on AA-Omniscience suggests elevated risk for any fact-dependent advisory task.
+Not tested in the source set. No independent measurement or practitioner testing source evaluated GPT-5.5's medical-advice accuracy. **Recommendation**: Do not cite GPT-5.5 for clinical-decision-support use cases without independent medical-domain evaluation. The 86% hallucination rate on AA-Omniscience suggests elevated risk for any fact-dependent advisory task.
 
 ### 7.10.2 Legal compliance tasks
 
@@ -238,24 +220,24 @@ Not tested in the source set. No source evaluated GPT-5.5's legal-compliance acc
 
 ### 7.10.3 Code security tasks
 
-GPT-5.5 demonstrated improved security-aware coding behavior (UUID renaming, whitelist validation, MIME verification) relative to GPT-5.3 in a single T5 test (TechnicalAnalysis-C, 2026, T5). This is an improvement, not an absolute success. The model did not exhibit code-injection vulnerability generation in this single test, but no systematic code-security benchmark is available in the source set.
+GPT-5.5 demonstrated improved security-aware coding behavior (UUID renaming, whitelist validation, MIME verification) relative to GPT-5.3 in a single practitioner testing test (TechnicalAnalysis-C, 2026). This is an improvement, not an absolute success. The model did not exhibit code-injection vulnerability generation in this single test, but no systematic code-security benchmark is available in the source set.
 
 ### 7.10.4 Long-running autonomous workflows
 
-Ben Davis (2026-05-28, T5) reports successful overnight autonomous runs with GPT-5.5 (xhigh). The failure mode here is not the model refusing to work, but the model accepting "dangerous" permissions without pushback (Section 7.4.2). The risk is in permission management, not in task execution.
+Ben Davis (2026-05-28) reports successful overnight autonomous runs with GPT-5.5 (xhigh). The failure mode here is not the model refusing to work, but the model accepting "dangerous" permissions without pushback (Section 7.4.2). The risk is in permission management, not in task execution.
 
 ## 7.11 Failure-Case Corpus Summary
 
-| Failure type | Count | GPT-5.5-specific? | T3 or T5 |
+| Failure type | Count | GPT-5.5-specific? | independent measurement or practitioner testing |
 |--------------|:-----:|:------------------:|:--------:|
-| Type A — Hallucination (aggregate) | 1 aggregate | Yes | T3 |
-| Type A — Multimodal OCR | 1 case | Yes (vs Gemini 3.5 Flash) | T5 |
-| Type B — Creative writing constraints | 1 case | Yes (vs Gemini 3.5 Flash) | T5 |
-| Type B — Permission scope | 1 case | Not tested in competitors | T5 |
-| Type B — Math convergence (relative) | 1 case (GPT-5.5 succeeds) | Not applicable | T5 |
-| Type C — Evaluator conclusion reversal | 1 case | Not a model failure | T5 |
-| Type D — Compaction regression | 1 finding | Yes (within-OpenAI) | T5 |
-| Type D — Needle-in-haystack | 1 case | No (Gemini also fails) | T5 |
+| Type A — Hallucination (aggregate) | 1 aggregate | Yes | independent measurement |
+| Type A — Multimodal OCR | 1 case | Yes (vs Gemini 3.5 Flash) | practitioner testing |
+| Type B — Creative writing constraints | 1 case | Yes (vs Gemini 3.5 Flash) | practitioner testing |
+| Type B — Permission scope | 1 case | Not tested in competitors | practitioner testing |
+| Type B — Math convergence (relative) | 1 case (GPT-5.5 succeeds) | Not applicable | practitioner testing |
+| Type C — Evaluator conclusion reversal | 1 case | Not a model failure | practitioner testing |
+| Type D — Compaction regression | 1 finding | Yes (within-OpenAI) | practitioner testing |
+| Type D — Needle-in-haystack | 1 case | No (Gemini also fails) | practitioner testing |
 | Type E — Over-refusal | 0 cases | Not documented | — |
 
 **Total**: 8 distinct failure cases/ findings meeting inclusion criteria. The corpus is **small and not statistically representative**. It is presented as illustrative evidence; systematic failure-rate measurement requires primary testing not available in this report (Chapter 11).
@@ -264,9 +246,9 @@ Ben Davis (2026-05-28, T5) reports successful overnight autonomous runs with GPT
 
 ## References for This Chapter
 
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/ — **T3 hallucination rate**
-2. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5 — **T5 failure cases with prompts**
-3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04. — **T5 compaction finding**
-4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28. — **T5 Computer Use and conclusion reversal**
-5. TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch: hands-on testing and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads — **T5 coding security and math convergence**
-6. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp — **T5 context window reference**
+1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
+2. an independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15. URL: https://example.com/technical-review/gemini-3.5-flash-vs-gpt-5.5
+3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
+4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
+5. TechnicalAnalysis-C (industry technical press). "GPT-5.5 free tier launch: hands-on testing and ads platform." 2026-05-05. URL: https://example.com/technical-analysis/gpt-5.5-free-tier-ads
+6. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp

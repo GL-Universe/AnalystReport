@@ -1,0 +1,652 @@
+All right, some big news today because
+we're expecting a lot of new model
+releases just around the corner. First
+and foremost, GPT 5.5 is being tested
+and it's looking very strong, especially
+at the UI layout and UI design tasks.
+Looks like the NSA has access to and is
+currently using a mythos. I think
+Anthropic is taking a page out of a
+Steve Martin's book, be so good they
+can't ignore you cuz Claude is being
+used in a government even though it's
+labeled a supply chain risk. A lot of
+departments are still like, "No, we need
+to use Claude. Don't take away Claude.
+We're going to use Claude." I think they
+all know that the supply chain risk was
+a, you know, kind of a BS designation
+anyway, so they're like, "Yeah, don't
+worry about it. We'll be fine." Grok
+build and Grok computer are expected to
+launch at the same time and very, very
+soon. Since the massive shakeup at XAI,
+it seems like they're kind of kicked it
+into high gear and we should expect some
+even faster progress. I mean, XAI and
+Grok caught up to the rest of the models
+very, very quickly. They just couldn't
+take the lead in important areas like
+coding, but it does seem like they're
+just getting started and a lot of the
+new releases will probably be showing a
+an even kind of larger leap ahead. But
+we'll test that out when that's
+released. Here's what I think may be the
+biggest story. Google creates a strike
+team to improve coding models. So this
+is the code red thing again and guess
+who's leading the effort? It's none
+other than Sergey Brin. Yes, so that's
+one of the two guys that founded Google
+itself. Just when he thought he was out,
+they just dragged him back in or they
+probably didn't drag him back in. He
+probably like walked in and he was like,
+"All right, I'm going to handle this."
+And the goal is that whole intelligence
+explosion thing that we've been talking
+about for quite some time. So we'll get
+to Google and Sergey Brin and their
+focus on coding models in just a second
+because I think it's important to
+understand what's triggering all of this
+because in a way you can think of all
+these stories as being kind of related.
+They're being kicked off by one domino.
+So first and foremost, GPT 5.5 has what
+seems to be a very strong focus on UI
+layout. So, OpenAI just a shadow dropped
+a massive GPT Pro update and it's
+completely slaughtering Claude Opus 4.7
+in front-end coding. So, as Arakis AI is
+reporting here, they don't know if this
+is the highly anticipated Spud model
+dropping a week early, but the smell of
+a massive architecture or shift is
+everywhere. According to Polymarket, a
+lot of people are thinking that this is
+indeed 5.5, aka the Spud model. I'm not
+sure if I talked about this on on video
+before or not, but there are some
+accounts on either Polymarket or one of
+the other event betting platforms that
+tend to be kind of accurate on how well
+they guess the various releases
+specifically for OpenAI. They're almost
+prophetic in in in a way, prescient you
+can say. It's like they know when these
+models are going to be released beyond a
+shadow of a doubt. A lot of people
+speculate that these may be either
+OpenAI employees or people that are
+somehow in or around OpenAI that just
+happen to know when these models are
+going to get released. But, usually when
+you see kind of a hard take off like
+this, it means that with a high degree
+of certainty that model's going to get
+released. Now, obviously there could be
+delays or misses or whatever, but again,
+if the insiders are correct, it does
+seem like it would get released by or on
+April 23rd, which is this Wednesday. And
+there seemingly are tons of kind of a
+front-end development progress. It's
+very good creating websites by using
+kind of image to code. You're showing an
+image of what you want the design to
+look like and almost a perfect replica
+pops out. So, interestingly, this is
+following Anthropic's release of Claude
+design. So, this seems to be maybe as a
+result of that release. This OpenAI
+trying to kind of answer that release to
+kind of react to it. So, again, this
+might be that kind of Anthropic effect
+that it has on OpenAI. And Grok also
+having Grok build and Grok computer. The
+Grok build UI has two versions, a local
+and remote. The local version uses a
+Grok agent running locally for
+execution, which only makes sense if it
+was a desktop app. And Grok computers
+likely Grok desktop app with Grok build
+built in. Since it will be web-based,
+there's a high chance that both Mac OS
+and Windows versions will drop at the
+same time. So, I think that xAI is
+really trying to get to the number one
+coding spot, which is recently has been
+held by Anthropic. Anthropic for the
+most part has been leading the charge in
+terms of how good its coding models are.
+And I believe this is Elon's number one
+goal, to get a model that's as good or
+better than the leading model, which
+means that, you know, this is another
+company that Anthropic is having their
+effect on. You know, at the same time,
+of course, as you know, Anthropic has
+these negotiations with the Pentagon,
+they kind of go poorly. Anthropic kind
+of refuses to bend on some of the rules
+that they want for their models, and
+that gets them into some hot water.
+They're labeled a supply chain risk. So,
+basically, they're getting blacklisted,
+but, you know, we've been hearing some
+rumors that some of the departments they
+they don't want to let Claude models go.
+They're just too good. So, here's yet
+more confirmation, NSA using Anthropic's
+Mythos despite the blacklist. And so,
+the government's cybersecurity needs
+appear to be outweighing the Pentagon's
+feud with Anthropic. So, we get another
+sort of department here that's feeling
+the Anthropic effect. Like its models
+are so good that you're almost forced
+you can't ignore it. Like as Steve
+Martin says, it's so good that you can't
+ignore it. Yes, it's true the Pentagon
+wants to, you know, label it a supply
+chain risk, but then NSA is like, "No,
+we we really need to look at this. We
+can't just pretend it doesn't exist and
+ignore it. We we have to have it. We
+have to use it. We have to test it." And
+if you haven't spotted the pattern yet,
+basically, all of the companies are
+feeling in one way or another the
+Anthropic effect, if you will, and
+they're beginning to realize kind of
+what's happening here. Now, I think that
+all these companies have a very smart
+people that are able to see ahead. So, I
+I don't think that this is necessarily
+that they didn't see this coming. I
+think most of us here in the AI space
+that have been talking about this were
+kind of aware of this idea. This idea
+that if you build a excellent coding
+model, something that can do software
+engineering at a high level, well, that
+allows you to do more machine learning
+research, to accelerate AI progress, to
+create even better future versions of
+these AI agents. So, this thing is kind
+of a compounding effect. And so, if one
+model or one company gets the early
+lead, all things being equal, that lead
+will multiply over time. That lead will
+grow. Now, of course, we've talked about
+this here, 2 years ago. We we knew this
+was this kind of idea. We said that this
+is a probably going to happen. People
+like Altman Brenner in his The
+Intelligence Explosion paper, of course,
+covered this. So, this isn't new
+information, but I do feel like a lot of
+these companies are actually beginning
+to feel the flywheel effect. I think
+we're beginning to see it in action.
+Anthropic was the first company, the
+first model to kind of pull ahead of the
+competition with coding specifically.
+And since then, the others have been
+releasing, but it never seems like any
+given company or model is able to jump
+ahead. Anthropic's releases are key to
+getting a stronger and a little bit more
+ahead of the competition. So, now, no
+longer can you just keep running the
+same race and it catch up, cuz now that
+exponential is getting steeper and
+sharper. So, I think this is why Sergey
+Brin came back to Google DeepMind and
+formed this strike team specifically
+with one idea in mind, to get that
+flywheel spinning ever faster. This
+isn't about getting a better
+autocomplete tool or a or a better
+coding product. This isn't that kind of
+a short-term thinking of just getting a
+incrementally better model. The real
+goal is much bigger, to take these
+coding models and turn them into
+engines. These engines that can automate
+more of Google's research and AI
+research, that can automate engineering.
+And by the way, I don't mean necessarily
+100% eliminate engineers. That's not
+what I mean when I say automate
+engineering. This is a gradual process.
+It starts with taking some busy work off
+the hands of engineers, freeing them up
+to do higher level tasks. As more and
+more of the grunt work is being able to
+done by AI models, the faster and faster
+this process gets. The goal isn't to
+necessarily just eliminate human
+engineers. We might never get to that.
+We're sort of raising the floor and
+enabling them and creating more and more
+automation around them so that their
+abilities multiply. Just to kind of
+summarize and underline this point, this
+this force this strike force, it's not
+there to improve the chatbot experience
+for the user. Google is working on that,
+but this thing specifically, it's really
+there for the purpose of catching up to
+Anthropic by improving the coding models
+by starting that flywheel process, that
+recursive process of improvement, start
+spinning it faster and faster. This push
+was, according to the information, it
+was reportedly, at least in part,
+motivated by the recent Anthropic
+releases. According to the report,
+Google views the Anthropic models as
+ahead of whatever Google Gemini can
+provide, specifically on their code
+writing ability. So, this is Koray
+Cavusoglu, and he is the DeepMind CTO.
+So, him and Sergey Brin are both
+reportedly directly involved in this
+project. So, this really signals like
+this is not a side quest, this is not a
+side project. This is the red alert,
+top-level strategic priority for for
+Google to make this happen. So, coding
+has become a clear, central battleground
+in this AI race. If your model can
+reliably write code, debug it, run
+experiments, run long-horizon tasks, it
+becomes much more than a chatbot. It
+becomes a force multiplier for internal
+production, for engineering, for
+research, automation. In fact, if you're
+an AI frontier lab for model research
+itself. Now, you may have seen this,
+this is a little bit of internet drama
+going on. Now, I know what you're
+thinking, aren't we above this petty
+internet drama on this channel? And the
+answer is no, not not really, not
+really. We can go muckraking, I don't
+have a problem with it. Here's a Steve
+Yegge, He's saying, "I was chatting with
+my buddy at Google who's been a tech
+director there for 20 years about their
+AI adoption. Craziest convo I've had all
+year. The TLDR, too long didn't read, is
+that Google engineering appears to have
+the same AI adoption footprint as a John
+Deere, the tractor company." By the way,
+I know that sounds harsh because it's a
+tractor company, but if you haven't
+heard John Deere, they're doing quite a
+bit with AI, surprisingly. So, it's not
+quite the diss that it sounds like on a
+surface level. I actually Google should
+have a much higher AI usage than a
+tractor company, but with this
+particular tractor company, they're
+actually trying to innovate and
+implement AI quite a bit. By the way,
+I'm not kidding about this. John Deere
+is one of the more aggressive AI
+adopters outside of Silicon Valley.
+Again, I get that comparing Google to a
+tractor company is like a diss, but I
+think it's safe to say that outside of
+AI companies, this is one of the more
+interesting companies doing AI. But,
+here Steve continues. He's saying that
+most of the industry has the same
+internal adoption curve. 20% agentic
+power users, 20% outright refusers, 60%
+still using cursor or equivalent chat
+tool. It turns out that Google has this
+curve, too. And so, the question is, why
+is Google so average? Now, of course,
+keep in mind, this is just one person's
+opinion based on an undisclosed source.
+And of course, this tweet got a lot of
+attention, I think, in part because
+Demis Hassabis, the founder and leader
+of Google DeepMind, so on the DeepMind
+side of the project, in response to
+Steve saying, "Oh, a buddy of mine from
+Google said this." He's saying, "Well,
+maybe tell your buddy to do some actual
+work and stop spreading absolute
+nonsense." This post is completely false
+and just pure clickbait. And so, Steve
+posted that, got massive massive heat
+for it. Apparently, this is a very
+polarizing topic cuz a lot of people did
+strongly agree. A lot of people strongly
+disagreed. And certainly, this idea that
+Google is somehow lacking in AI adoption
+seems a little bit strange. Here's the
+thing. Part of that effort of the Google
+strike team, the Red Alert with Sergey
+Brin, one of the pillars of that effort
+is to aggressively get more Google
+engineers to start using AI products.
+So, Google internally, you know, in
+efforts that are fueled by Sergey Brin,
+they're pushing AI adoption hard. So,
+first and foremost, I love Demis
+Hassabis. Like, he was a dubbed a
+knight. He was knighted. He's He's an
+actual knight. He's Sir Demis Hassabis.
+So, definitely obviously massive respect
+to Demis. Those of you that have been
+watching the channel know I really like
+the person. I have just incredible
+respect for him. Recently started
+reading the book that recently came out
+about him. It's hard to read books
+nowadays. I didn't realize this, but I
+got this book as a hardcover. It's
+called the Infinity Machine, and I I
+realized I just lost the habit of
+reading. Back in the days, I used to
+read books like all of the time. Now,
+just that habit, that skill is is is
+gone. It's a lot harder. I consume tons
+of stuff online, podcasts, Audible, like
+just everything but books. Like, opening
+a book with actual pages and and reading
+it, boy, that's getting harder to do. My
+point here is that I think Steve has a
+point, maybe. Now, I'll show you why I
+think that and what Sergey Brin is doing
+and why I think those two two things are
+related. But, here Steve is saying that
+the tweet that we just saw about Google
+drew a lot of pushback, to say the
+least. But, he's saying that Googlers
+from multiple orgs have reached out to
+me independently and anonymously. Now,
+he's saying he hasn't verified each
+person's story, but the picture that
+these Googlers paint is consistent
+across all sources. What they describe
+is a two-tiered system. DeepMind
+engineers use Claude as a daily tool.
+Most of the rest of Google does not.
+When the question of equalizing access
+came up internally, the proposed
+response was to remove Claude for
+everyone, which is weird, right? If you
+want people to have equal access to
+stuff, usually that means give everybody
+the access as opposed to take it away
+from people that have it. Seems very
+backwards, doesn't it? But, of course,
+DeepMind objected and so strongly that
+several engineers reportedly threatened
+to leave. Google say that the leadership
+Google's leadership knows that this gap
+is real. The response has been to
+mandate AI usage in performance metrics
+and individual expectations. And so,
+basically, his point was that there's a
+pretty big separation between Google
+DeepMind and sort of Google proper. And
+what he was saying is a spot-on for
+Google, maybe not for Google DeepMind.
+And as Lucas Beers mentioned here, "Did
+you notice how what Steve was talking
+about Google and all the rebuttals were
+talking about Google DeepMind?" And
+according to the information article, a
+Google spokesperson said the company has
+seen tremendous adoption of internal
+coding tools. "Their use has been
+turbocharging our model and AI tooling
+development. We're really focused here."
+And at the same time, Google is really
+trying to push its own employees to
+adopt coding tools. Some teams outside
+Google DeepMind are also holding a
+mandatory AI training sessions for
+engineers, according to one of the
+people. In the memo, Brin wrote that
+every Gemini engineer must be forced to
+use internal agents for complex,
+multi-step tasks. Now, of course, I
+don't have any inside information. I
+don't know exactly what's happening.
+Maybe what Steve is saying is true that,
+you know, some of the engineers outside
+of Google DeepMind have been a little
+bit slow to adopt AI tools. And that
+companies like John Deere are actually
+adopting AI faster than these Google
+engineers. So, I'm not sure if that's
+true or not, but you see that Google is
+also having a very strong push to try to
+get those engineers to start using these
+AI tools. Again, as the information
+reported, engineers outside of Google
+DeepMind will have mandatory AI training
+sessions to start them to be able to use
+these AI coding tools. Sergey Brin is
+saying that every Gemini engineer must
+be forced. Forced is the word that he
+used. I believe that's what they've
+called him is using in that internal
+memo. So, they need to be forced to use
+these for their engineering for complex
+engineering tasks. So, I don't know
+who's wrong, who's right, but that post
+has certainly ruffled some feathers over
+there at Google. And no matter how you
+perceive it, whether you think it's
+wrong or right, I think the facts are
+that even internally Google perceives
+there to be a gap. Anthropic has
+developed a strong reputation for being
+the leader in AI coding abilities. That
+lead has become one of the strongest
+sort of narratives in this industry,
+both internally at companies and
+externally. And now OpenAI and xAI and
+Google, they have to react to that
+narrative, to that perception. How you
+react to that perception? Well, you put
+out a model that's better than anything
+that Claude and Anthropic have to offer.
+And I think this is a Sergey Brin's
+goal, right? Kind of light the fire
+under everybody to number one adopt it
+more. Whether you think Google is a
+leading the adoption curve or lagging
+behind, where you find yourself on that
+argument, here's the founder of the
+company saying, "Hey, we need to force
+everybody to use these AI agentic coding
+tools. We need to get these mandatory AI
+trainings for engineers, and we need to
+aggressively pivot and make it a
+priority to get better coding tools out
+there." I mean, you just compare the
+staff over at Anthropic versus, you
+know, how many people there are at
+Google. Anthropic has somewhere under
+5,000 employees total. Most of them, I
+assume, are technical staff in one way
+or another. Google has somewhere of
+closer to 200,000.
+Google has a massive infrastructure
+advantage. In fact, the latest Claude
+models have been trained on Google's own
+TPUs, their tensor processing units,
+their AI chips. They have a huge
+internal code base. They have a huge
+research budgets and departments. So,
+Google has the the scale, the talent,
+the tech, the infrastructure, they have
+the data. And so, I think very quickly
+we'll see how much all that matters,
+right? So, if Sergey Brin and team can
+focus all of that, all those resources,
+all that talent, all that scale,
+everything, everything, and start to
+lead, you know, build a substantial lead
+in terms of their models' ability to
+code, well, that means that all those
+advantages have to
+into them becoming the juggernaut and
+being unstoppable. But if they can't, I
+think things get a lot more interesting.
+Because what does that mean about
+Anthropic? How can they keep winning
+even though they don't own the TPUs,
+they don't have as much talent, they
+don't have the the resources? What is it
+that allows them to keep winning against
+what seems to be against the odds? And
+also, could it mean that in this game
+whoever gets the first lead,
+specifically with this sort of first
+domino of creating AI coding agents? Is
+it the fact that if you start that
+flywheel early, that kind of exponential
+cumulative recursive improvement
+process? Like if you're the first person
+to start that inflection upwards, does
+it mean that from there on out you're
+just going to keep exponentially
+improving while everybody's always going
+to be behind? Whatever the case is, I
+think this is the race to watch. Who
+will win out as far as AI's ability to
+code between these labs? Because it
+really seems like that's where
+everybody's beginning to realize that
+that's what they should be focusing all
+their efforts on, and that's kind of the
+Pareto principle, 80/20. That's the
+thing that you try to focus on to get
+the biggest rewards. And we're also
+seeing that it's not necessarily the
+talent, the money, the infrastructure
+that just makes you a winner. Anthropic
+is one of the smallest labs, or or used
+to be. It seems to be doing everything
+with a tenth of the capital, some small
+percentage of the capital that that
+everybody else uses. It seems to be
+using its money a lot more effectively,
+efficiently to create these agents than
+than anybody else. So I try to keep up
+with what everyone else is saying kind
+of in this AI creator space, AI
+commentator community, whatever you want
+to call it. And there's a surprising
+amount of people that are saying that
+this mythos thing is just Anthropic
+lying, or even if it is real, it doesn't
+really matter because of some other
+reason, like oh, other models can do
+this. So to all of you paying attention
+and following this channel, just kind of
+keep tabs. So if mythos is not a big
+deal, again as a lot of people are
+saying, and by the way, if you're not
+familiar with some of my previous
+videos, I do think that is a big deal. I
+do think that these models will keep
+getting better. If you just look at the
+the charts and the the progress, like if
+you just follow the line, we're on
+track. These models are improving at a
+sort of as was foretold, right? At a
+certain predicted sort of rate. And as
+things continue, they will get more and
+more wild. Like, this isn't unexpected.
+As they get better and better, things
+will keep breaking and we need to
+prepare for that instead of uh sort of
+just pretending it doesn't exist. But,
+for the people that are keeping track of
+this at home, so if Mythos is fake, if
+it's a myth, and Mr. Dario Amodei just
+made everything up. So, if the people
+that are saying that it it's just fake
+news, that Mythos is not real, then what
+does it mean? That means that
+Anthropic's little PR stunt, it fooled
+all of these people. It completely duped
+them, right? It fooled CEO Jamie Dimon.
+So, he's a JP Morgan's CEO. So, he
+admits that Anthropic's AI 2 Mythos is a
+threat. So, they they fooled this guy,
+right? They got that sucker. They fooled
+the NSA, right? The world's biggest
+spying agency. It's not a spying agency,
+but it's it's kind of a spying agency,
+right? But, they're all idiots, they
+didn't know anything. They got tricked
+by by Dario. He's like, "I got this
+model that that's pretty dangerous." And
+they're like, "Okay, yeah." And they
+just they just believe the whole thing.
+And then they went against the Pentagon
+to get their hands on that model. So,
+that's that's how much they get fooled,
+right? They fooled the Fed as well. So,
+Powell bessent discussed Anthropic's
+Mythos AI cyber threat with major US
+banks. So, they they they fooled the
+Federal Reserve. They fooled Jerome
+Powell. And then and Jerome Powell and
+and others, they they in turn spread
+that lie to all the major US banks. They
+also apparently fooled Sergey Brin
+that's now panicking about Anthropic's
+abilities. And they're like, "Guys, we
+really need to catch up." So, the
+founder of Google that has predicted a
+lot of these tech advances and really
+invented a lot of them, put them into
+reality. He also was a fooled by
+Anthropic's PR stunt. So, either A, some
+of these people on Twitter and YouTube,
+etc., they figured out that Mythos was
+fake even though they've never seen it
+or tested it, they just sort of guessed
+that it was Anthropic's PR stunt and
+they just they just nailed it. Or it's
+that the people that had access to this
+model and they've tested it and they saw
+it for themselves that even though that
+model didn't do what it was claimed to
+do, those people that tested it, that
+were insiders, that they still got
+fooled by Anthropic somehow. Like,
+seriously, what do you think is
+happening here? Please please tell me in
+the comments. We live in the wildest of
+times where it's so difficult to
+understand what to believe because you
+find so many people saying completely
+different things, but please tell me
+tell me what you think. Do you think
+that Anthropic's PR stunt of saying that
+Mythos can have some serious risky
+cybersecurity abilities? think that it
+fooled the top leaders in in finance and
+tech and and government and and NSA,
+etc., etc.? Is that what you think
+happened? Please let me know in the
+comments down below. Thank you so much
+for watching. My name is Wes Roth. I'll
+see you in the next one.

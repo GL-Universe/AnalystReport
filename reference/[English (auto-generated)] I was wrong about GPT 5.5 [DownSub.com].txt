@@ -1,0 +1,618 @@
+Every other time I've talked about GPD
+5.5 has been to tell people to use it on
+low reasoning and I think this model is
+still really really good on low
+reasoning. I do not take that back at
+all. The vast majority of the time I am
+still using this model on low reasoning,
+but I was wrong about X high reasoning.
+I have never been a huge fan of it on
+older GPD models like GPD 5.4. I pretty
+much entirely use that one on high. I
+never really changed it. This one I just
+recently over like the last week or so
+started really pushing it on extra high
+in the Codex desktop app with all the
+crazy stuff they put in there. It It's
+something different. It is really really
+cool to the point where I felt like I
+kind of just had to make another video
+on this cuz I want to show you guys the
+kinds of workflows this unlocks and
+generally talk about where I think all
+of this stuff is maybe going. I've been
+pretty bad at predicting this stuff in
+the past and I'm sure I'll continue to
+be bad at predicting it, but I still
+want to talk about the weird way I've
+started
+Oh my god. Monkey.
+He's really stupid. He's like really
+really stupid. Stripe, what are you
+doing? And I think what I was saying is
+that this unlocks a pretty insane number
+of workflows and I think it's kind of
+emblematic of the direction things are
+going where we are just going to end up
+giving these agents more and more
+control and let them do more and more
+things. To start I want to give you guys
+just a little example of how I generally
+speaking have been using these things.
+If I go into the Codex desktop app and
+I'll just go here, use the computer use
+skill. What I want to do here is just
+have you go through and test the actual
+chat stream experience of this. Put in a
+message, have it stream in, make sure
+that all the formatting and content
+actually looks correct and then also
+double check the functionality of like
+the retry button, the edit button, the
+copy button, all of that stuff. I
+already have the project open within
+Helium. You can just kind of go in there
+and do it. Keep going until you have all
+those satisfied. Give me a report at the
+end of the current functionality as well
+as any proposed fixes to improve
+performance, UX, etc. So this is one of
+the things I've been doing with it. It
+is really convenient for just general
+front endy type tasks to have it go
+through and double check its work. I've
+mentioned this a bajillion times and
+I'll say it a bajillion times more. One
+of the best things you can do to get
+better outputs out of agents is to give
+them some feedback loop that is rooted
+in reality. Be it a schema check that
+make sure its outputs are in the right
+shape, or maybe for code stuff, a check
+command that will actually make sure
+that the code compiles and is correct.
+And now with this, instead of just
+outputting a bunch of stuff that it
+can't really test, all it can do is make
+sure that the syntax is correct, but
+there could still be tons of logic
+errors hidden within this. It lets it
+actually go through and get feedback on
+whether or not this actually worked.
+Like one of the things I was dealing
+with earlier is I'm using clerk
+components for the org management on
+this project. It had these gross little
+boxes around all the icons, which was
+just a styling mistake the model made. I
+told it like, "Hey, this is what's
+happening. Use the computer use skill to
+make sure that's not happening anymore."
+And if you look closely in here, it's a
+little hard to see. I'll zoom in a bunch
+here, but uh it grabbed a screenshot of
+the actual current state of the site, so
+it made its fixes and then went into the
+browser, ran the actual app, and was
+able to see, okay, now the boxes are
+gone from these two elements, which is
+super super nice. And as I'm doing this,
+you'll notice up here at the top, you
+look at my top bar here, I have the
+little helium computer use icon. If I
+jump into helium, there's a little
+cursor running around doing things in
+here. That cursor isn't me. I'm not
+touching the computer at all. It is just
+doing its thing to actually test the
+app, where the first thing it did was a
+little copy test up here. So, asked it
+for a TypeScript code snippet, and it is
+currently trying to figure out how to
+send another one. Oh, there we go. It's
+a little slow and a little jank, but
+still the fact that it is just like
+doing this is really really cool. That's
+actually really funny. If you look at
+the output here, it was trying to do a
+test on the stop button, and it wasn't
+able to click the stop button in time
+because it's too slow to actually take
+multiple actions, and the model is
+generally pretty fast, so it couldn't do
+it. It's currently figuring out a way to
+make a better one. I'm just going to let
+it keep doing its thing. That's not
+really the point. The point is that the
+model can now fully use the browser. And
+obviously, that's really useful for this
+kind of thing. But if you actually just
+think about it for a little bit, this
+unlocks an insane number of workflows
+that just weren't possible beforehand.
+And you know what else unlocks a bunch
+of stuff? Today's sponsor. Today's
+sponsor is a markdown file. It is the
+off.md file from Work OS. This is a
+really, really cool new standard that
+they just introduced that makes it
+incredibly easy for your agents to
+authenticate basically anything. It's an
+open standard that works really well
+with WorkOS, but can also be ported over
+to any other authentication platform
+because when they built this, they took
+the standards really, really seriously
+and it's just built on top of existing
+OAuth specs. The way it works is
+seamless. Say I want to add Firecrawl
+scraping to my app, I tell my agent to
+add Firecrawl scraping to my app, it'll
+analyze the repo and then when it goes
+out to try and add in Firecrawl, it'll
+find this auth.md file on their servers,
+get all the information it needs on how
+to sign up and register, give me a yes
+or no on can I register on your behalf,
+I'll say allow. Now that that's allowed,
+it's going to provision everything I
+need, make the account, make the API
+key, load it into my .env and that's it.
+Everything is set up and working. This
+has already been adopted by Cloudflare,
+Firecrawl, Resend and many others. It's
+a dope standard and it's just the kind
+of thing that WorkOS does. They deeply
+understand auth, everything from just
+adding a sign in with Google button to
+your site all the way up to the crazy
+stuff you need to do to authenticate an
+enterprise customer and there's a reason
+why everyone from OpenAI, Cursor,
+Perplexity, Vercel, so many others are
+using WorkOS. They are the right choice
+for scaling up your auth and for letting
+agents auth with your service. It's a
+great platform. If you're not already
+using them, you really should at
+david7.link/workos.
+One of the weird things that this
+actually helps a ton with is environment
+variables and shitty cloud console
+configs like a certain Google Cloud
+Console. I have been getting more and
+more fed up with environment variables
+and stitching a bunch of random stuff
+together as I've been doing more with
+agents. One of the things you'll realize
+as you push these things further is that
+you want to have multiple of them
+running at the same time. Like as I was
+recording, I had that big run of Codex
+going in the background, but that's
+pretty much hogging up A, my browser and
+B, the current instance of the BTCA
+codebase. I want to have multiple
+instances running at once so that I can
+be doing some front end stuff, but also
+be doing some back end stuff. But in
+order to do that, you need to have a way
+to parallelize these things with work
+trees and work trees are good, but the
+problem with work trees is .env files
+really, really suck. You can kind copy
+them over a bunch, but then if you're
+using something like Convex, you have to
+spin up a new Convex instance for every
+single work tree, otherwise they're
+going to conflict with each other. It's
+just a really hellish management
+problem. This doesn't solve that
+problem, but this does make dealing with
+environment variables and cloud services
+a little bit less painful in the short
+term. I'm hoping that in the long term
+we get to a place where like everything
+can actually be interacted with over
+API. Full disclosure, these guys have
+sponsored the podcast, but they are not
+sponsoring this video or the channel
+right now. Maybe they might in the
+future. I do really like them. But the
+thing I did want to talk about here is
+Agent Mail entirely because I think it's
+a really good example of how these
+things should work for agents, where it
+gives your AI agents email inboxes. And
+what that means is that they can create
+new inboxes, update the inboxes, read
+threads, update threads, do whatever the
+hell they need to entirely over API and
+SDK. The most annoying thing ever is
+when I am working on a project, I have
+it working locally, it's really nice,
+and then I go to deploy, and I need to
+stitch together a bunch of random
+environment variables and set up the
+preview deploy and set up the hosting
+and all of this random crap and stupid
+dashboards. Like why can I not just run
+one command to actually do the thing?
+There are so many infra platforms that
+are getting close on this. Like
+Cloudflare's Wrangler is kind of going
+in this direction, and it has a lot of
+the pieces that it needs, but still if
+you're going to deal with an external
+service, you still have to put that
+OpenAI API key in there somehow, and the
+whole thing just kind of sucks to a
+level that I just am tired of dealing
+with. The computer use thing does
+actually make that easier. Like one of
+the things I've been using it for is
+I've had to do a bunch of random stuff
+in the GCP dashboard. Not because I'm
+using Google Cloud, but because I need
+to use their APIs. I need to get into
+the YouTube API, the Gmail API, the
+Google Drive API, and a bunch of these
+things for internal tooling for my job,
+because I'm building a bunch of custom
+agents with that. As I'm doing these
+things, I need to be able to properly
+set the scopes on the OAuth to authorize
+the right emails for all these things.
+It's just a lot of tedious
+clicking through stupid dashboards that
+I just don't want to deal with anymore.
+And I've honestly found that the easiest
+way to set up something like the Gogs
+CLI, which is a little project by Peter,
+the guy who made Open Claw, that
+effectively lets you grab your Gmail
+inbox or whatever for your agent to work
+with, is to to just kind of let the
+agent go through and set up the project
+and credentials and all that stuff
+within the GCB dashboard, copy-paste
+that all into the places where it needs
+to be, and then let you go through and
+do the actual login. Obviously, this is
+a security nightmare, and this is
+another level beyond just dangerously
+run all permissions. I already have been
+doing that for a while. Like, you'll
+notice if you go into my Codex, I've had
+full access turned on for the last 4
+months, and I have no intention of
+turning it off. I thought this was an
+insane idea 4 months ago. Like, last
+December, I never in a million years
+could have imagined letting an agent
+have full root access to my computer at
+all times, but yet now I do. I just let
+it do its thing. I don't have any
+permission checks on it, and half the
+time I'm not watching what it's doing,
+probably more than half the time. I'm
+just letting five or six agents run off
+in the background and do whatever they
+need to. I just kind of gave up. I trust
+the models enough at this point. Well,
+I'm not there yet on stuff like this,
+where we're like dealing with very
+sensitive credentials in the GCB
+dashboard. I'm getting kind of close,
+and I can definitely see a world where
+in a couple months, I'm just not
+monitoring it anymore. I have my Mac
+mini running in my server room over
+there. Maybe I just let that guy have
+full computer use all the time, and if I
+need to do something like this, I'm
+like, "Hey, can you go get all this set
+up?" And I don't even know what it's
+doing. It just goes off, clicks a bunch
+of things in the dashboard with full
+root permissions, and then hopefully it
+ends up working out. Obviously, there
+are a bajillion ways this can go very,
+very, very wrong, be it prompt
+injection, hallucination, or just a
+simple mistake where it ends up deleting
+something it shouldn't have. This
+creates a lots of potential problems,
+but also solves a ton of problems, and
+it's just a it's a weird balance we're
+kind of dealing with here that I don't
+really have the answer to yet. I'm also
+dealing with this with like the Hermes
+agent OpenClaw stuff. I've been going a
+lot harder with that. The only reason I
+haven't like fully gone all in on it yet
+is because, again, the security and
+perms is a very big concern. The idea of
+giving it read-write access to the
+YouTube API or the Gmail API is still
+just kind of terrifying. There are
+safeguards in place for all of this.
+Like, Hermes agent has a really good
+permission system right out of the box,
+but even still, this is what a lot of
+the command approval requests look like
+these days. This is a gigantic number of
+bash commands that it wants to run to
+execute whatever it's trying to do right
+now. I can read through this and see the
+rmrf's and like get an idea of what it's
+actually doing here and whether or not
+it makes sense, but it is time and
+effort to actually parse through and
+read this. And as you're just like lying
+in bed looking at this on your phone or
+like out doing something else, are you
+going to closely read this entire thing?
+As we get to the point where a lot of
+the ways these agents make edits is by
+just writing out a giant Python script
+and running it. It's not really
+parseable unless you really sit down and
+do it and at that point you might as
+well just like write it or have the
+agent write it with you at the same
+time. We're getting to a point where we
+kind of just have to let go more and let
+them do more and that's uh terrifying.
+I'm I'm not there yet. I'm not saying I
+won't get there. I probably will. That's
+just the direction these things are
+going. I I I don't have the answer. I
+just wanted to bring this up. Another
+thing worth bringing up here is the
+potential cost of this stuff. I have not
+been going 1 millionth as hard as
+someone like uh Peter is the creator of
+Open Claw. He posted an update to Code X
+bar which included his actual usage of
+Open AI spend. He's currently working at
+Open AI so like he's getting these
+tokens for free. But, in the last 30
+days he's done 1.3 million dollars worth
+of API credit spend. He did mention in
+the replies that if you turn off fast
+mode, which is what I'm currently
+running it on, I'm doing 5 5 extra high
+on fast, it would go down to about 300
+grand. But, still that's 300 grand a
+month of AI spend. He's going insane and
+the whole point that he's trying to make
+here is he's trying to figure out what
+it would be like to run a product where
+tokens were free and unlimited. What
+could you actually do? He has a
+bajillion different sub agents running
+on this. Every single commit and change
+and issue gets run through an insane
+number of Open Claw instances. Like
+whenever a PR lands, it will go through
+every single one of the issues and there
+are thousands of them and find every
+single little one that might have been
+related to the fixes shipped in that PR
+and automatically close them. Same thing
+with PRs, it'll automatically close them
+if they are duplicates or if they are
+currently being fixed or whatever is
+currently happening. It is letting the
+AIs autonomously manage this gigantic
+open source project for him. It's really
+cool what he's actually doing here. I
+think it's a sick North Star to have,
+but uh again, that's a lot of money. And
+my personal usage here, like you can see
+I have 99% left, 98% left. I'm barely
+even touching my $200 a month sub. A lot
+of this is because I have the extra rate
+limits from the 55 party. If you didn't
+see that, OpenAI had like a 55 event.
+Anyone who applied or ended up going got
+10x rate limits for a while, and I'm
+currently still on those 10x rate
+limits. So like, these aren't reflective
+of real usage. If you expand these out
+my 5-hour, I'd probably be down to like
+90% and my 7-day, I'd be down to like
+80%. But also like even still, I've been
+doing an insane amount of inference on
+this. Like I am definitely burning
+thousands of dollars worth of tokens to
+actually do this stuff. And at least for
+right now, the free money is there from
+OpenAI to actually do this stuff. Will
+be there forever? I don't know. I really
+hope it will be. Enjoy it while it's
+here. I would go pretty hard with this.
+I think it is worth experimenting with
+because there are really cool workflows
+here. I also wanted to talk a little bit
+about the Codex desktop app in general
+because I've been pushing it harder and
+trying to figure out the right ways to
+actually use this. I brought up work
+trees earlier, and I don't have this set
+up on all my projects. I do have it on
+this one where whenever I create a new
+thread or whatever, I can do new work
+tree. And if I make a new work tree,
+it'll make this work tree off of main,
+and I'll just say we'll just do this on
+low. What does this project do? Just a
+dumb test run. The whole point is it's
+doing a bunch of stuff here where it is
+copying over the .env.local for my main
+branch. It is also setting up a new
+Convex instance for this specific work
+tree that it can all just kind of run at
+once. And now that this is fully spun
+up, I have it running, it's doing its
+thinking. And if I went in here, I will
+stop that dev server, and then I will
+start the dev server here. So this is
+running within this work tree, and I can
+open up a browser within the Codex
+desktop app and do a bunch of useful
+stuff in here. Like I'll move it so that
+my face isn't covering it. If I go over
+here, I can like take a screenshot, and
+that'll automatically get put on my
+clipboard so I can paste it in the chat.
+Or I could be like, "Okay, I want to
+change this element." Click it and then
+add a comment in there that'll be passed
+into the next prompt. Like, there's a
+lot of really useful things you can do
+within here. The Codex desktop app has
+gotten really good, and I'm pretty much
+using it for everything. I've even
+started using the automation system
+where I just have one right now. It's
+just keeping my developer directory
+clean. Because of what I do for work, I
+do a lot of experimenting and make a
+bunch of random stuff that ends up
+getting thrown away constantly. So, my
+dev directory would just constantly get
+bloated with nonsense that I didn't want
+to have, and it would be hard to parse
+through. So, I have an automation that
+every day at 5:00 p.m., it will go
+through and run a Codex session that
+will clean up the directory. Get rid of
+any stale stuff, keep notes of what I am
+and am not working on, save some of
+these memories. It's just a nice little
+babysitter for that directory, and
+that's the kind of thing you can kind of
+start making with this. I've also been
+using this a bunch on my Windows PC over
+there. I was hanging out with Sarah when
+he was in town in SF. He was showing me
+some of his workflows and helping me get
+local model stuff set up on my 5090 rig
+over there. And one of the things that I
+noticed as I was talking to him and
+working on this stuff is that I am not
+using these models enough. I need to be
+going harder with it. When he was
+getting like VLM Studio, his little
+project for running local models, it's a
+really cool open source project he's
+been working on. The way he got it set
+up was just going into the Codex desktop
+app and telling it to set that thing up.
+We didn't do any of the get clones, we
+didn't do any of the setup, we just had
+it do the thing, and just went back and
+forth with it and asked it to make
+whatever changes were needed to get it
+running properly there. It wouldn't be
+enough to just blindly say these things
+into the void. Like, the prompts he was
+giving it were very specific. He
+understood how the whole thing works,
+and I think that's a common theme
+through all of this. If you know what
+you're doing and you're just telling it
+to take an action, it can take that
+action really well and do a lot of the
+config stuff for you. I like
+letting these things just kind of run
+computers at this point. It's one of the
+best uses I've found for them, and
+that's a place where 55 on low really
+shines. I've even been really liking the
+mobile app experience. They added to
+ChatGPT a Codex section where you can
+link your Codex desktop app to your
+ChatGPT account. So, that when you're
+out doing something else and you're not
+at home on your computer, Your computer
+can still be running and have the actual
+instance of Codex running and just
+control the threads remotely. The
+experience is pretty seamless. It feels
+really good and I'm trying to get more
+and more of this stuff set up. Like my
+dream setup that I'm not done with yet,
+I'm currently working on because again
+the security stuff is a nightmare, is
+having in my network closet my Mac Mini
+that is just kind of running forever. It
+has Hermes agent and other things like
+that on it. But I also wanted to have a
+Codex instance on it. So if I want to be
+working on projects while I'm on the go,
+if I just have an idea for something, I
+can just send that off as a prompt and
+have it actually happen in the
+background. The other really good way of
+doing this, if you don't want to set up
+like a dedicated long-running computer
+that's just always running Codex at all
+times, the Cursor Cloud agents are
+really really good. I definitely have my
+issues with the current Cursor desktop
+app experience. It's getting better, but
+it's still like glasses not where it
+needs to be. Their Cloud agents are
+amazing. I really really like them. The
+biggest problem with all of this though
+is again you have to set your projects
+up in a way that it is easy for the
+agents to work on them in parallel. That
+means as few dependencies as possible,
+as few environment variables as
+possible, and as simple of environments
+as possible. One of the things that
+Julius did for T3 code that I thought
+was really sick is he made it so that
+you can run the entire thing with no
+.env files. I think you still have to
+have like an OpenRouter API key so that
+you can get the model inference to
+actually run that. But if you just want
+to boot it and look at it and sign into
+it, all of that can be simulated with no
+environment variables or external
+dependencies. I think these days that's
+a really good thing to have not just for
+the development experience side of
+things, but also I'm really trying to
+work on all my projects getting the
+number of dependencies in the
+package.json as low as humanly possible.
+More security issues keep happening and
+they're going to keep happening. Supply
+chain attacks are getting very real and
+very bad very fast. I don't want to be
+exposed to that. I want my stuff to be a
+lot more secure, so I'm going a lot
+harder on just instead of installing a
+package, letting the agent basically
+recreate the package within the project
+because they kind of just can at this
+point. The way I'm using these things is
+just completely unrecognizable from how
+I was using them 3 months ago. This was
+kind of just an off-the-cuff rant of
+like what I'm currently feeling and
+doing with this stuff. If it was
+helpful, make sure to let me know. Like
+and subscribe. I will have more detailed
+breakdowns on this stuff in the future.
+But for now, all I would say is just
+push these things a little bit harder.
+Give 55 extra highest shots. And the
+Codex desktop app is actually very, very
+good.

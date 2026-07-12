@@ -1,0 +1,481 @@
+GPT 5.5 is here. It is their new
+frontier model. It is coming out in
+Codex and ChatGPT Pro. And yes, it is an
+incredible model. So, we're releasing
+GPT 5.5, our smartest and most intuitive
+to use model yet, and the next step
+toward a new way of getting work done on
+a computer. Now, I've been using it for
+2 weeks. I've been thoroughly testing it
+on my own code bases, on fresh code
+bases. I've used it in ChatGPT Pro, and
+it is a very, very good model. It fixes
+a lot of the issues that GPT 5.4 had.
+Specifically, it has a better
+personality, and I think that is in
+response to how difficult and soulless
+it was to use GPT 5.4 in Openclaw. So,
+that is that's something to to note. All
+right, so a lot of this is just kind of
+marketing fluff. I mean, it's all true,
+but it's the stuff they say in every
+single blog post. So, here is where it
+really matters. The gains are especially
+strong in agentic coding, computer use,
+knowledge work, and early scientific
+research. This is where it obviously
+matters. This is where the money is.
+This is where Anthropic showed us that
+you can grow incredibly fast revenue,
+really like doubling and doubling and
+doubling all the way up to $30 billion
+annual run rate right now with a
+hyperfocus
+on enterprise coding. And OpenAI got the
+message.
+They are now focused on coding, and this
+is the result. They are starting to put
+out more models that are just better and
+better at agentic coding, because the
+flywheel is just incredible. You build a
+coding model, you sell it to enterprise
+and make a bunch of money, you collect
+all of that incredible coding data, make
+the model better, and then use that
+model to train your next model.
+It is the self-improving
+flywheel of artificial intelligence. GPT
+5.5 delivers this step up in
+intelligence without compromising on
+speed. Larger, more capable models are
+often slower to serve, but GPT-5.5
+matches GPT-5.4 token latency in
+real-world serving while performing at a
+much higher level of intelligence. So,
+this is something that I know they spent
+a lot of time on, and I noticed a few
+things. One, you get the same level of
+intelligence as GPT-5.4 in far fewer
+tokens. It is just more token efficient
+overall. Now, that is counterbalanced by
+the fact that it is a more expensive
+model, but when it all balances out,
+you're paying less overall, and that's
+the key. And then also, there's a higher
+ceiling on the total intelligence you
+can get out of a GPT-5.5 model. So, more
+efficient per token, which is really
+good. More expensive per token, but more
+efficient as well. It also uses
+significantly fewer tokens to complete
+the same Codex task, making it more
+efficient as well as more capable. And
+yes, I noticed this. It was very clear.
+Not only in the amount of thinking
+tokens it was using, but also just how
+it explained things to me, which, you
+know, when when I'm coding and I'm vibe
+coding especially, when it gives me an
+essay to explain one little change that
+I've made or that it has made, it's
+frustrating. I don't want that. It's too
+much. It's too much to read, and I
+always have to say, "Hey,
+explain that simply and explain that in
+short." And it always does after that,
+but now you don't really have to do
+that. It explains it in a really concise
+way. And that's also part of the
+personality improvement that I
+mentioned. If GPT-5.4 is explaining
+something to you in a very rigid, very
+formal essay,
+and then 5.5 is like, "Here, let me give
+you exactly what you need." That is an
+improvement in the personality, the tone
+of the messages that you're receiving
+from 5.5. So, we're releasing 5.5 with
+our strongest set of safeguards to date,
+designed to reduce misuse while
+preserving access for beneficial work.
+5.5 is rolling out to plus, pro,
+business, and enterprise users in chat
+GPT and Codex and GPT 5.5 Pro is rolling
+out to pro business and enterprise users
+in chat GPT. And of course, if you're
+talking about real-world AI usage, you
+have to talk about how it actually works
+in the enterprise environment. And the
+sponsor of today's video, Box, put
+together a bunch of benchmarks
+specifically for 5.5. Let's take a look.
+All right, so this is Box AI complex
+work eval for GPT 5.5 and of course,
+they're comparing it to GPT 5.4. What
+you are seeing is a significant step up
+from 5.4 to 5.5. Purple, 5.4, yellow,
+5.5. That is 67 to 77% on their accuracy
+index for their full data set. Here are
+industry-specific and this is basically
+how well each of the models works within
+the Box environment specifically for
+enterprise use cases. So, for financial
+services, a massive nearly 20-point
+jump. For healthcare, from 61 to 78,
+public sector, 59 to 72, media and
+entertainment, a lesser but still
+significant 13% jump. And by the way, if
+you're not already a Box customer, go
+try them out. We use it at Ford Future.
+I use it as my data store for Open Claw.
+And of course, you get all of the
+enterprise use cases. You actually get
+to extract real insights out of all of
+your unstructured data and it is thanks
+to things like having GPT 5.5 in Box AI,
+which I'm going to show you right now.
+So, here we go. We have Box AI agent GPT
+5.5. We're going to load up a set of
+documents. This is financial data.
+Analyze the connection between project
+heritage mentioned in the engineering
+roadmap and the performance of the
+enterprise customer segment in the churn
+summary. This is not simple. And after
+waiting, this is sped up, we actually
+get the full analysis. GPT 5.5 will be
+available in Box AI very soon. Join over
+100,000 other enterprise businesses
+using Box like my company does. You get
+compliance, you get governance, you get
+all of the enterprise features you come
+to expect from Box, and then you also
+get Box AI. So, go check it out. Link in
+the description down below. Thanks to
+Box for sponsoring this video. Let's
+look at the benchmarks. GPT 5.5 5.4, we
+have 5.5 Pro right here versus 5.4 Pro.
+Here's where it matters. Finally, they
+also list competitor models. We have
+Opus 4.7 and GPT 3.1 Pro. Really, the
+only one that matters is Opus 4.7.
+So, terminal bench. This is agentic
+usage. Look at the difference there. So,
+we have a seven-point jump from 5.4 to
+5.5, and just completely dominating Opus
+4.7 on terminal bench. This is the
+model's ability to go into terminal and
+operate terminal CLI, right? This is
+really important for agentic usage. This
+is also really important for tool
+calling.
+We have expert swe internal. I don't
+actually know what expert swe is. Maybe
+I guess it's obviously an internal
+benchmark. 73 as compared to 68. They
+don't have the other competitors. Fine.
+GDP val. This is a benchmark that the
+OpenAI team has created. This is testing
+real-world usage, actual valuable
+knowledge work usage for the model. And
+it's a little bit better. We have a 1.9%
+improvement from GPT 5.4.
+Here's
+5.5 Pro Pro, interestingly enough, is
+actually an a decrease.
+Here's Claude 4.7, Claude Opus 4.7 at
+80.3. OS World Verified. This is the
+model's ability to do computer control,
+browser control. They basically give the
+model an environment and let it control
+a computer. And we can see
+it is a it's an improvement, not a huge
+one, 3.7% on par with Opus 4.7.
+I have to be honest, I don't do a lot of
+browser control. I don't do a lot of
+computer control. I just find it to be
+excruciatingly slow, and it's just not a
+use case that I need now.
+If things can be controlled through the
+CLI, they should be.
+I don't want point and click for my
+agent. It is slow and I'm prone to
+errors. So, please, everything should
+have a CLI. Everything should have an
+API. That's the way to go. That's how to
+get the most out of agents. That's what
+I want. It's also fast. Okay, so do
+that. If you're building stuff, do that.
+Browse comp, which is a web browsing
+benchmark, uh GPT 5.5 coming in at 84.4.
+That would make sense why GPT 5.5 Pro,
+which is the model within a harness that
+is specifically built for research and
+very difficult problems would be so good
+at this benchmark in particular, in web
+browsing. Very close second, GPT 5.4
+Pro. So, not a huge improvement there.
+At Claude Opus 4.7 down at 80%, 79%. We
+have Frontier math. It got the number
+one score on 5.5 and specifically 5.5
+Pro. Frontier math tier two, same thing.
+Um yeah, look, Pro is for the hard
+problems. GPT 5.5 and Codex is for
+coding. That's how you got to think
+about it. But, what we're seeing here is
+compared to Opus 4.7, it is much better.
+Here is the artificial intelligence
+index, which is a bunch of different
+benchmarks indexed and shown here. So,
+what we're seeing is two things. Uh
+across the Y axis, we have the actual
+score, and across the X axis, we have
+the output tokens. What you are looking
+for is high, higher is better, and left,
+left is better, smaller is better across
+the output tokens. And what that means
+is you're getting more efficiency per
+token, more intelligence per token. And
+so, 5.5 higher and more left. That is
+what we're looking for here. Okay, same
+thing here. I think a big thing that
+they did and what I noticed is that it
+is very token efficient. And so,
+although it is more expensive, which I
+mentioned earlier and I'll show you the
+prices in a second, it is also more
+token efficient and more token efficient
+enough to offset the increase in price.
+All right? So, that's what we're seeing
+here. We're seeing higher intelligence,
+so the light blue line is 5.5, the
+darker blue line is 5.4. We are seeing
+higher intelligence
+nearly across the board, except for
+right here on this one,
+uh but much cheaper. So, let's look.
+For this score, so this is one of their
+scores on Terminal Bench,
+I think this is probably lowest effort.
+It got a 34.2 on GPT-5.4 with uh
+basically 4950 output tokens. Over here,
+we got 39.1 with 2100 2165 output
+tokens. Significantly
+more efficient, significantly more
+intelligence per token. I love that
+they're focusing on this now. Same thing
+here, expert suite, we're just seeing it
+much more token efficient and you also
+get a higher intelligence index out of
+it. So, we actually did some testing.
+Let's look at some of the demos they put
+together.
+>> Prompts: Attached image, implement this
+as a new app using WebGL invite using
+real data from the Artemis 2 mission.
+Make sure to test the app thoroughly
+until it's fully functional and looks
+like the app in the picture. Pay close
+attention to the rendering of the
+planets and fly past. Now, I want to
+stop on this for a second. Make sure to
+test the app thoroughly until it is
+fully functional. Why is that so
+important? One thing that it's obviously
+a lot better at is visual inspection.
+You give it a prompt in Codex, you let
+it build something, and it will just
+continue to look at the thing until it
+gets it right. And I have a few examples
+that we'll show you in a minute, but it
+does that better than any other model.
+And it's able to actually see what's on
+the page and iterate and continue to
+improve what's on the page better than
+any other model, including Opus 47. Uh
+so it that in itself is extremely
+impressive and just allows the agent
+or or GPT 5.5 in Codex to act much more
+autonomously. It's able to complete
+projects
+much more autonomously without me having
+to say, "Oh, that that button is
+actually in the wrong place." It will
+just go do that for me. So this is yeah,
+very cool. Uh looks good, it looks very
+complete.
+Earthquake tracker. Okay, kind of a more
+simple website. I mean, you know, I to
+be honest, I'm not all that impressed
+with this.
+I think Another thing that they did to
+improve 5.5, at least the front-end
+design, is not use a lot of pills, don't
+use a lot of uh boxes.
+Um and and it's clear here. They they
+kind of it improved it a little bit, but
+look, um being able to create a
+portfolio website or or a chart website,
+this has all been done. Uh so I'm I'm
+not overly impressed with this.
+Dungeon game.
+This, on the other hand,
+is really impressive. This kind of
+reminds me of uh
+Dungeon Keeper. Do you guys remember
+that game way back? That was one of my
+favorite games. I hope I hope I'm saying
+the name right. This game looks very
+impressive. A full 3D hack and slash
+game seems to work really well. The
+animation of the actual knight is is
+pretty good, but you know what? It
+actually works.
+Um and yeah, the visuals look really
+good. You can actually see
+the lighting looks really good. You can
+see shadows.
+The logic There's actual logic, So, when
+you're hitting these little imp guys,
+these little goblins, they actually have
+life and as you're
+hitting them, their life gets reduced.
+So,
+yeah, very cool. Okay, let's look at the
+last one. 3D game, tank down. So, we
+we've seen stuff like this.
+Let's see if it is actually more
+impressive.
+Yeah, it's okay.
+I I've seen stuff like this.
+Not overly impressed with it. All right,
+let's keep going. All right, beyond
+benchmarks, early testers, hey, that
+would be that would be me and a bunch of
+other folks, said GPT-5.5 shows a
+stronger ability to understand the shape
+of a system, why something is failing,
+where the fix needs to land, and what
+else in the code base would be affected.
+This is actually something that I gave
+them in particular.
+Uh some feedback I gave them in
+particular. I What I noticed about
+GPT-5.5
+is that it could see around corners
+almost. I told it a problem I had in my
+production website and I didn't give it
+access to the production database, so it
+could actually look at the logs, look at
+the errors, look at the real production
+data, but I just roughly described what
+the issue was
+and it knew how to fix it. And Opus 4.6
+and 4.7 did not. It was very impressive.
+So, it has this almost intuition about
+how the app should be operating in a
+production environment that I haven't
+seen elsewhere. It was really
+impressive. So, GPT-5.5 is better than
+GPT-5.4 at generating documents,
+spreadsheets, and slide presentations.
+Yes, this is true. Jonas specifically
+gave GPT-5.5 within ChatGPT Pro very um
+like a wide-ranging and thorough
+documents to create and he said it had
+no problem creating 60-page coherent,
+well-designed documents. So, in in the
+ability to actually create real-world
+knowledge work documents, it's very
+good. Today, more than 85% of the
+company uses Codex every week. Why is it
+not 100%? What role in the company could
+possibly not benefit from using their
+own models? In comms, the team uses 5.5
+in Codex to analyze 6 months of speaking
+request data.
+Oh, my god. That's like uh
+80% me asking to interview Sam Altman
+right there. Uh build a scoring and risk
+framework and validate an automated
+Slack agent. So, low-risk requests could
+be handled automatically, while
+higher-risk requests still route to
+human review. Scientific research. This
+is really where it's where we're going
+to see
+uh good good improvements.
+I think that it's just like the ceiling
+of 5.5 feels a lot higher than the
+ceiling of 5.4. Plus, if you're like
+comparing apples to apples, you get a
+lot more out of 5.5, but at a cheaper
+price because the token efficiency is so
+much higher. That's the thing to keep in
+mind. All right. Let's talk a little bit
+about that token efficiency. I don't
+think people are going to understand how
+important this is, because the
+intelligence is improving,
+but the cost per intelligence is
+actually decreasing. And this is good
+for most people. Now, if you are trying
+to research frontier science, frontier
+math problems, the hardest coding
+problems in the world, you need the
+highest ceiling. The highest ceiling of
+intelligence, and that is what 5.5 gives
+you. But, for everyday users like me,
+I just want an incredible coding model.
+I want it to be as cheap as possible and
+as fast as possible, and that's where
+token efficiency comes in. That's why
+it's so valuable, because
+the same thing I was getting with 5.4 is
+now cheaper.
+And it's more concise. I really like
+that.
+Serving 5.5 at 5.4 latency required
+rethinking inference as an integrated
+system.
+5.5 was co-designed for trained with and
+served
+using GB200s
+and GB300 NVLink 72 systems.
+And remember we talked about
+self-improving artificial intelligence?
+Codex and GPT 5.5 were instrumental in
+how we achieved our performance targets.
+Codex helped the team move faster from
+idea to benchmarkable implementation,
+sketching approaches, wiring
+experiments, and helping identify which
+optimizations were worth deeper
+investment. Oh, right. One thing that
+they mentioned
+in our little pre-access group is that
+5.5 will not be available via the API
+yet. It will be very soon, but not quite
+yet. So, for API developers, will soon
+be available. Let's look at the pricing
+page. Yeah, so it's it's double the
+price. $5 per million input tokens, $30
+per million output tokens versus half
+that rate for 5.4. That is expensive,
+yes.
+However, you should notice the if the
+token efficiency, the intelligence per
+token efficiency improvement, and it
+should offset that price at least
+somewhat.
+Now, when you mix in batch pricing,
+caching, flex pricing, um
+controlling the thinking token budget,
+you don't for most use cases need extra
+high thinking.
+Again, we're talking about the ceiling
+of what's possible in this model. You
+don't need the ceiling for 99% of use
+cases. So, it's not the effective
+pricing is not really going to be 5 and
+30.
