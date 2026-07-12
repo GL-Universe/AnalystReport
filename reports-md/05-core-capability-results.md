@@ -185,11 +185,3 @@ Ben Davis's two videos (2026-05-04 and 2026-05-28) are themselves a documented T
 | Creative writing with constraints | **Weaker** than Gemini 3.5 Flash in tested case | practitioner testing only (single case) |
 | Code security awareness | **Improved** over GPT-5.3 (UUID/whitelist/MIME) | practitioner testing only (single case) |
 | Output consistency | Not measured | Measurement gap |
-
-## References for This Chapter
-
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-2. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
-3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-9. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp

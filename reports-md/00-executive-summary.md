@@ -122,13 +122,3 @@ The full white paper is structured into 13 chapter files:
 | `10-dataset-description.md` | Ch 10 | Public datasets and user-test corpora used |
 | `11-limitations.md` | Ch 11 | Honest statement of evidence gaps |
 | `12-appendix.md` | Ch 12 | COI, references, source-tier index |
-
----
-
-## References for This Chapter
-
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-2. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
-3. Berman, Matthew. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-4. Independent technical review. "Gemini 3.5 Flash vs GPT-5.5: a hands-on comparison." 2026-05-15.
-5. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.

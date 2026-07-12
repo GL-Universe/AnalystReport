@@ -139,12 +139,3 @@ This chapter **does not** make definitive safety conclusions. It reports measure
 **Net assessment**: The safety picture for GPT-5.5 is mixed and **under-measured**. Vendor-reported data shows specific regressions (jailbreak, gore, sexual filtering) alongside vendor-claimed improvements (high-risk-domain hallucination). Independently measured data (Artificial Analysis, 2026) shows a general hallucination rate (86%) that is the highest among frontier models tested. Government and academic safety evaluations are absent as of the report date.
 
 This report does **not** conclude that GPT-5.5 is safe or unsafe. It concludes that GPT-5.5's safety profile has both documented regressions and vendor-claimed improvements, that the vendor's own framework rates the model "High" risk in two domains, and that independent regulatory verification is not yet available.
-
----
-
-## References for This Chapter
-
-1. OpenAI. "GPT-5.5 system card and Preparedness Framework assessment." 2026-04-23.
-2. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-5. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-7. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.

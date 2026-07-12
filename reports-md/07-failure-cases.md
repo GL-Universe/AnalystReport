@@ -229,12 +229,3 @@ Ben Davis (2026-05-28) reports successful overnight autonomous runs with GPT-5.5
 | Type E — Over-refusal | 0 cases | Not documented | — |
 
 **Total**: 8 distinct failure cases/ findings meeting inclusion criteria. The corpus is **small and not statistically representative**. It is presented as illustrative evidence; systematic failure-rate measurement requires primary testing not available in this report (Chapter 11).
-
----
-
-## References for This Chapter
-
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-3. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-4. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-6. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp

@@ -124,11 +124,3 @@ All cost figures in Chapter 8 use vendor list prices. Enterprise agreements, vol
 ## 11.7 Update Policy
 
 This report is a **snapshot** as of 2026-07-12. If significant new evidence becomes available (e.g., a second independent measurement institution cross-validates Artificial Analysis's findings; OpenAI publishes updated benchmarks), this report should be updated with a new version. The current version remains citable as a point-in-time assessment of evidence available up to 2026-07-12.
-
----
-
-## References for This Chapter
-
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-2. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-4. EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55

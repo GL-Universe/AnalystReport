@@ -175,16 +175,3 @@ DeepSeek-V4 Preview, released the same day as GPT-5.5, lists V4-Flash at $0.14/$
 | DeepSeek-V4 | Not directly compared on Intelligence Index; DeepSeek-V4 is ~10× cheaper per token; open-weight MIT license |
 
 **Bottom line**: GPT-5.5 is the **highest-scoring** model on the AA Intelligence Index at the time of writing, but it is **not the cheapest** (Gemini 3.1 Pro Preview is) and **not the most hallucination-resistant** (Claude Opus 4.7 is). The vendor-reported benchmarks are **partially verified** by independent measurement measurement but not fully reproduced at the headline magnitudes.
-
----
-
-## References for This Chapter
-
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-3. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
-4. OpenAI. "GPT-5.5 launch announcement." 2026-04-23.
-5. Anthropic. "Claude Opus 4.7 model card and pricing." 2026.
-6. Google. "Gemini 3.1 Pro and 3.5 Flash launch and benchmarks." 2026.
-7. DeepSeek. "DeepSeek-V4 Preview release." 2026-04-23.
-9. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-10. EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55

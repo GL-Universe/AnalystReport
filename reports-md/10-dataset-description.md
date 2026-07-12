@@ -97,7 +97,7 @@ For independent measurement sources, the report relies on Artificial Analysis's 
 - **practitioner testing source data**: Publicly accessible via YouTube video URLs and industry technical article URLs; full prompt/output text is reproduced in Chapter 7 where directly relevant
 - **vendor-reported source data**: OpenAI's launch announcement, system card, and Preparedness Framework documentation are publicly accessible; specific URLs are provided in each citation
 - **Aggregation scripts**: Not applicable — this report does not run new code; it synthesizes published figures
-- **Source-tier classification table**: Publicly available in `reports-md/outline-reference.md`, this report does not introduce proprietary data. All cited evidence is traceable to public sources.
+- **Source classification**: Documented in Chapter 3 (Evaluation Methodology); this report does not introduce proprietary data. All cited evidence is traceable to public sources.
 
 ## 10.6 Sample Example Format
 
@@ -127,15 +127,3 @@ Following the Hugging Face Dataset Card format, the aggregated dataset used by t
 - **Quality control**: Inclusion criteria per Section 2.4; practitioner testing sources with undocumented prompts excluded from failure-case corpus
 - **Known biases**: English-language over-representation in failure cases; vendor benchmarks over-represented in headline numbers
 - **Update policy**: Static as of 2026-07-12; future model updates will require a new version
-
----
-
-## References for This Chapter
-
-1. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-2. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
-3. Ben Davis. "I was wrong about GPT 5.5." YouTube. 2026-05-28.
-4. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-5. OpenAI. "GPT-5.5 launch announcement and system card." 2026-04-23.
-6. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
-7. EveryTo (Laura Entis). "Who Isn't Using GPT 5.5." 2026-04-30. URL: https://every.to/context-window/who-isnt-using-gpt-55

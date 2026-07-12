@@ -69,14 +69,3 @@ This chapter and the rest of the report draw on three categories of source:
 
 - This chapter does not cite OpenAI's technical report as the only background source — independent measurement and practitioner testing sources are also cited.
 - This chapter does not make conclusive judgments — research questions are stated, not answered.
-
----
-
-## References for This Chapter
-
-1. Latent Space. "[AINews] GPT 5.5 and OpenAI Codex Superapp." 2026-04-22/23. URL: https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp
-3. OpenAI. "GPT-5.5 launch announcement." 2026-04-23.
-4. Artificial Analysis. "OpenAI's GPT-5.5 is the new leading AI model." 2026-04-23. URL: https://artificialanalysis.ai/articles/openai-gpt5-5-is-the-new-leading-AI-model/
-5. Wes Roth. "OpenAI's GPT 5.5 is wild.." YouTube. 2026-04-20.
-7. Matthew Berman. "OpenAI just dropped GPT-5.5.. (WOAH)." YouTube. 2026-04-23.
-8. Ben Davis. "GPT-5.5 is the best model ever made (but there's a catch)." YouTube. 2026-05-04.
